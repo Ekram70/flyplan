@@ -1,0 +1,17 @@
+/* ===Default CSS=== */
+::selection {
+  background-color: $primaryColor;
+  color: $whiteColor;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  min-height: 100vh;
+  background-color: $bgColor;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 15px;
+  margin: 0 auto;
+}

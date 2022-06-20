@@ -1,0 +1,223 @@
+/* ===Google Fonts=== */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap");
+/* ===Reset CSS=== */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+/* ===Default CSS=== */
+::-moz-selection {
+  background-color: #404057;
+  color: #ffffff;
+}
+::selection {
+  background-color: #404057;
+  color: #ffffff;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  min-height: 100vh;
+  background-color: #edf2f6;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+/* ===Header CSS Start=== */
+.header {
+  font-size: 15px;
+}
+
+.top-menu {
+  background-color: #404057;
+  color: #cccccc;
+}
+.top-menu .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.top-menu-item {
+  display: inline-block;
+}
+.top-menu-left-item {
+  margin-right: 53px;
+}
+.top-menu-left-item:last-child {
+  margin-right: 0;
+}
+.top-menu .social-btn a {
+  margin-right: 16px;
+}
+.top-menu .social-btn a:last-child {
+  margin-right: 0;
+}
+.top-menu .fa-phone,
+.top-menu .fa-instagram,
+.top-menu .fa-angle-down {
+  font-size: 16px;
+}
+.top-menu .phone i,
+.top-menu .register i,
+.top-menu .login i {
+  margin-right: 5px;
+}
+.top-menu-right-item {
+  padding: 0 30px;
+}
+.top-menu-right-item:first-child {
+  padding-left: 0;
+}
+.top-menu-right-item:last-child {
+  padding-right: 0;
+}
+.top-menu-right-item .icon {
+  font-size: 19px;
+}
+.top-menu .active-item {
+  color: #ffffff;
+}
+.top-menu .login,
+.top-menu .register {
+  text-transform: capitalize;
+  position: relative;
+}
+.top-menu .login::after,
+.top-menu .register::after {
+  content: "";
+  width: 2px;
+  height: 65%;
+  background-color: #545671;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.top-menu .currency {
+  text-transform: uppercase;
+}
+.top-menu .currency i {
+  margin-left: 10px;
+}
+
+.menu {
+  background-color: #ffffff;
+}
+.menu .container {
+  padding: 28px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu .navbar {
+  font-size: 18px;
+  font-weight: 500;
+  color: #b4b4c8;
+}
+.menu .navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .navbar li {
+  margin-right: 48px;
+}
+.menu .navbar li:last-child {
+  margin-right: 0;
+}
+.menu .navbar li a {
+  text-transform: capitalize;
+}
+.menu .navbar li .icon {
+  font-size: 39px;
+}
+.menu .navbar .active-item {
+  color: #32d093;
+}
+.menu .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .logo img {
+  margin-right: 10px;
+}
+.menu .logo .brand-name {
+  font-size: 28px;
+  font-weight: 800;
+  color: #404057;
+}
+.menu .search form {
+  background-color: #f6fbff;
+  border-radius: 32px;
+  padding: 12px 25px;
+  position: relative;
+  width: 300px;
+}
+.menu .search form input::-moz-placeholder {
+  font-size: 15px;
+  font-weight: 500;
+  color: #b4b4c8;
+  text-transform: capitalize;
+}
+.menu .search form input:-ms-input-placeholder {
+  font-size: 15px;
+  font-weight: 500;
+  color: #b4b4c8;
+  text-transform: capitalize;
+}
+.menu .search form input::placeholder {
+  font-size: 15px;
+  font-weight: 500;
+  color: #b4b4c8;
+  text-transform: capitalize;
+}
+.menu .search form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-size: 26px;
+  font-weight: 400;
+  color: #404057;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+}

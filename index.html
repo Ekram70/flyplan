@@ -11,16 +11,84 @@
     />
     <!-- IonIcons -->
     <link
-      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
       rel="stylesheet"
     />
     <!-- My Css -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon">
     <title>FlyPlan</title>
   </head>
   <body>
-    <i class="fa fa-twitter-square"></i>
-    <i class="icon ion-md-radio-button-on"></i>
-    How it feels
+    <!-- Header Section -->
+    <header class="section header">
+      <!-- Top menu -->
+      <div class="top-menu">
+        <div class="container">
+          <!-- Top menu left -->
+          <div class="top-menu-left">
+            <div class="phone top-menu-item top-menu-left-item">
+              <a href="#"><i class="fa fa-phone"></i></a>
+              <a href="#"><span>555-555-555</span></a>
+            </div>
+            <div class="social-btn top-menu-item top-menu-left-item">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+          <!-- Top menu right -->
+          <div class="top-menu-right">
+            <div class="register top-menu-item top-menu-right-item">
+              <a href="#"><i class="icon ion-android-person-add"></i></a>
+              <a href="#"><span>register</span></a>
+              <a href="#"></a>
+            </div>
+            <div class="login top-menu-item top-menu-right-item active-item">
+              <a href="#"><i class="icon ion-android-unlock"></i></a>
+              <a href="#"><span>login</span></a>
+            </div>
+            <div class="currency top-menu-item top-menu-right-item">
+              <a href="#"><span>$ usd</span></a>
+              <a href="#"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- Main men -->
+        <div class="menu">
+          <div class="container">
+          <!-- Navbar -->
+          <nav class="navbar">
+            <ul>
+              <li><a href="#" class="active-item">home</a></li>
+              <li><a href="#">pages</a></li>
+              <li><a href="#">about</a></li>
+              <li>
+                <a href="#">
+                  <i class="icon ion-android-more-horizontal"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Logo -->
+          <div class="logo">
+            <img src="images/icon.jpg" alt="FlyPlan">
+            <h1 class="brand-name">flyplan</h1>
+          </div>
+          <!-- Search -->
+          <div class="search">
+            <form>
+                <input type="text" placeholder="search...">
+                <button type="submit">
+                  <i class="icon ion-android-search"></i>
+                </button>
+            </form>
+          </div>
+        </div>
+        </div>
+      </div>
+    </header>
   </body>
 </html>

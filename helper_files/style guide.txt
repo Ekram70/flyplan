@@ -3,7 +3,7 @@ Fonts:
 2. Font Awesome 4.7
 3. WorkSans
 
-Font style:
+Font Weight:
 1. Light
 2. Regular
 3. Medium
