@@ -32,4 +32,35 @@ button {
   border: none;
   background-color: transparent;
   font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+input::placeholder {
+  color: inherit;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(83%) sepia(9%) saturate(396%) hue-rotate(201deg)
+    brightness(88%) contrast(86%);
+}
+
+button {
+  all: inherit;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+}
+
+select {
+  background-color: inherit;
+  color: inherit;
+  font-size: inherit;
+  border: none;
+}
+
+option {
+  background-color: inherit;
+  color: inherit;
+  font-size: inherit;
 }

@@ -1,0 +1,125 @@
+.change-search {
+  .container {
+    background-color: $primaryColor;
+    color: $whiteColor;
+    border-radius: 4px;
+    padding: 28px;
+  }
+}
+
+.flight {
+  @include space-between;
+  &-icon {
+    font-size: $fz-26;
+    @include round(44px);
+    background-color: $whiteColor;
+    color: $primaryColor;
+    @include center;
+    margin-right: 20px;
+  }
+  &-box {
+    display: flex;
+    align-items: center;
+  }
+  &-location {
+    h4 {
+      font-weight: $fontWeightSemiBold;
+      font-size: $fz-24;
+      text-transform: capitalize;
+    }
+    span {
+      font-weight: $fontWeightMedium;
+      font-size: $fz-20;
+      color: $smTextColor2;
+      text-transform: uppercase;
+    }
+  }
+
+  &-btn {
+    text-transform: capitalize;
+    background-color: $whiteColor;
+    color: $primaryColor;
+    font-size: $fz-18;
+    font-weight: $fontWeightBold;
+    text-align: center;
+    border-radius: 4px;
+    button {
+      padding: 6px 10px;
+    }
+  }
+}
+
+.dropdown-change {
+  margin-top: 35px;
+}
+
+.dropdown-form {
+  &-radio {
+    display: flex;
+  }
+  .radio-item {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: $fz-16;
+    font-weight: $fontWeightMedium;
+    &:first-child {
+      margin-right: 30px;
+    }
+    input[type="radio"] {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: transparent;
+      @include round(16px);
+      border: 2px solid $secondaryColor;
+      position: relative;
+      margin-right: 10px;
+    }
+
+    input[type="radio"] + label {
+      color: $smTextColor2;
+    }
+
+    input[type="radio"]::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include round(8px);
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      background-color: $secondaryColor;
+    }
+
+    input[type="radio"]:checked::before {
+      transform: scale(1);
+      transform: translate(-50%, -50%);
+    }
+
+    input[type="radio"]:checked + label {
+      color: $whiteColor;
+    }
+  }
+  &-search {
+    color: $smTextColor2;
+    font-size: $fz-16;
+    font-weight: $fontWeightMedium;
+    margin-top: 18px;
+    div {
+      background-color: $bgColor3;
+      display: inline-block;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      &:focus-within {
+        border: 2px solid $secondaryColor;
+      }
+      & > * {
+        padding: 12px 18px;
+      }
+    }
+  }
+  .input-search {
+    background-color: $secondaryColor;
+    color: $whiteColor;
+  }
+}

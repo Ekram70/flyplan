@@ -43,9 +43,8 @@
             <div class="register top-menu-item top-menu-right-item">
               <a href="#"><i class="icon ion-android-person-add"></i></a>
               <a href="#"><span>register</span></a>
-              <a href="#"></a>
             </div>
-            <div class="login top-menu-item top-menu-right-item active-item">
+            <div class="login top-menu-item top-menu-right-item">
               <a href="#"><i class="icon ion-android-unlock"></i></a>
               <a href="#"><span>login</span></a>
             </div>
@@ -74,8 +73,8 @@
           </nav>
           <!-- Logo -->
           <div class="logo">
-            <img src="images/icon.jpg" alt="FlyPlan">
-            <h1 class="brand-name">flyplan</h1>
+            <a href="#"><img src="images/icon.jpg" alt="FlyPlan"></a>
+            <h1 class="brand-name"><a href="#">flyplan</a></h1>
           </div>
           <!-- Search -->
           <div class="search">
@@ -90,5 +89,92 @@
         </div>
       </div>
     </header>
+    <section class="section change-search">
+      <div class="container">
+        <div class="flight">
+          <div class="flight-depart flight-box">
+            <div class="flight-icon">
+              <i class="fa fa-plane"></i>
+            </div>
+            <div class="flight-location">
+                <h4>los angeles - istanbul</h4>
+                <span>jun 04, sat &nbsp;|&nbsp; 3 travellers</span>
+            </div>
+          </div>
+          <div class="flight-return flight-box">
+            <div class="flight-icon">
+              <i class="fa fa-plane"></i>
+            </div>
+            <div class="flight-location">
+                <h4>istanbul - los angeles</h4>
+                <span>27 may, sat &nbsp;|&nbsp; 3 travellers</span>
+            </div>
+          </div>
+          <div class="flight-btn">
+            <button>change</button>
+          </div>
+        </div>
+        <div class="dropdown-change">
+          <form class="dropdown-form">
+             <div class="dropdown-form-radio">
+                <div class="radio-item">
+                  <input type="radio" name="radio-item" id="round-trip">
+                  <label for="round-trip">round trip</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" name="radio-item" id="one-way">
+                  <label for="one-way">one way</label>
+                </div>
+              </div>
+              <div class="dropdown-form-search">
+                <div class="input-from">
+                  <input type="text" placeholder="From">
+                </div>
+                <i class="icon ion-android-sync"></i>
+                <div class="input-to">
+                  <input type="text" placeholder="To">
+                </div>
+                <div class="input-depart">
+                  <input type="date">
+                </div>
+                <div class="input-return">
+                  <input type="date">
+                </div>
+                <div class="input-adults">
+                  <select>
+                    <option>1 adult</option>
+                    <option>2 adults</option>
+                    <option>3 adults</option>
+                  </select>
+                </div>
+                <div class="input-children">
+                  <select>
+                    <option>1 children</option>
+                    <option>2 children</option>
+                    <option>3 children</option>
+                  </select>
+                </div>
+                <div class="input-infants">
+                  <select>
+                    <option>1 infants</option>
+                    <option>2 infants</option>
+                    <option>3 infants</option>
+                  </select>
+                </div>
+                <div class="input-class">
+                  <select>
+                    <option>first class</option>
+                    <option>business class</option>
+                    <option>economy class</option>
+                  </select>
+                </div>
+                <div class="input-search">
+                  <button>search flight</button>
+                </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

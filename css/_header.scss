@@ -1,6 +1,7 @@
 /* ===Header CSS Start=== */
 .header {
   font-size: $fz-15;
+  margin-top: 0;
 }
 
 .top-menu {
@@ -19,6 +20,12 @@
     &:last-child {
       margin-right: 0;
     }
+    & a:hover {
+      color: $whiteColor;
+    }
+  }
+  .phone:hover {
+    color: $whiteColor;
   }
 
   .social-btn a {
@@ -53,10 +60,9 @@
     .icon {
       font-size: 19px;
     }
-  }
-
-  .active-item {
-    color: $whiteColor;
+    &:hover {
+      color: $whiteColor;
+    }
   }
 
   .login,
@@ -103,6 +109,9 @@
       }
       a {
         text-transform: capitalize;
+        &:hover {
+          color: $secondaryColor;
+        }
       }
       .icon {
         font-size: 39px;
@@ -130,6 +139,15 @@
       padding: 12px 25px;
       position: relative;
       width: 300px;
+      border: 2px solid transparent;
+      transition: 0.3s border ease;
+      &:focus-within {
+        border: 2px solid $secondaryColor;
+        button {
+          background-color: $secondaryColor;
+          color: $whiteColor;
+        }
+      }
       input::placeholder {
         @include font($fz-15, $fontWeightMedium, $smTextColor2);
         text-transform: capitalize;
@@ -139,11 +157,15 @@
         right: 0;
         top: 0;
         background-color: $whiteColor;
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
+        @include round(42px);
         @include font($fz-26, $fontWeightRegular, $primaryColor);
         box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+        transition: 0.3s color ease, 0.3s background-color ease;
+        @include center;
+        &:hover {
+          background-color: $secondaryColor;
+          color: $whiteColor;
+        }
       }
     }
   }

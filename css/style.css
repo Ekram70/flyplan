@@ -34,6 +34,45 @@ button {
   border: none;
   background-color: transparent;
   font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+input::-moz-placeholder {
+  color: inherit;
+}
+
+input:-ms-input-placeholder {
+  color: inherit;
+}
+
+input::placeholder {
+  color: inherit;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(83%) sepia(9%) saturate(396%) hue-rotate(201deg)
+    brightness(88%) contrast(86%);
+}
+
+button {
+  all: inherit;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+}
+
+select {
+  background-color: inherit;
+  color: inherit;
+  font-size: inherit;
+  border: none;
+}
+
+option {
+  background-color: inherit;
+  color: inherit;
+  font-size: inherit;
 }
 
 /* ===Default CSS=== */
@@ -52,6 +91,10 @@ body {
   background-color: #edf2f6;
 }
 
+.section {
+  margin: 46px 0;
+}
+
 .container {
   max-width: 1170px;
   padding: 15px;
@@ -61,6 +104,7 @@ body {
 /* ===Header CSS Start=== */
 .header {
   font-size: 15px;
+  margin-top: 0;
 }
 
 .top-menu {
@@ -81,6 +125,12 @@ body {
 }
 .top-menu-left-item:last-child {
   margin-right: 0;
+}
+.top-menu-left-item a:hover {
+  color: #ffffff;
+}
+.top-menu .phone:hover {
+  color: #ffffff;
 }
 .top-menu .social-btn a {
   margin-right: 16px;
@@ -110,7 +160,7 @@ body {
 .top-menu-right-item .icon {
   font-size: 19px;
 }
-.top-menu .active-item {
+.top-menu-right-item:hover {
   color: #ffffff;
 }
 .top-menu .login,
@@ -164,6 +214,9 @@ body {
 .menu .navbar li a {
   text-transform: capitalize;
 }
+.menu .navbar li a:hover {
+  color: #32d093;
+}
 .menu .navbar li .icon {
   font-size: 39px;
 }
@@ -189,6 +242,15 @@ body {
   padding: 12px 25px;
   position: relative;
   width: 300px;
+  border: 2px solid transparent;
+  transition: 0.3s border ease;
+}
+.menu .search form:focus-within {
+  border: 2px solid #32d093;
+}
+.menu .search form:focus-within button {
+  background-color: #32d093;
+  color: #ffffff;
 }
 .menu .search form input::-moz-placeholder {
   font-size: 15px;
@@ -213,11 +275,145 @@ body {
   right: 0;
   top: 0;
   background-color: #ffffff;
+  height: 42px;
+  width: 42px;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
   font-size: 26px;
   font-weight: 400;
   color: #404057;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+  transition: 0.3s color ease, 0.3s background-color ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .search form button:hover {
+  background-color: #32d093;
+  color: #ffffff;
+}
+
+.change-search .container {
+  background-color: #404057;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 28px;
+}
+
+.flight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flight-icon {
+  font-size: 26px;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #404057;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.flight-box {
+  display: flex;
+  align-items: center;
+}
+.flight-location h4 {
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+.flight-location span {
+  font-weight: 500;
+  font-size: 20px;
+  color: #b4b4c8;
+  text-transform: uppercase;
+}
+.flight-btn {
+  text-transform: capitalize;
+  background-color: #ffffff;
+  color: #404057;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 4px;
+}
+.flight-btn button {
+  padding: 6px 10px;
+}
+
+.dropdown-change {
+  margin-top: 35px;
+}
+
+.dropdown-form-radio {
+  display: flex;
+}
+.dropdown-form .radio-item {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+}
+.dropdown-form .radio-item:first-child {
+  margin-right: 30px;
+}
+.dropdown-form .radio-item input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 2px solid #32d093;
+  position: relative;
+  margin-right: 10px;
+}
+.dropdown-form .radio-item input[type="radio"] + label {
+  color: #b4b4c8;
+}
+.dropdown-form .radio-item input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: #32d093;
+}
+.dropdown-form .radio-item input[type="radio"]:checked::before {
+  transform: scale(1);
+  transform: translate(-50%, -50%);
+}
+.dropdown-form .radio-item input[type="radio"]:checked + label {
+  color: #ffffff;
+}
+.dropdown-form-search {
+  color: #b4b4c8;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 18px;
+}
+.dropdown-form-search div {
+  background-color: #535370;
+  display: inline-block;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+.dropdown-form-search div:focus-within {
+  border: 2px solid #32d093;
+}
+.dropdown-form-search div > * {
+  padding: 12px 18px;
+}
+.dropdown-form .input-search {
+  background-color: #32d093;
+  color: #ffffff;
 }
