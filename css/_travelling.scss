@@ -1,0 +1,212 @@
+.travelling {
+  .container {
+    padding: 0;
+  }
+  &-header {
+    margin-bottom: 10px;
+    h3 {
+      border-radius: 4px;
+      padding: 15px 28px;
+      color: $whiteColor;
+      background-color: $primaryColor;
+      font-size: $fz-24;
+      font-weight: $fontWeightSemiBold;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+
+  &-box {
+    padding: 40px 70px;
+    background-color: $whiteColor;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    &-top {
+      @include space-between;
+      h2 {
+        font-size: $fz-24;
+        font-weight: $fontWeightSemiBold;
+        color: $primaryColor;
+        text-transform: uppercase;
+      }
+      span {
+        font-size: $fz-20;
+        font-weight: $fontWeightBold;
+        background-color: $primaryColor;
+        color: $whiteColor;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        line-height: 30px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 4px;
+      }
+      i {
+        font-size: $fz-24;
+        color: $secondaryColor;
+      }
+    }
+
+    &-form-item {
+      margin-top: 40px;
+
+      .title {
+        font-size: $fz-20;
+        font-weight: $fontWeightSemiBold;
+        color: $primaryColor;
+        text-transform: capitalize;
+        padding-left: 24px;
+        position: relative;
+        margin-bottom: 25px;
+        &::before {
+          content: "";
+          width: 4px;
+          height: 100%;
+          background-color: $secondaryColor;
+          position: absolute;
+          left: 0;
+          top: 0;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .personal-info {
+      .content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        // & > div {
+        //   border: 1px solid;
+        // }
+        text-transform: capitalize;
+        label {
+          font-size: $fz-16;
+          font-weight: $fontWeightMedium;
+          color: $primaryColor;
+          display: block;
+          margin-bottom: 10px;
+        }
+        input,
+        select {
+          border: 2px solid $bgColor;
+          border-radius: 4px;
+          padding: 15px;
+          width: 100%;
+          font-size: $fz-16;
+          font-weight: $fontWeightMedium;
+          color: $smTextColor2;
+          &::placeholder {
+            color: $smTextColor2;
+          }
+          &:focus {
+            border: 2px solid $secondaryColor;
+          }
+        }
+        input[type="date"] {
+          text-transform: uppercase;
+        }
+
+        .birth-gender {
+          display: flex;
+          gap: 20px;
+          & > * {
+            flex-basis: 50%;
+          }
+        }
+
+        .expiry-item {
+          display: flex;
+          width: 100%;
+          gap: 10px;
+          align-items: center;
+          & > * {
+            flex-basis: 33%;
+          }
+          .checkbox {
+            display: flex;
+            input {
+              display: none;
+            }
+            label,
+            i {
+              cursor: pointer;
+              color: $smTextColor2;
+            }
+            label span {
+              margin-left: 10px;
+            }
+            input + label {
+              color: $smTextColor2;
+              i {
+                width: 10px;
+              }
+              .fa-square-o {
+                display: inline-block;
+              }
+              .fa-check-square-o {
+                display: none;
+              }
+            }
+            input:checked + label {
+              color: $primaryColor;
+              .fa-check-square-o {
+                display: inline-block;
+                color: $primaryColor;
+              }
+              .fa-square-o {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .baggage {
+      .content-box {
+        border: 2px solid $bgColor;
+        padding: 10px 20px;
+        text-transform: capitalize;
+      }
+      .cabin-baggage {
+        @include space-between;
+        &:not(:last-child) {
+          margin-bottom: 35px;
+        }
+        position: relative;
+        &-item {
+          font-size: $fz-16;
+          font-weight: $fontWeightSemiBold;
+          color: $primaryColor;
+        }
+        &-details {
+          font-size: $fz-16;
+          font-weight: $fontWeightMedium;
+          color: $smTextColor2;
+        }
+        &-price {
+          font-size: $fz-18;
+          font-weight: $fontWeightSemiBold;
+          color: $primaryColor;
+          margin-right: 100px;
+        }
+        &-icon {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          font-size: $fz-22;
+          background-color: $bgColor5;
+          color: $whiteColor;
+          text-align: center;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          border-radius: 50%;
+          @include center;
+        }
+      }
+    }
+  }
+}

@@ -36,6 +36,10 @@
       i {
         font-size: $fz-16;
         color: $smTextColor2;
+        cursor: pointer;
+        &:hover {
+          color: $secondaryColor;
+        }
       }
     }
     input[type="range"] {
@@ -134,7 +138,7 @@
         }
       }
 
-      input + label {
+      input:checked + label {
         .fa-square-o {
           display: none;
         }
@@ -143,7 +147,7 @@
         }
       }
 
-      input:checked + label {
+      input + label {
         .fa-square-o {
           display: inline-block;
         }
@@ -371,6 +375,24 @@
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
       cursor: pointer;
+    }
+  }
+  .continue {
+    margin-top: 40px;
+    @include space-between;
+    text-transform: capitalize;
+    button {
+      font-size: $fz-18;
+      font-weight: $fontWeightBold;
+      background-color: $secondaryColor;
+      color: $whiteColor;
+      padding: 15px 30px;
+      border-radius: 4px;
+    }
+    p {
+      font-size: $fz-18;
+      font-weight: $fontWeightSemiBold;
+      color: $primaryColor;
     }
   }
 }

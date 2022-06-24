@@ -181,644 +181,756 @@
 
     <section class="section results">
       <div class="container results-container">
-      <aside class="filter">
-        <div class="title">
-          <h3>filters</h3>
+        <aside class="filter">
+          <div class="title">
+            <h3>filters</h3>
+          </div>
+        
+          <div class="filter-box">
+            <div class="filter-title">
+              <h6>price range</h6>
+            
+              <i class="fa fa-chevron-up"></i>
+            </div>
+            <div class="filter-box-content">
+              <span class="price-amount">$600</span>
+              <input type="range">
+            </div>
+          </div>
+
+          <div class="filter-box">
+            <div class="filter-title">
+              <h6>depart time</h6>
+              <i class="fa fa-chevron-up"></i>
+            </div>
+            <div class="filter-box-content">
+              <button class="depart-btn">
+                <i class="icon ion-ios-partlysunny"></i>
+                <span>before 6 am</span>
+              </button>
+              <button class="depart-btn">
+                <i class="icon ion-ios-sunny"></i>
+                <span>6am - 12 am</span>
+              </button>
+              <button class="depart-btn">
+                <i class="icon ion-ios-cloudy"></i>
+                <span>12pm - 6 pm</span>
+              </button>
+              <button class="depart-btn">
+                <i class="icon ion-ios-cloudy-night"></i>
+                <span>after 6 pm</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="filter-box">
+            <div class="filter-title">
+              <h6>stops</h6>
+              <i class="fa fa-chevron-up"></i>
+            </div>
+            <div class="filter-box-content">
+              <button class="stops-btn">
+                0
+              </button>
+              <button class="stops-btn active">
+                1
+              </button>
+              <button class="stops-btn">
+                2+
+              </button>
+            </div>
+          </div>
+
+          <div class="filter-box">
+            <div class="filter-title">
+              <h6>airlines</h6>
+              <i class="fa fa-chevron-up"></i>
+            </div>
+            <div class="filter-box-content">
+              <div class="airline-item">
+                <input type="checkbox" id="aeroflot">
+                <label for="aeroflot">
+                  <i class="fa fa-square-o"></i>
+                  <i class="fa fa-check-square-o"></i>
+                  <span>aeroflot</span>
+                </label>
+              </div>
+
+              <div class="airline-item">
+                <input type="checkbox" id="air-berlin">
+                <label for="air-berlin">
+                  <i class="fa fa-square-o"></i>
+                  <i class="fa fa-check-square-o"></i>
+                  <span>air berlin</span>
+                </label>
+              </div>
+
+              <div class="airline-item">
+                <input type="checkbox" id="air-canada">
+                <label for="air-canada">
+                  <i class="fa fa-square-o"></i>
+                  <i class="fa fa-check-square-o"></i>
+                  <span>air canada</span>
+                </label>
+              </div>
+
+              <div class="airline-item">
+                <input type="checkbox" id="air-france">
+                <label for="air-france">
+                  <i class="fa fa-square-o"></i>
+                  <i class="fa fa-check-square-o"></i>
+                  <span>air france</span>
+                </label>
+              </div>
+
+              <div class="airline-item">
+                <input type="checkbox" id="alitalia">
+                <label for="alitalia">
+                  <i class="fa fa-square-o"></i>
+                  <i class="fa fa-check-square-o"></i>
+                  <span>alitalia</span>
+                </label>
+              </div>
+
+              <div class="airline-item">
+                <input type="checkbox" id="austrian-airlines">
+                <label for="austrian-airlines">
+                  <i class="fa fa-square-o"></i>
+                  <i class="fa fa-check-square-o"></i>
+                  <span>austrian airlines</span>
+                </label>
+              </div>
+
+              <div class="airline-item">
+                <input type="checkbox" id="austrian-airlines2">
+                <label for="austrian-airlines2">
+                  <i class="fa fa-square-o"></i>
+                  <i class="fa fa-check-square-o"></i>
+                  <span>austrian airlines</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="reset-all">
+            <button class="reset-btn">reset all filters</button>
+          </div>
+
+        </aside>
+        <div class="result-box">
+          <div class="sort-by">
+            <div class="sort-by-title">
+              <h6>565 results</h6>
+            </div>
+            <div class="sort-by-input">
+              <label for="">sort by:</label>
+              <select name="" id="">
+                <option value="">Price per Adult</option>
+                <option value="">Price per Children</option>
+                <option value="">Price per Infant</option>
+              </select>
+            </div>
+          </div>
+          <div class="result-item">
+            <div class="result-single-item">
+              <div class="departure">
+                <div class="departure-item">
+                  <div class="airline">
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="onbound">
+                    <div class="onbound-time">
+                      <h6>07:05am</h6>
+                    </div>
+                    <div class="onbound-date">
+                      <span>jun 04, fri</span>
+                    </div>
+                    <div class="onbound-airport">
+                      <span>los angeles lax</span>
+                    </div>
+                  </div>
+                  <div class="details">
+                    <div class="details-duration">
+                      <span>10h 50m</span>
+                    </div>
+                    <div class="details-chart">
+                      <div class="chart">
+                        <div class="chart-circle"></div>
+                        <div class="chart-circle"></div>
+                      </div>
+                    </div>
+                    <div class="details-chart">
+                      <span>2 stops</span>
+                    </div>
+                    <div class="details-stops"></div>
+                  </div>
+                  <div class="arrive">
+                    <div class="arrive-time">
+                      <h6>09:10pm</h6>
+                    </div>
+                    <div class="arrive-date">
+                      <span>jun 06, fri</span>
+                    </div>
+                    <div class="arrive-airport">
+                      <span>istanbut ist</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="departure-item">
+                  <div class="airline">
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="onbound">
+                    <div class="onbound-time">
+                      <h6>07:05am</h6>
+                    </div>
+                    <div class="onbound-date">
+                      <span>jun 04, fri</span>
+                    </div>
+                    <div class="onbound-airport">
+                      <span>los angeles lax</span>
+                    </div>
+                  </div>
+                  <div class="details">
+                    <div class="details-duration">
+                      <span>10h 50m</span>
+                    </div>
+                    <div class="details-chart">
+                      <div class="chart">
+                        <div class="chart-circle"></div>
+                        <div class="chart-circle"></div>
+                      </div>
+                    </div>
+                    <div class="details-chart">
+                      <span>2 stops</span>
+                    </div>
+                    <div class="details-stops"></div>
+                  </div>
+                  <div class="arrive">
+                    <div class="arrive-time">
+                      <h6>09:10pm</h6>
+                    </div>
+                    <div class="arrive-date">
+                      <span>jun 06, fri</span>
+                    </div>
+                    <div class="arrive-airport">
+                      <span>istanbut ist</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="details-tag">
+                  <span>details</span>
+                </div>
+              </div>
+              <div class="price">
+                <h6 class="price-amount">$988</h6>
+                <button class="price-btn">Book</button>
+              </div>
+            </div>
+            <div class="result-single-item">
+              <div class="departure">
+                <div class="departure-item">
+                  <div class="airline">
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="onbound">
+                    <div class="onbound-time">
+                      <h6>07:05am</h6>
+                    </div>
+                    <div class="onbound-date">
+                      <span>jun 04, fri</span>
+                    </div>
+                    <div class="onbound-airport">
+                      <span>los angeles lax</span>
+                    </div>
+                  </div>
+                  <div class="details">
+                    <div class="details-duration">
+                      <span>10h 50m</span>
+                    </div>
+                    <div class="details-chart">
+                      <div class="chart">
+                        <div class="chart-circle"></div>
+                        <div class="chart-circle"></div>
+                      </div>
+                    </div>
+                    <div class="details-chart">
+                      <span>2 stops</span>
+                    </div>
+                    <div class="details-stops"></div>
+                  </div>
+                  <div class="arrive">
+                    <div class="arrive-time">
+                      <h6>09:10pm</h6>
+                    </div>
+                    <div class="arrive-date">
+                      <span>jun 06, fri</span>
+                    </div>
+                    <div class="arrive-airport">
+                      <span>istanbut ist</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="departure-item">
+                  <div class="airline">
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="onbound">
+                    <div class="onbound-time">
+                      <h6>07:05am</h6>
+                    </div>
+                    <div class="onbound-date">
+                      <span>jun 04, fri</span>
+                    </div>
+                    <div class="onbound-airport">
+                      <span>los angeles lax</span>
+                    </div>
+                  </div>
+                  <div class="details">
+                    <div class="details-duration">
+                      <span>10h 50m</span>
+                    </div>
+                    <div class="details-chart">
+                      <div class="chart">
+                        <div class="chart-circle"></div>
+                        <div class="chart-circle"></div>
+                      </div>
+                    </div>
+                    <div class="details-chart">
+                      <span>2 stops</span>
+                    </div>
+                    <div class="details-stops"></div>
+                  </div>
+                  <div class="arrive">
+                    <div class="arrive-time">
+                      <h6>09:10pm</h6>
+                    </div>
+                    <div class="arrive-date">
+                      <span>jun 06, fri</span>
+                    </div>
+                    <div class="arrive-airport">
+                      <span>istanbut ist</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="details-tag">
+                  <span>details</span>
+                </div>
+              </div>
+              <div class="price">
+                <h6 class="price-amount">$988</h6>
+                <button class="price-btn">Book</button>
+              </div>
+            </div>
+            <div class="result-single-item">
+              <div class="departure">
+                <div class="departure-item">
+                  <div class="airline">
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="onbound">
+                    <div class="onbound-time">
+                      <h6>07:05am</h6>
+                    </div>
+                    <div class="onbound-date">
+                      <span>jun 04, fri</span>
+                    </div>
+                    <div class="onbound-airport">
+                      <span>los angeles lax</span>
+                    </div>
+                  </div>
+                  <div class="details">
+                    <div class="details-duration">
+                      <span>10h 50m</span>
+                    </div>
+                    <div class="details-chart">
+                      <div class="chart">
+                        <div class="chart-circle"></div>
+                        <div class="chart-circle"></div>
+                      </div>
+                    </div>
+                    <div class="details-chart">
+                      <span>2 stops</span>
+                    </div>
+                    <div class="details-stops"></div>
+                  </div>
+                  <div class="arrive">
+                    <div class="arrive-time">
+                      <h6>09:10pm</h6>
+                    </div>
+                    <div class="arrive-date">
+                      <span>jun 06, fri</span>
+                    </div>
+                    <div class="arrive-airport">
+                      <span>istanbut ist</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="departure-item">
+                  <div class="airline">
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="onbound">
+                    <div class="onbound-time">
+                      <h6>07:05am</h6>
+                    </div>
+                    <div class="onbound-date">
+                      <span>jun 04, fri</span>
+                    </div>
+                    <div class="onbound-airport">
+                      <span>los angeles lax</span>
+                    </div>
+                  </div>
+                  <div class="details">
+                    <div class="details-duration">
+                      <span>10h 50m</span>
+                    </div>
+                    <div class="details-chart">
+                      <div class="chart">
+                        <div class="chart-circle"></div>
+                        <div class="chart-circle"></div>
+                      </div>
+                    </div>
+                    <div class="details-chart">
+                      <span>2 stops</span>
+                    </div>
+                    <div class="details-stops"></div>
+                  </div>
+                  <div class="arrive">
+                    <div class="arrive-time">
+                      <h6>09:10pm</h6>
+                    </div>
+                    <div class="arrive-date">
+                      <span>jun 06, fri</span>
+                    </div>
+                    <div class="arrive-airport">
+                      <span>istanbut ist</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="details-tag">
+                  <span>details</span>
+                </div>
+              </div>
+              <div class="price">
+                <h6 class="price-amount">$988</h6>
+                <button class="price-btn">Book</button>
+              </div>
+            </div>
+            <div class="result-single-item">
+              <div class="departure">
+                <div class="departure-item">
+                  <div class="airline">
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="onbound">
+                    <div class="onbound-time">
+                      <h6>07:05am</h6>
+                    </div>
+                    <div class="onbound-date">
+                      <span>jun 04, fri</span>
+                    </div>
+                    <div class="onbound-airport">
+                      <span>los angeles lax</span>
+                    </div>
+                  </div>
+                  <div class="details">
+                    <div class="details-duration">
+                      <span>10h 50m</span>
+                    </div>
+                    <div class="details-chart">
+                      <div class="chart">
+                        <div class="chart-circle"></div>
+                        <div class="chart-circle"></div>
+                      </div>
+                    </div>
+                    <div class="details-chart">
+                      <span>2 stops</span>
+                    </div>
+                    <div class="details-stops"></div>
+                  </div>
+                  <div class="arrive">
+                    <div class="arrive-time">
+                      <h6>09:10pm</h6>
+                    </div>
+                    <div class="arrive-date">
+                      <span>jun 06, fri</span>
+                    </div>
+                    <div class="arrive-airport">
+                      <span>istanbut ist</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="departure-item">
+                  <div class="airline">
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                    <div class="airline-item">
+                      <div class="airline-img"></div>
+                      <div class="airline-details">
+                        <h6>american airlines</h6>
+                        <span>ba-3271</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="onbound">
+                    <div class="onbound-time">
+                      <h6>07:05am</h6>
+                    </div>
+                    <div class="onbound-date">
+                      <span>jun 04, fri</span>
+                    </div>
+                    <div class="onbound-airport">
+                      <span>los angeles lax</span>
+                    </div>
+                  </div>
+                  <div class="details">
+                    <div class="details-duration">
+                      <span>10h 50m</span>
+                    </div>
+                    <div class="details-chart">
+                      <div class="chart">
+                        <div class="chart-circle"></div>
+                        <div class="chart-circle"></div>
+                      </div>
+                    </div>
+                    <div class="details-chart">
+                      <span>2 stops</span>
+                    </div>
+                    <div class="details-stops"></div>
+                  </div>
+                  <div class="arrive">
+                    <div class="arrive-time">
+                      <h6>09:10pm</h6>
+                    </div>
+                    <div class="arrive-date">
+                      <span>jun 06, fri</span>
+                    </div>
+                    <div class="arrive-airport">
+                      <span>istanbut ist</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="details-tag">
+                  <span>details</span>
+                </div>
+              </div>
+              <div class="price">
+                <h6 class="price-amount">$988</h6>
+                <button class="price-btn">Book</button>
+              </div>
+            </div>
+          </div>
+          <div class="continue">
+            <button>Continue</button>
+            <p>Everything looks fine. Please Continue!</p>
+          </div>
         </div>
-       
-        <div class="filter-box">
-          <div class="filter-title">
-            <h6>price range</h6>
-           
+      </div>
+    </section>
+
+    <section class="section travelling">
+      <div class="container">
+        <div class="travelling-header">
+          <h3>Who's traveling?</h3>
+        </div>
+        <div class="travelling-box">
+          <div class="travelling-box-top">
+            <h2><span>1</span>Adult</h2>
+            <i class="fa fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="travelling-box">
+          <div class="travelling-box-top">
+            <h2><span>2</span>Adult</h2>
             <i class="fa fa-chevron-up"></i>
           </div>
-          <div class="filter-box-content">
-            <span class="price-amount">$600</span>
-            <input type="range">
-          </div>
-        </div>
-
-        <div class="filter-box">
-          <div class="filter-title">
-            <h6>depart time</h6>
-            <i class="fa fa-chevron-up"></i>
-          </div>
-          <div class="filter-box-content">
-            <button class="depart-btn">
-              <i class="icon ion-ios-partlysunny"></i>
-              <span>before 6 am</span>
-            </button>
-            <button class="depart-btn">
-              <i class="icon ion-ios-sunny"></i>
-              <span>6am - 12 am</span>
-            </button>
-            <button class="depart-btn">
-              <i class="icon ion-ios-cloudy"></i>
-              <span>12pm - 6 pm</span>
-            </button>
-            <button class="depart-btn">
-              <i class="icon ion-ios-cloudy-night"></i>
-              <span>after 6 pm</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="filter-box">
-          <div class="filter-title">
-            <h6>stops</h6>
-            <i class="fa fa-chevron-up"></i>
-          </div>
-          <div class="filter-box-content">
-            <button class="stops-btn">
-              0
-            </button>
-            <button class="stops-btn active">
-              1
-            </button>
-            <button class="stops-btn">
-              2+
-            </button>
-          </div>
-        </div>
-
-        <div class="filter-box">
-          <div class="filter-title">
-            <h6>airlines</h6>
-            <i class="fa fa-chevron-up"></i>
-          </div>
-          <div class="filter-box-content">
-            <div class="airline-item">
-              <input type="checkbox" id="aeroflot">
-              <label for="aeroflot">
-                <i class="fa fa-square-o"></i>
-                <i class="fa fa-check-square-o"></i>
-                <span>aeroflot</span>
-              </label>
-            </div>
-
-            <div class="airline-item">
-              <input type="checkbox" id="air-berlin">
-              <label for="air-berlin">
-                <i class="fa fa-square-o"></i>
-                <i class="fa fa-check-square-o"></i>
-                <span>air berlin</span>
-              </label>
-            </div>
-
-            <div class="airline-item">
-              <input type="checkbox" id="air-canada">
-              <label for="air-canada">
-                <i class="fa fa-square-o"></i>
-                <i class="fa fa-check-square-o"></i>
-                <span>air canada</span>
-              </label>
-            </div>
-
-            <div class="airline-item">
-              <input type="checkbox" id="air-france">
-              <label for="air-france">
-                <i class="fa fa-square-o"></i>
-                <i class="fa fa-check-square-o"></i>
-                <span>air france</span>
-              </label>
-            </div>
-
-            <div class="airline-item">
-              <input type="checkbox" id="alitalia">
-              <label for="alitalia">
-                <i class="fa fa-square-o"></i>
-                <i class="fa fa-check-square-o"></i>
-                <span>alitalia</span>
-              </label>
-            </div>
-
-            <div class="airline-item">
-              <input type="checkbox" id="austrian-airlines">
-              <label for="austrian-airlines">
-                <i class="fa fa-square-o"></i>
-                <i class="fa fa-check-square-o"></i>
-                <span>austrian airlines</span>
-              </label>
-            </div>
-
-            <div class="airline-item">
-              <input type="checkbox" id="austrian-airlines2">
-              <label for="austrian-airlines2">
-                <i class="fa fa-square-o"></i>
-                <i class="fa fa-check-square-o"></i>
-                <span>austrian airlines</span>
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="reset-all">
-          <button class="reset-btn">reset all filters</button>
-        </div>
-
-      </aside>
-      <div class="result-box">
-        <div class="sort-by">
-          <div class="sort-by-title">
-            <h6>565 results</h6>
-          </div>
-          <div class="sort-by-input">
-            <label for="">sort by:</label>
-            <select name="" id="">
-              <option value="">Price per Adult</option>
-              <option value="">Price per Children</option>
-              <option value="">Price per Infant</option>
-            </select>
-          </div>
-        </div>
-        <div class="result-item">
-          <div class="result-single-item">
-            <div class="departure">
-              <div class="departure-item">
-                <div class="airline">
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
+          <form class="travelling-box-form">
+            <div class="personal-info travelling-box-form-item">
+              <div class="title">
+                <h6>personal information</h6>
+              </div>
+              <div class="content">
+                <div class="first-name">
+                  <label for="fname">first name</label>
+                  <input type="text" name="" id="fname" placeholder="enter first name">
+                </div>
+                <div class="last-name">
+                  <label for="lname">last name</label>
+                  <input type="text" name="" id="lname" placeholder="enter last name">
+                </div>
+                <div class="birth-gender">
+                  <div class="birth">
+                    <label for="dob">date of birth</label>
+                    <input type="date" id="dob">
                   </div>
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
+                  <div class="gender">
+                    <label for="gender">gender</label>
+                    <select name="" id="gender">
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
                   </div>
                 </div>
-                <div class="onbound">
-                  <div class="onbound-time">
-                    <h6>07:05am</h6>
-                  </div>
-                  <div class="onbound-date">
-                    <span>jun 04, fri</span>
-                  </div>
-                  <div class="onbound-airport">
-                    <span>los angeles lax</span>
-                  </div>
+                <div class="nationality">
+                  <label for="nationality">nationality</label>
+                  <select name="" id="nationality">
+                    <option value="bd">Bangladeshi</option>
+                    <option value="in">indian</option>
+                    <option value="pk">pakistani</option>
+                  </select>
                 </div>
-                <div class="details">
-                  <div class="details-duration">
-                    <span>10h 50m</span>
-                  </div>
-                  <div class="details-chart">
-                    <div class="chart">
-                      <div class="chart-circle"></div>
-                      <div class="chart-circle"></div>
+                <div class="passport">
+                  <label for="passport">passport of id number</label>
+                  <input type="text" name="" id="passport" placeholder="0000 0000 0000 0000">
+                </div>
+                <div class="expiry">
+                  <label>Expiry date</label>
+                  <div class="expiry-item">
+                    <select name="">
+                      <option value="01">January</option>
+                      <option value="02">february</option>
+                      <option value="03">march</option>
+                    </select>
+                    <select name="" >
+                      <option value="2001">2001</option>
+                      <option value="2002">2002</option>
+                      <option value="2003">2003</option>
+                    </select>
+                    <div class="checkbox">
+                      <input type="checkbox" name="" id="echeck">
+                      <label for="echeck">                  
+                        <i class="fa fa-square-o"></i>
+                        <i class="fa fa-check-square-o"></i>
+                        <span>No expiry</span>
+                      </label>
                     </div>
-                  </div>
-                  <div class="details-chart">
-                    <span>2 stops</span>
-                  </div>
-                  <div class="details-stops"></div>
-                </div>
-                <div class="arrive">
-                  <div class="arrive-time">
-                    <h6>09:10pm</h6>
-                  </div>
-                  <div class="arrive-date">
-                    <span>jun 06, fri</span>
-                  </div>
-                  <div class="arrive-airport">
-                    <span>istanbut ist</span>
                   </div>
                 </div>
               </div>
-              <div class="departure-item">
-                <div class="airline">
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="onbound">
-                  <div class="onbound-time">
-                    <h6>07:05am</h6>
-                  </div>
-                  <div class="onbound-date">
-                    <span>jun 04, fri</span>
-                  </div>
-                  <div class="onbound-airport">
-                    <span>los angeles lax</span>
-                  </div>
-                </div>
-                <div class="details">
-                  <div class="details-duration">
-                    <span>10h 50m</span>
-                  </div>
-                  <div class="details-chart">
-                    <div class="chart">
-                      <div class="chart-circle"></div>
-                      <div class="chart-circle"></div>
-                    </div>
-                  </div>
-                  <div class="details-chart">
-                    <span>2 stops</span>
-                  </div>
-                  <div class="details-stops"></div>
-                </div>
-                <div class="arrive">
-                  <div class="arrive-time">
-                    <h6>09:10pm</h6>
-                  </div>
-                  <div class="arrive-date">
-                    <span>jun 06, fri</span>
-                  </div>
-                  <div class="arrive-airport">
-                    <span>istanbut ist</span>
-                  </div>
-                </div>
+            </div>
+            <div class="baggage travelling-box-form-item">
+              <div class="title">
+                <h6>Baggage</h6>
               </div>
-              <div class="details-tag">
-                <span>details</span>
+              <div class="content">
+                <div class="content-box">
+                    <p class="cabin-baggage">
+                      <span class="cabin-baggage-item">Cabin Baggage</span>
+                      <span class="cabin-baggage-details">42x32x20cm</span>
+                      <span class="cabin-baggage-price">free</span>
+                    </p>
+                    <p class="cabin-baggage checked-baggege">
+                      <span class="cabin-baggage-item">Cabin Baggage</span>
+                      <span class="cabin-baggage-details">42x32x20cm</span>
+                      <span class="cabin-baggage-price">free</span>
+                      <span class="cabin-baggage-icon"><a href="#"><i class="icon ion-android-close"></i></a></span>
+                    </p>
+                </div>
               </div>
             </div>
-            <div class="price">
-              <h6 class="price-amount">$988</h6>
-              <button class="price-btn">Book</button>
-            </div>
-          </div>
-          <div class="result-single-item">
-            <div class="departure">
-              <div class="departure-item">
-                <div class="airline">
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="onbound">
-                  <div class="onbound-time">
-                    <h6>07:05am</h6>
-                  </div>
-                  <div class="onbound-date">
-                    <span>jun 04, fri</span>
-                  </div>
-                  <div class="onbound-airport">
-                    <span>los angeles lax</span>
-                  </div>
-                </div>
-                <div class="details">
-                  <div class="details-duration">
-                    <span>10h 50m</span>
-                  </div>
-                  <div class="details-chart">
-                    <div class="chart">
-                      <div class="chart-circle"></div>
-                      <div class="chart-circle"></div>
-                    </div>
-                  </div>
-                  <div class="details-chart">
-                    <span>2 stops</span>
-                  </div>
-                  <div class="details-stops"></div>
-                </div>
-                <div class="arrive">
-                  <div class="arrive-time">
-                    <h6>09:10pm</h6>
-                  </div>
-                  <div class="arrive-date">
-                    <span>jun 06, fri</span>
-                  </div>
-                  <div class="arrive-airport">
-                    <span>istanbut ist</span>
-                  </div>
-                </div>
-              </div>
-              <div class="departure-item">
-                <div class="airline">
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="onbound">
-                  <div class="onbound-time">
-                    <h6>07:05am</h6>
-                  </div>
-                  <div class="onbound-date">
-                    <span>jun 04, fri</span>
-                  </div>
-                  <div class="onbound-airport">
-                    <span>los angeles lax</span>
-                  </div>
-                </div>
-                <div class="details">
-                  <div class="details-duration">
-                    <span>10h 50m</span>
-                  </div>
-                  <div class="details-chart">
-                    <div class="chart">
-                      <div class="chart-circle"></div>
-                      <div class="chart-circle"></div>
-                    </div>
-                  </div>
-                  <div class="details-chart">
-                    <span>2 stops</span>
-                  </div>
-                  <div class="details-stops"></div>
-                </div>
-                <div class="arrive">
-                  <div class="arrive-time">
-                    <h6>09:10pm</h6>
-                  </div>
-                  <div class="arrive-date">
-                    <span>jun 06, fri</span>
-                  </div>
-                  <div class="arrive-airport">
-                    <span>istanbut ist</span>
-                  </div>
-                </div>
-              </div>
-              <div class="details-tag">
-                <span>details</span>
-              </div>
-            </div>
-            <div class="price">
-              <h6 class="price-amount">$988</h6>
-              <button class="price-btn">Book</button>
-            </div>
-          </div>
-          <div class="result-single-item">
-            <div class="departure">
-              <div class="departure-item">
-                <div class="airline">
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="onbound">
-                  <div class="onbound-time">
-                    <h6>07:05am</h6>
-                  </div>
-                  <div class="onbound-date">
-                    <span>jun 04, fri</span>
-                  </div>
-                  <div class="onbound-airport">
-                    <span>los angeles lax</span>
-                  </div>
-                </div>
-                <div class="details">
-                  <div class="details-duration">
-                    <span>10h 50m</span>
-                  </div>
-                  <div class="details-chart">
-                    <div class="chart">
-                      <div class="chart-circle"></div>
-                      <div class="chart-circle"></div>
-                    </div>
-                  </div>
-                  <div class="details-chart">
-                    <span>2 stops</span>
-                  </div>
-                  <div class="details-stops"></div>
-                </div>
-                <div class="arrive">
-                  <div class="arrive-time">
-                    <h6>09:10pm</h6>
-                  </div>
-                  <div class="arrive-date">
-                    <span>jun 06, fri</span>
-                  </div>
-                  <div class="arrive-airport">
-                    <span>istanbut ist</span>
-                  </div>
-                </div>
-              </div>
-              <div class="departure-item">
-                <div class="airline">
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="onbound">
-                  <div class="onbound-time">
-                    <h6>07:05am</h6>
-                  </div>
-                  <div class="onbound-date">
-                    <span>jun 04, fri</span>
-                  </div>
-                  <div class="onbound-airport">
-                    <span>los angeles lax</span>
-                  </div>
-                </div>
-                <div class="details">
-                  <div class="details-duration">
-                    <span>10h 50m</span>
-                  </div>
-                  <div class="details-chart">
-                    <div class="chart">
-                      <div class="chart-circle"></div>
-                      <div class="chart-circle"></div>
-                    </div>
-                  </div>
-                  <div class="details-chart">
-                    <span>2 stops</span>
-                  </div>
-                  <div class="details-stops"></div>
-                </div>
-                <div class="arrive">
-                  <div class="arrive-time">
-                    <h6>09:10pm</h6>
-                  </div>
-                  <div class="arrive-date">
-                    <span>jun 06, fri</span>
-                  </div>
-                  <div class="arrive-airport">
-                    <span>istanbut ist</span>
-                  </div>
-                </div>
-              </div>
-              <div class="details-tag">
-                <span>details</span>
-              </div>
-            </div>
-            <div class="price">
-              <h6 class="price-amount">$988</h6>
-              <button class="price-btn">Book</button>
-            </div>
-          </div>
-          <div class="result-single-item">
-            <div class="departure">
-              <div class="departure-item">
-                <div class="airline">
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="onbound">
-                  <div class="onbound-time">
-                    <h6>07:05am</h6>
-                  </div>
-                  <div class="onbound-date">
-                    <span>jun 04, fri</span>
-                  </div>
-                  <div class="onbound-airport">
-                    <span>los angeles lax</span>
-                  </div>
-                </div>
-                <div class="details">
-                  <div class="details-duration">
-                    <span>10h 50m</span>
-                  </div>
-                  <div class="details-chart">
-                    <div class="chart">
-                      <div class="chart-circle"></div>
-                      <div class="chart-circle"></div>
-                    </div>
-                  </div>
-                  <div class="details-chart">
-                    <span>2 stops</span>
-                  </div>
-                  <div class="details-stops"></div>
-                </div>
-                <div class="arrive">
-                  <div class="arrive-time">
-                    <h6>09:10pm</h6>
-                  </div>
-                  <div class="arrive-date">
-                    <span>jun 06, fri</span>
-                  </div>
-                  <div class="arrive-airport">
-                    <span>istanbut ist</span>
-                  </div>
-                </div>
-              </div>
-              <div class="departure-item">
-                <div class="airline">
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                  <div class="airline-item">
-                    <div class="airline-img"></div>
-                    <div class="airline-details">
-                      <h6>american airlines</h6>
-                      <span>ba-3271</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="onbound">
-                  <div class="onbound-time">
-                    <h6>07:05am</h6>
-                  </div>
-                  <div class="onbound-date">
-                    <span>jun 04, fri</span>
-                  </div>
-                  <div class="onbound-airport">
-                    <span>los angeles lax</span>
-                  </div>
-                </div>
-                <div class="details">
-                  <div class="details-duration">
-                    <span>10h 50m</span>
-                  </div>
-                  <div class="details-chart">
-                    <div class="chart">
-                      <div class="chart-circle"></div>
-                      <div class="chart-circle"></div>
-                    </div>
-                  </div>
-                  <div class="details-chart">
-                    <span>2 stops</span>
-                  </div>
-                  <div class="details-stops"></div>
-                </div>
-                <div class="arrive">
-                  <div class="arrive-time">
-                    <h6>09:10pm</h6>
-                  </div>
-                  <div class="arrive-date">
-                    <span>jun 06, fri</span>
-                  </div>
-                  <div class="arrive-airport">
-                    <span>istanbut ist</span>
-                  </div>
-                </div>
-              </div>
-              <div class="details-tag">
-                <span>details</span>
-              </div>
-            </div>
-            <div class="price">
-              <h6 class="price-amount">$988</h6>
-              <button class="price-btn">Book</button>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
       </div>
     </section>
+
   </body>
 </html>

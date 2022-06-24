@@ -700,6 +700,15 @@ body {
   width: 100%;
   text-transform: capitalize;
 }
+.dropdown-form-search input::-moz-placeholder {
+  color: #b4b4c8;
+}
+.dropdown-form-search input:-ms-input-placeholder {
+  color: #b4b4c8;
+}
+.dropdown-form-search input::placeholder {
+  color: #b4b4c8;
+}
 .dropdown-form-search input:focus {
   color: #ffffff;
 }
@@ -708,6 +717,7 @@ body {
 }
 .dropdown-form-search select {
   text-transform: capitalize;
+  width: 100%;
 }
 .dropdown-form-search .input-from,
 .dropdown-form-search .input-to,
@@ -792,6 +802,10 @@ body {
 .filter .filter-box .filter-title i {
   font-size: 16px;
   color: #b4b4c8;
+  cursor: pointer;
+}
+.filter .filter-box .filter-title i:hover {
+  color: #32d093;
 }
 .filter .filter-box input[type=range] {
   -webkit-appearance: none;
@@ -888,16 +902,16 @@ body {
 .filter .filter-box .airline-item label span {
   margin-left: 10px;
 }
-.filter .filter-box .airline-item input + label .fa-square-o {
+.filter .filter-box .airline-item input:checked + label .fa-square-o {
   display: none;
 }
-.filter .filter-box .airline-item input + label .fa-check-square-o {
-  display: inline-block;
-}
-.filter .filter-box .airline-item input:checked + label .fa-square-o {
-  display: inline-block;
-}
 .filter .filter-box .airline-item input:checked + label .fa-check-square-o {
+  display: inline-block;
+}
+.filter .filter-box .airline-item input + label .fa-square-o {
+  display: inline-block;
+}
+.filter .filter-box .airline-item input + label .fa-check-square-o {
   display: none;
 }
 .filter .reset-btn {
@@ -1114,4 +1128,236 @@ body {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   cursor: pointer;
+}
+.result-box .continue {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+}
+.result-box .continue button {
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #32d093;
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 4px;
+}
+.result-box .continue p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #404057;
+}
+
+.travelling .container {
+  padding: 0;
+}
+.travelling-header {
+  margin-bottom: 10px;
+}
+.travelling-header h3 {
+  border-radius: 4px;
+  padding: 15px 28px;
+  color: #ffffff;
+  background-color: #404057;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+}
+.travelling-box {
+  padding: 40px 70px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.travelling-box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.travelling-box-top h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #404057;
+  text-transform: uppercase;
+}
+.travelling-box-top span {
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #404057;
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  line-height: 30px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+}
+.travelling-box-top i {
+  font-size: 24px;
+  color: #32d093;
+}
+.travelling-box-form-item {
+  margin-top: 40px;
+}
+.travelling-box-form-item .title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #404057;
+  text-transform: capitalize;
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 25px;
+}
+.travelling-box-form-item .title::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: #32d093;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+}
+.travelling-box .personal-info .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-transform: capitalize;
+}
+.travelling-box .personal-info .content label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #404057;
+  display: block;
+  margin-bottom: 10px;
+}
+.travelling-box .personal-info .content input,
+.travelling-box .personal-info .content select {
+  border: 2px solid #edf2f6;
+  border-radius: 4px;
+  padding: 15px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #b4b4c8;
+}
+.travelling-box .personal-info .content input::-moz-placeholder, .travelling-box .personal-info .content select::-moz-placeholder {
+  color: #b4b4c8;
+}
+.travelling-box .personal-info .content input:-ms-input-placeholder, .travelling-box .personal-info .content select:-ms-input-placeholder {
+  color: #b4b4c8;
+}
+.travelling-box .personal-info .content input::placeholder,
+.travelling-box .personal-info .content select::placeholder {
+  color: #b4b4c8;
+}
+.travelling-box .personal-info .content input:focus,
+.travelling-box .personal-info .content select:focus {
+  border: 2px solid #32d093;
+}
+.travelling-box .personal-info .content input[type=date] {
+  text-transform: uppercase;
+}
+.travelling-box .personal-info .content .birth-gender {
+  display: flex;
+  gap: 20px;
+}
+.travelling-box .personal-info .content .birth-gender > * {
+  flex-basis: 50%;
+}
+.travelling-box .personal-info .content .expiry-item {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+}
+.travelling-box .personal-info .content .expiry-item > * {
+  flex-basis: 33%;
+}
+.travelling-box .personal-info .content .expiry-item .checkbox {
+  display: flex;
+}
+.travelling-box .personal-info .content .expiry-item .checkbox input {
+  display: none;
+}
+.travelling-box .personal-info .content .expiry-item .checkbox label,
+.travelling-box .personal-info .content .expiry-item .checkbox i {
+  cursor: pointer;
+  color: #b4b4c8;
+}
+.travelling-box .personal-info .content .expiry-item .checkbox label span {
+  margin-left: 10px;
+}
+.travelling-box .personal-info .content .expiry-item .checkbox input + label {
+  color: #b4b4c8;
+}
+.travelling-box .personal-info .content .expiry-item .checkbox input + label i {
+  width: 10px;
+}
+.travelling-box .personal-info .content .expiry-item .checkbox input + label .fa-square-o {
+  display: inline-block;
+}
+.travelling-box .personal-info .content .expiry-item .checkbox input + label .fa-check-square-o {
+  display: none;
+}
+.travelling-box .personal-info .content .expiry-item .checkbox input:checked + label {
+  color: #404057;
+}
+.travelling-box .personal-info .content .expiry-item .checkbox input:checked + label .fa-check-square-o {
+  display: inline-block;
+  color: #404057;
+}
+.travelling-box .personal-info .content .expiry-item .checkbox input:checked + label .fa-square-o {
+  display: none;
+}
+.travelling-box .baggage .content-box {
+  border: 2px solid #edf2f6;
+  padding: 10px 20px;
+  text-transform: capitalize;
+}
+.travelling-box .baggage .cabin-baggage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.travelling-box .baggage .cabin-baggage:not(:last-child) {
+  margin-bottom: 35px;
+}
+.travelling-box .baggage .cabin-baggage-item {
+  font-size: 16px;
+  font-weight: 600;
+  color: #404057;
+}
+.travelling-box .baggage .cabin-baggage-details {
+  font-size: 16px;
+  font-weight: 500;
+  color: #b4b4c8;
+}
+.travelling-box .baggage .cabin-baggage-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #404057;
+  margin-right: 100px;
+}
+.travelling-box .baggage .cabin-baggage-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background-color: #bfbfd0;
+  color: #ffffff;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
