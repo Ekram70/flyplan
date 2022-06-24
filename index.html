@@ -89,6 +89,8 @@
         </div>
       </div>
     </header>
+
+
     <section class="section change-search">
       <div class="container">
         <div class="flight">
@@ -130,8 +132,8 @@
                 <div class="input-from">
                   <input type="text" placeholder="From">
                 </div>
-                <i class="icon ion-android-sync"></i>
                 <div class="input-to">
+                  <i class="icon ion-android-sync"></i>
                   <input type="text" placeholder="To">
                 </div>
                 <div class="input-depart">
@@ -174,6 +176,150 @@
               </div>
           </form>
         </div>
+      </div>
+    </section>
+
+    <section class="section results">
+      <div class="container">
+      <aside class="filter">
+        <div class="title">
+          <h3>filters</h3>
+        </div>
+       
+        <div class="filter-box">
+          <div class="filter-title">
+            <h6>price range</h6>
+           
+            <i class="fa fa-chevron-up"></i>
+          </div>
+          <div class="filter-box-content">
+            <span class="price-amount">$600</span>
+            <input type="range">
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <div class="filter-title">
+            <h6>depart time</h6>
+            <i class="fa fa-chevron-up"></i>
+          </div>
+          <div class="filter-box-content">
+            <button class="depart-btn">
+              <i class="icon ion-ios-partlysunny"></i>
+              <span>before 6 am</span>
+            </button>
+            <button class="depart-btn">
+              <i class="icon ion-ios-sunny"></i>
+              <span>6am - 12 am</span>
+            </button>
+            <button class="depart-btn">
+              <i class="icon ion-ios-cloudy"></i>
+              <span>12pm - 6 pm</span>
+            </button>
+            <button class="depart-btn">
+              <i class="icon ion-ios-cloudy-night"></i>
+              <span>after 6 pm</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <div class="filter-title">
+            <h6>stops</h6>
+            <i class="fa fa-chevron-up"></i>
+          </div>
+          <div class="filter-box-content">
+            <button class="stops-btn">
+              0
+            </button>
+            <button class="stops-btn active">
+              1
+            </button>
+            <button class="stops-btn">
+              2+
+            </button>
+          </div>
+        </div>
+
+        <div class="filter-box">
+          <div class="filter-title">
+            <h6>airlines</h6>
+            <i class="fa fa-chevron-up"></i>
+          </div>
+          <div class="filter-box-content">
+            <div class="airline-item">
+              <input type="checkbox" id="aeroflot">
+              <label for="aeroflot">
+                <i class="fa fa-square-o"></i>
+                <i class="fa fa-check-square-o"></i>
+                <span>aeroflot</span>
+              </label>
+            </div>
+
+            <div class="airline-item">
+              <input type="checkbox" id="air-berlin">
+              <label for="air-berlin">
+                <i class="fa fa-square-o"></i>
+                <i class="fa fa-check-square-o"></i>
+                <span>air berlin</span>
+              </label>
+            </div>
+
+            <div class="airline-item">
+              <input type="checkbox" id="air-canada">
+              <label for="air-canada">
+                <i class="fa fa-square-o"></i>
+                <i class="fa fa-check-square-o"></i>
+                <span>air canada</span>
+              </label>
+            </div>
+
+            <div class="airline-item">
+              <input type="checkbox" id="air-france">
+              <label for="air-france">
+                <i class="fa fa-square-o"></i>
+                <i class="fa fa-check-square-o"></i>
+                <span>air france</span>
+              </label>
+            </div>
+
+            <div class="airline-item">
+              <input type="checkbox" id="alitalia">
+              <label for="alitalia">
+                <i class="fa fa-square-o"></i>
+                <i class="fa fa-check-square-o"></i>
+                <span>alitalia</span>
+              </label>
+            </div>
+
+            <div class="airline-item">
+              <input type="checkbox" id="austrian-airlines">
+              <label for="austrian-airlines">
+                <i class="fa fa-square-o"></i>
+                <i class="fa fa-check-square-o"></i>
+                <span>austrian airlines</span>
+              </label>
+            </div>
+
+            <div class="airline-item">
+              <input type="checkbox" id="austrian-airlines">
+              <label for="austrian-airlines">
+                <i class="fa fa-square-o"></i>
+                <i class="fa fa-check-square-o"></i>
+                <span>austrian airlines</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="reset-all">
+          <button class="reset-btn">reset all filters</button>
+        </div>
+
+      </aside>
+      <div class="result-box">
+
+      </div>
       </div>
     </section>
   </body>

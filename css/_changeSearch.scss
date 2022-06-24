@@ -44,7 +44,7 @@
     text-align: center;
     border-radius: 4px;
     button {
-      padding: 6px 10px;
+      padding: 10px 18px;
     }
   }
 }
@@ -63,6 +63,7 @@
     text-transform: capitalize;
     font-size: $fz-16;
     font-weight: $fontWeightMedium;
+    cursor: pointer;
     &:first-child {
       margin-right: 30px;
     }
@@ -103,8 +104,53 @@
   &-search {
     color: $smTextColor2;
     font-size: $fz-16;
-    font-weight: $fontWeightMedium;
+    font-weight: $fontWeightSemiBold;
     margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    text-transform: capitalize;
+    input {
+      width: 100%;
+      &:focus {
+        color: $whiteColor;
+      }
+      text-transform: capitalize;
+    }
+    input[type="date"] {
+      text-transform: uppercase;
+    }
+    select {
+      text-transform: capitalize;
+    }
+
+    .input-from,
+    .input-to,
+    .input-search {
+      grid-column: span 2;
+    }
+
+    .input-to {
+      width: 95%;
+      margin-left: auto;
+      position: relative;
+    }
+
+    .input-search {
+      text-align: center;
+      button {
+        text-transform: capitalize;
+        width: 100%;
+      }
+    }
+    .icon {
+      position: absolute;
+      left: -47px;
+      top: -5px;
+      font-size: $fz-28;
+      cursor: pointer;
+    }
+
     div {
       background-color: $bgColor3;
       display: inline-block;
@@ -114,7 +160,7 @@
         border: 2px solid $secondaryColor;
       }
       & > * {
-        padding: 12px 18px;
+        padding: 10px 18px;
       }
     }
   }

@@ -1,0 +1,172 @@
+.results {
+  // display: flex;
+  .container {
+    padding: 0;
+  }
+}
+.filter {
+  background-color: $whiteColor;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 270px;
+  color: $primaryColor;
+  & > div:not(:first-child) {
+    padding: 30px 0;
+    margin: 0 30px;
+  }
+  .title {
+    padding: 14px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $primaryColor;
+    color: $whiteColor;
+    font-size: $fz-24;
+    font-weight: $fontWeightSemiBold;
+  }
+  .filter-box {
+    &:not(:nth-last-child(1), :nth-last-child(2)) {
+      border-bottom: 5px dashed $bgColor;
+    }
+    .filter-title {
+      margin-top: 30px;
+      margin-bottom: 24px;
+      font-size: $fz-20;
+      font-weight: $fontWeightSemiBold;
+      text-transform: capitalize;
+      @include space-between;
+      i {
+        font-size: $fz-16;
+        color: $smTextColor2;
+      }
+    }
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 10px;
+      background-color: $bgColor;
+      transition: 0.3s background-color ease;
+      cursor: pointer;
+      border-radius: 32px;
+      &:hover {
+        background-color: $primaryColor;
+      }
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        @include round(15px);
+        border: 4px solid $primaryColor;
+        cursor: pointer;
+        &:hover {
+          background: $whiteColor;
+        }
+      }
+
+      &::-moz-range-thumb {
+        @include round(15px);
+        border: 2px solid $primaryColor;
+        cursor: pointer;
+        &:hover {
+          background: $whiteColor;
+        }
+      }
+    }
+
+    .price-amount {
+      font-weight: $fontWeightMedium;
+      font-size: $fz-16;
+      position: relative;
+      left: 80px;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    .depart-btn {
+      display: block;
+      background-color: $bgColor;
+      width: 100%;
+      border-radius: 4px;
+      padding: 8px 20px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      .icon {
+        font-size: $fz-24;
+      }
+      span {
+        font-weight: $fontWeightMedium;
+        font-size: $fz-18;
+        text-transform: capitalize;
+        margin-left: 15px;
+      }
+    }
+
+    .stops-btn {
+      font-size: $fz-22;
+      font-weight: $fontWeightMedium;
+      background-color: $bgColor;
+      padding: 10px 0;
+      text-align: center;
+      display: inline-block;
+      width: 55px;
+      border-radius: 4px;
+      &.active {
+        background-color: $primaryColor;
+        color: $whiteColor;
+      }
+    }
+
+    .airline-item {
+      display: flex;
+      margin-bottom: 25px;
+      label {
+        font-size: $fz-16;
+        font-weight: $fontWeightMedium;
+        text-transform: capitalize;
+        cursor: pointer;
+        i {
+          font-size: $fz-18;
+          width: 10px;
+          .fa-square-o {
+            color: $smTextColor2;
+          }
+        }
+        span {
+          margin-left: 10px;
+        }
+      }
+
+      input + label {
+        .fa-square-o {
+          display: none;
+        }
+        .fa-check-square-o {
+          display: inline-block;
+        }
+      }
+
+      input:checked + label {
+        .fa-square-o {
+          display: inline-block;
+        }
+        .fa-check-square-o {
+          display: none;
+        }
+      }
+    }
+    
+  }
+  .reset-btn {
+    background-color: $smTextColor2;
+    width: 100%;
+    text-align: center; 
+    text-transform: capitalize;
+    color: $whiteColor;
+    border-radius: 4px;
+    padding: 12px 0;
+    cursor: pointer;
+    transition: 0.3s background-color ease;
+    &:hover{
+      background-color: $secondaryColor;
+    }
+  }
+}
