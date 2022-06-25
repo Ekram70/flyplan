@@ -377,7 +377,6 @@ a {
 
 body {
   font-family: "Work Sans", sans-serif;
-  min-height: 100vh;
   background-color: #edf2f6;
 }
 
@@ -1892,4 +1891,118 @@ body {
 }
 .footer-bottom .policy a:hover {
   color: #ffffff;
+}
+
+.sidebar {
+  background-color: #ffffff;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 270px;
+  height: 100%;
+  box-shadow: -5px 0px 10px rgba(64, 64, 87, 0.2);
+  overflow-y: auto;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+.sidebar .header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #404057;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.summary-section {
+  padding: 0 30px;
+  margin-top: 25px;
+  position: relative;
+}
+.summary-section .title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #32d093;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.summary-section .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 40px;
+  width: 6px;
+  background-color: #32d093;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.summary-section .muted {
+  font-weight: 700;
+  color: #b4b4c8;
+}
+.summary-section .color {
+  color: #404057;
+  font-size: 24px;
+}
+
+.summary-item {
+  margin-top: 30px;
+}
+.summary-item-title h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #404057;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.summary-item-title h4 i {
+  font-size: 22px;
+  color: #b4b4c8;
+  transform: translateY(2px);
+  margin-right: 10px;
+}
+.summary-item .flight-item {
+  margin-bottom: 20px;
+}
+.summary-item .flight-item span {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #404057;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.summary-item .flight-item .strong {
+  font-weight: 700;
+}
+.summary-item .flight-summary span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #b4b4c8;
+  text-transform: uppercase;
+}
+.summary-item .travellers-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.summary-item .travellers-item span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #404057;
+  text-transform: capitalize;
+}
+.summary-item .travellers-item .price-muted {
+  color: #b4b4c8;
+}
+
+.summary-last {
+  margin-bottom: 35px;
 }
