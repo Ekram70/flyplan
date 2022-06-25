@@ -1,0 +1,126 @@
+.confirmation {
+  .container {
+    padding: 0;
+  }
+  &-header {
+    margin-bottom: 10px;
+    h3 {
+      border-radius: 4px;
+      padding: 15px 28px;
+      color: $whiteColor;
+      background-color: $primaryColor;
+      font-size: $fz-24;
+      font-weight: $fontWeightSemiBold;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+
+  &-box {
+    padding: 30px 70px;
+    background-color: $whiteColor;
+    border-radius: 4px;
+    margin-bottom: 10px;
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      // & > div {
+      //   border: 1px solid;
+      // }
+      text-transform: capitalize;
+      label {
+        font-size: $fz-16;
+        font-weight: $fontWeightMedium;
+        color: $primaryColor;
+        display: block;
+        margin-bottom: 10px;
+      }
+      input,
+      select {
+        border: 2px solid $bgColor;
+        border-radius: 4px;
+        padding: 15px;
+        width: 100%;
+        font-size: $fz-16;
+        font-weight: $fontWeightMedium;
+        color: $smTextColor2;
+        &::placeholder {
+          color: $smTextColor2;
+        }
+        &:focus {
+          border: 2px solid $secondaryColor;
+        }
+      }
+      input[type="date"] {
+        text-transform: uppercase;
+      }
+
+      .checkbox {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        input {
+          display: none;
+        }
+        label,
+        i {
+          cursor: pointer;
+          color: $smTextColor2;
+        }
+        label span {
+          margin-left: 10px;
+        }
+
+        label a {
+          color: $secondaryColor;
+        }
+        input + label {
+          color: $smTextColor2;
+          i {
+            width: 10px;
+          }
+          .fa-square-o {
+            display: inline-block;
+          }
+          .fa-check-square-o {
+            display: none;
+          }
+        }
+        input:checked + label {
+          color: $primaryColor;
+          .fa-check-square-o {
+            display: inline-block;
+            color: $primaryColor;
+          }
+          .fa-square-o {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &-btn {
+    margin-top: 30px;
+    @include space-between;
+    button {
+      padding: 10px 30px;
+      border-radius: 4px;
+      font-size: $fz-18;
+      font-weight: $fontWeightBold;
+      color: $whiteColor;
+      text-transform: capitalize;
+    }
+    .buy {
+      background-color: $secondaryColor;
+    }
+    p {
+      font-size: $fz-18;
+      font-weight: $fontWeightSemiBold;
+      color: $primaryColor;
+    }
+  }
+}

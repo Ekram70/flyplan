@@ -1681,3 +1681,131 @@ body {
 .pay-btn .continue {
   background-color: #32d093;
 }
+
+.confirmation .container {
+  padding: 0;
+}
+.confirmation-header {
+  margin-bottom: 10px;
+}
+.confirmation-header h3 {
+  border-radius: 4px;
+  padding: 15px 28px;
+  color: #ffffff;
+  background-color: #404057;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+}
+.confirmation-box {
+  padding: 30px 70px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.confirmation-box .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-transform: capitalize;
+}
+.confirmation-box .content label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #404057;
+  display: block;
+  margin-bottom: 10px;
+}
+.confirmation-box .content input,
+.confirmation-box .content select {
+  border: 2px solid #edf2f6;
+  border-radius: 4px;
+  padding: 15px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #b4b4c8;
+}
+.confirmation-box .content input::-moz-placeholder, .confirmation-box .content select::-moz-placeholder {
+  color: #b4b4c8;
+}
+.confirmation-box .content input:-ms-input-placeholder, .confirmation-box .content select:-ms-input-placeholder {
+  color: #b4b4c8;
+}
+.confirmation-box .content input::placeholder,
+.confirmation-box .content select::placeholder {
+  color: #b4b4c8;
+}
+.confirmation-box .content input:focus,
+.confirmation-box .content select:focus {
+  border: 2px solid #32d093;
+}
+.confirmation-box .content input[type=date] {
+  text-transform: uppercase;
+}
+.confirmation-box .content .checkbox {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.confirmation-box .content .checkbox input {
+  display: none;
+}
+.confirmation-box .content .checkbox label,
+.confirmation-box .content .checkbox i {
+  cursor: pointer;
+  color: #b4b4c8;
+}
+.confirmation-box .content .checkbox label span {
+  margin-left: 10px;
+}
+.confirmation-box .content .checkbox label a {
+  color: #32d093;
+}
+.confirmation-box .content .checkbox input + label {
+  color: #b4b4c8;
+}
+.confirmation-box .content .checkbox input + label i {
+  width: 10px;
+}
+.confirmation-box .content .checkbox input + label .fa-square-o {
+  display: inline-block;
+}
+.confirmation-box .content .checkbox input + label .fa-check-square-o {
+  display: none;
+}
+.confirmation-box .content .checkbox input:checked + label {
+  color: #404057;
+}
+.confirmation-box .content .checkbox input:checked + label .fa-check-square-o {
+  display: inline-block;
+  color: #404057;
+}
+.confirmation-box .content .checkbox input:checked + label .fa-square-o {
+  display: none;
+}
+.confirmation-btn {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.confirmation-btn button {
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.confirmation-btn .buy {
+  background-color: #32d093;
+}
+.confirmation-btn p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #404057;
+}
