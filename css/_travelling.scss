@@ -168,6 +168,7 @@
         border: 2px solid $bgColor;
         padding: 10px 20px;
         text-transform: capitalize;
+        margin-bottom: 10px;
       }
       .cabin-baggage {
         @include space-between;
@@ -175,6 +176,7 @@
           margin-bottom: 35px;
         }
         position: relative;
+        text-align: center;
         &-item {
           font-size: $fz-16;
           font-weight: $fontWeightSemiBold;
@@ -207,6 +209,201 @@
           @include center;
         }
       }
+
+      .add-baggage {
+        text-transform: capitalize;
+        &-container {
+          @include space-between;
+          align-items: stretch;
+          gap: 10px;
+          margin-bottom: 10px;
+        }
+        p {
+          padding: 18px 25px;
+          display: flex;
+          background-color: $bgColor;
+          border-radius: 4px;
+          flex-basis: 90%;
+          & > * {
+            flex-basis: 50%;
+          }
+        }
+        &-item {
+          font-size: $fz-16;
+          font-weight: $fontWeightSemiBold;
+          color: $primaryColor;
+          position: relative;
+          isolation: isolate;
+          i {
+            cursor: pointer;
+            display: inline-block;
+            &:hover + span {
+              display: inline-block;
+            }
+          }
+          span {
+            font-size: $fz-13;
+            font-weight: $fontWeightMedium;
+            color: $primaryColor;
+            background-color: $whiteColor;
+            display: none;
+            text-align: center;
+            width: 220px;
+            padding: 10px;
+            border-radius: 4px;
+            position: absolute;
+            right: 165px;
+            top: -70px;
+            filter: drop-shadow(
+              0px 0px 5px rgba($color: $primaryColor, $alpha: 0.2)
+            );
+            &::after {
+              content: "";
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              transform: translate(-50%, -50%) rotate(45deg);
+              height: 15px;
+              width: 15px;
+              background-color: $whiteColor;
+              z-index: -2;
+            }
+          }
+        }
+        &-details {
+          font-size: $fz-16;
+          font-weight: $fontWeightMedium;
+          color: $smTextColor2;
+        }
+        &-input {
+          background-color: $bgColor;
+          width: 100px;
+          input {
+            padding: 10px 0 10px 20px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .price-btn {
+          font-size: $fz-18;
+          font-weight: $fontWeightBold;
+          color: $whiteColor;
+          background-color: $secondaryColor;
+          border-radius: 4px;
+          flex-basis: 10%;
+          button {
+            width: 130px;
+            text-align: center;
+            display: inline-block;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .pricing-content {
+      display: flex;
+      gap: 10px;
+    }
+    .pricing-table {
+      border: 2px solid transparent;
+      border-radius: 4px;
+      padding: 35px 40px;
+      width: 33%;
+      position: relative;
+      &:hover {
+        border: 2px solid $secondaryColor;
+        .price-close i {
+          display: inline-block;
+        }
+        .price-amount {
+          button {
+            color: $bgColor5;
+            background-color: $bgColor;
+          }
+        }
+      }
+      .price-close i {
+        font-size: $fz-20;
+        color: $primaryColor;
+        background-color: $whiteColor;
+        border-radius: 50%;
+        display: none;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        box-shadow: 0 0 5px rgba($color: $primaryColor, $alpha: 0.5);
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(50%, -50%);
+      }
+      .img {
+        text-align: center;
+        font-size: $fz-30;
+        color: $primaryColor;
+        margin-bottom: 25px;
+      }
+      .pricing-title {
+        text-align: center;
+        color: $primaryColor;
+        font-size: $fz-20;
+        font-weight: $fontWeightSemiBold;
+        margin-bottom: 30px;
+      }
+      .price-details-item {
+        color: $bgColor5;
+        font-size: $fz-16;
+        font-weight: $fontWeightMedium;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+        i {
+          width: 20px;
+          text-align: center;
+        }
+        .fa-check {
+          color: $secondaryColor;
+        }
+        .fa-check + span {
+          color: $primaryColor;
+        }
+      }
+
+      .price-amount {
+        text-align: center;
+        button {
+          width: 110px;
+          color: $whiteColor;
+          font-size: $fz-18;
+          font-weight: $fontWeightBold;
+          background-color: $secondaryColor;
+          padding: 10px 0;
+          border-radius: 4px;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+
+  &-passenger {
+    margin-top: 30px;
+    button {
+      padding: 10px 30px;
+      border-radius: 4px;
+      font-size: $fz-18;
+      font-weight: $fontWeightBold;
+      color: $whiteColor;
+    }
+    i {
+      margin-right: 10px;
+    }
+    .add {
+      background-color: $smTextColor2;
+    }
+    .continue {
+      background-color: $secondaryColor;
+      margin-left: 10px;
     }
   }
 }

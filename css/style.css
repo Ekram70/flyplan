@@ -1318,12 +1318,14 @@ body {
   border: 2px solid #edf2f6;
   padding: 10px 20px;
   text-transform: capitalize;
+  margin-bottom: 10px;
 }
 .travelling-box .baggage .cabin-baggage {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  text-align: center;
 }
 .travelling-box .baggage .cabin-baggage:not(:last-child) {
   margin-bottom: 35px;
@@ -1361,3 +1363,192 @@ body {
   justify-content: center;
   align-items: center;
 }
+.travelling-box .baggage .add-baggage {
+  text-transform: capitalize;
+}
+.travelling-box .baggage .add-baggage-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.travelling-box .baggage .add-baggage p {
+  padding: 18px 25px;
+  display: flex;
+  background-color: #edf2f6;
+  border-radius: 4px;
+  flex-basis: 90%;
+}
+.travelling-box .baggage .add-baggage p > * {
+  flex-basis: 50%;
+}
+.travelling-box .baggage .add-baggage-item {
+  font-size: 16px;
+  font-weight: 600;
+  color: #404057;
+  position: relative;
+  isolation: isolate;
+}
+.travelling-box .baggage .add-baggage-item i {
+  cursor: pointer;
+  display: inline-block;
+}
+.travelling-box .baggage .add-baggage-item i:hover + span {
+  display: inline-block;
+}
+.travelling-box .baggage .add-baggage-item span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #404057;
+  background-color: #ffffff;
+  display: none;
+  text-align: center;
+  width: 220px;
+  padding: 10px;
+  border-radius: 4px;
+  position: absolute;
+  right: 165px;
+  top: -70px;
+  filter: drop-shadow(0px 0px 5px rgba(64, 64, 87, 0.2));
+}
+.travelling-box .baggage .add-baggage-item span::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  height: 15px;
+  width: 15px;
+  background-color: #ffffff;
+  z-index: -2;
+}
+.travelling-box .baggage .add-baggage-details {
+  font-size: 16px;
+  font-weight: 500;
+  color: #b4b4c8;
+}
+.travelling-box .baggage .add-baggage-input {
+  background-color: #edf2f6;
+  width: 100px;
+}
+.travelling-box .baggage .add-baggage-input input {
+  padding: 10px 0 10px 20px;
+  width: 100%;
+  height: 100%;
+}
+.travelling-box .baggage .add-baggage .price-btn {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #32d093;
+  border-radius: 4px;
+  flex-basis: 10%;
+}
+.travelling-box .baggage .add-baggage .price-btn button {
+  width: 130px;
+  text-align: center;
+  display: inline-block;
+  height: 100%;
+}
+.travelling-box .pricing-content {
+  display: flex;
+  gap: 10px;
+}
+.travelling-box .pricing-table {
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 35px 40px;
+  width: 33%;
+  position: relative;
+}
+.travelling-box .pricing-table:hover {
+  border: 2px solid #32d093;
+}
+.travelling-box .pricing-table:hover .price-close i {
+  display: inline-block;
+}
+.travelling-box .pricing-table:hover .price-amount button {
+  color: #bfbfd0;
+  background-color: #edf2f6;
+}
+.travelling-box .pricing-table .price-close i {
+  font-size: 20px;
+  color: #404057;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: none;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(64, 64, 87, 0.5);
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
+}
+.travelling-box .pricing-table .img {
+  text-align: center;
+  font-size: 30px;
+  color: #404057;
+  margin-bottom: 25px;
+}
+.travelling-box .pricing-table .pricing-title {
+  text-align: center;
+  color: #404057;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.travelling-box .pricing-table .price-details-item {
+  color: #bfbfd0;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+.travelling-box .pricing-table .price-details-item i {
+  width: 20px;
+  text-align: center;
+}
+.travelling-box .pricing-table .price-details-item .fa-check {
+  color: #32d093;
+}
+.travelling-box .pricing-table .price-details-item .fa-check + span {
+  color: #404057;
+}
+.travelling-box .pricing-table .price-amount {
+  text-align: center;
+}
+.travelling-box .pricing-table .price-amount button {
+  width: 110px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #32d093;
+  padding: 10px 0;
+  border-radius: 4px;
+  margin-top: 25px;
+}
+.travelling-passenger {
+  margin-top: 30px;
+}
+.travelling-passenger button {
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.travelling-passenger i {
+  margin-right: 10px;
+}
+.travelling-passenger .add {
+  background-color: #b4b4c8;
+}
+.travelling-passenger .continue {
+  background-color: #32d093;
+  margin-left: 10px;
+}/*# sourceMappingURL=style.css.map */
