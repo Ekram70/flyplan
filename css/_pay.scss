@@ -1,0 +1,127 @@
+.pay {
+  .container {
+    padding: 0;
+  }
+  &-header {
+    margin-bottom: 10px;
+    h3 {
+      border-radius: 4px;
+      padding: 15px 28px;
+      color: $whiteColor;
+      background-color: $primaryColor;
+      font-size: $fz-24;
+      font-weight: $fontWeightSemiBold;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+
+  &-box {
+    padding: 30px 70px;
+    background-color: $whiteColor;
+    border-radius: 4px;
+    margin-bottom: 10px;
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      // & > div {
+      //   border: 1px solid;
+      // }
+      text-transform: capitalize;
+      label {
+        font-size: $fz-16;
+        font-weight: $fontWeightMedium;
+        color: $primaryColor;
+        display: block;
+        margin-bottom: 10px;
+      }
+      input,
+      select {
+        border: 2px solid $bgColor;
+        border-radius: 4px;
+        padding: 15px;
+        width: 100%;
+        font-size: $fz-16;
+        font-weight: $fontWeightMedium;
+        color: $smTextColor2;
+        &::placeholder {
+          color: $smTextColor2;
+        }
+        &:focus {
+          border: 2px solid $secondaryColor;
+        }
+      }
+      input[type="date"] {
+        text-transform: uppercase;
+      }
+
+      .credit-card {
+        grid-column: span 3;
+        &-container {
+          @include space-between;
+        }
+        &-item {
+          width: 150px;
+          height: 85px;
+          background-color: $bgColor;
+          border-radius: 4px;
+          cursor: pointer;
+          &:hover {
+            background-color: $whiteColor;
+            border: 2px solid $secondaryColor;
+          }
+        }
+      }
+
+      .card-number {
+        text-transform: lowercase;
+      }
+
+      .expiry-box {
+        display: flex;
+        gap: 10px;
+      }
+
+      .expiry-item {
+        flex-basis: 70%;
+
+        .expiry-parts {
+          @include space-between;
+          gap: 10px;
+        }
+      }
+      .cvv {
+        flex-basis: 30%;
+      }
+
+      .location {
+        @include space-between;
+        gap: 10px;
+        & > * {
+          flex-basis: 50%;
+        }
+      }
+    }
+  }
+  &-btn {
+    margin-top: 30px;
+    button {
+      padding: 10px 30px;
+      border-radius: 4px;
+      font-size: $fz-18;
+      font-weight: $fontWeightBold;
+      color: $whiteColor;
+    }
+    i {
+      margin-right: 10px;
+    }
+    .add {
+      background-color: $smTextColor2;
+    }
+    .continue {
+      background-color: $secondaryColor;
+    }
+  }
+}
