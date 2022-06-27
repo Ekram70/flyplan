@@ -375,6 +375,7 @@ a {
 body {
   font-family: "Work Sans", sans-serif;
   background-color: #edf2f6;
+  max-width: 100vw;
 }
 
 .section {
@@ -383,12 +384,12 @@ body {
 
 .container {
   max-width: 1170px;
-  padding: 15px;
   margin: 0 auto;
 }
-
-.d-block {
-  display: block;
+@media (max-width: 1200px) {
+  .container {
+    max-width: 90%;
+  }
 }
 
 .d-none {
@@ -414,11 +415,37 @@ body {
   align-items: center;
   padding: 9px 0;
 }
+@media (max-width: 576px) {
+  .top-menu span {
+    display: none;
+  }
+}
+.top-menu .active-currency span {
+  display: inline-block;
+}
+.top-menu .currency-list span {
+  display: block;
+}
 .top-menu-item {
   display: inline-block;
 }
 .top-menu-left-item {
   margin-right: 53px;
+}
+@media (max-width: 576px) {
+  .top-menu-left-item {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .top-menu-left-item {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .top-menu-left-item {
+    margin-right: 10px;
+  }
 }
 .top-menu-left-item:last-child {
   margin-right: 0;
@@ -441,6 +468,21 @@ body {
 .top-menu .social-btn a:last-child {
   margin-right: 0;
 }
+@media (max-width: 576px) {
+  .top-menu .social-btn a {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .top-menu .social-btn a {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 992px) {
+  .top-menu .social-btn a {
+    margin-right: 0px;
+  }
+}
 .top-menu .fa-phone,
 .top-menu .fa-instagram,
 .top-menu .fa-angle-down {
@@ -451,9 +493,35 @@ body {
 .top-menu .login i {
   margin-right: 5px;
 }
+.top-menu .top-menu-mobile {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .top-menu .top-menu-mobile {
+    display: inline-block;
+  }
+}
+.top-menu i {
+  margin-right: 10px;
+}
 .top-menu-right-item {
   padding: 0 26px;
   transition: 0.5s color ease;
+}
+@media (max-width: 576px) {
+  .top-menu-right-item {
+    padding: 0 5px;
+  }
+}
+@media (max-width: 768px) {
+  .top-menu-right-item {
+    padding: 0 5px;
+  }
+}
+@media (max-width: 992px) {
+  .top-menu-right-item {
+    padding: 0 10px;
+  }
 }
 .top-menu-right-item:first-child {
   padding-left: 0;
@@ -475,7 +543,10 @@ body {
   box-shadow: 0px 0px 10px rgba(64, 64, 87, 0.2);
   margin-top: 20px;
   position: absolute;
+  right: 0;
   z-index: 999;
+  width: 80px;
+  text-align: center;
 }
 .top-menu-right-item .currency-list a {
   transition: 0.3s background-color ease, 0.3s color ease;
@@ -503,9 +574,26 @@ body {
 }
 .top-menu .currency {
   text-transform: uppercase;
+  position: relative;
 }
 .top-menu i {
   margin-left: 10px;
+}
+@media (max-width: 576px) {
+  .top-menu i {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .top-menu i {
+    margin-left: 0px;
+  }
+}
+.top-menu .fa-phone {
+  margin-left: 0;
+}
+.top-menu .fa-angle-down {
+  margin-right: 0;
 }
 
 /*Main Menu*/
@@ -520,6 +608,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 992px) {
+  .menu .container {
+    padding: 12px 0;
+  }
 }
 .menu .navbar {
   font-size: 18px;
@@ -536,6 +629,17 @@ body {
 }
 .menu .navbar li:last-child {
   margin-right: 0;
+  display: inline-block;
+}
+@media (max-width: 576px) {
+  .menu .navbar li {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .menu .navbar li {
+    margin-right: 30px;
+  }
 }
 .menu .navbar li a {
   text-transform: capitalize;
@@ -562,6 +666,16 @@ body {
   font-size: 28px;
   font-weight: 800;
   color: #404057;
+}
+@media (max-width: 992px) {
+  .menu .logo .brand-name {
+    margin: 0;
+  }
+}
+@media (max-width: 992px) {
+  .menu .search {
+    display: none;
+  }
 }
 .menu .search form {
   background-color: #f6fbff;
@@ -626,6 +740,11 @@ body {
   border-radius: 4px;
   padding: 28px;
 }
+@media (max-width: 992px) {
+  .change-search input {
+    font-size: 14px;
+  }
+}
 
 /*Flight*/
 .flight {
@@ -634,6 +753,11 @@ body {
   align-items: center;
   /*Flight Depart & Return*/
   /*Flight Btn*/
+}
+@media (max-width: 992px) {
+  .flight {
+    display: block;
+  }
 }
 .flight-icon {
   font-size: 26px;
@@ -650,18 +774,39 @@ body {
 .flight-box {
   display: flex;
   align-items: center;
-  margin-left: 12px;
+}
+@media (max-width: 992px) {
+  .flight-box {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
 }
 .flight-location h4 {
   font-weight: 600;
   font-size: 24px;
   text-transform: capitalize;
 }
+@media (max-width: 992px) {
+  .flight-location h4 {
+    font-size: 20px;
+    display: inline-block;
+  }
+}
+@media (max-width: 576px) {
+  .flight-location h4 {
+    display: block;
+  }
+}
 .flight-location span {
   font-weight: 500;
   font-size: 20px;
   color: #b4b4c8;
   text-transform: uppercase;
+}
+@media (max-width: 992px) {
+  .flight-location span {
+    font-size: 16px;
+  }
 }
 .flight-btn {
   text-transform: capitalize;
@@ -748,6 +893,18 @@ body {
   grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   text-transform: capitalize;
+}
+@media (max-width: 992px) {
+  .dropdown-form-search {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .dropdown-form-search {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
 }
 .dropdown-form-search input {
   width: 100%;
@@ -840,11 +997,24 @@ body {
   margin-left: auto;
   position: relative;
 }
+@media (max-width: 576px) {
+  .dropdown-form-search .input-to {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
 .dropdown-form-search .input-to i {
   transition: 0.3s background-color ease, 0.3s color ease;
 }
 .dropdown-form-search .input-to i:hover {
   color: #ffffff;
+}
+@media (max-width: 576px) {
+  .dropdown-form-search .input-to i {
+    left: 50%;
+    top: -130%;
+    transform: translateX(-50%);
+  }
 }
 .dropdown-form-search .input-search {
   text-align: center;
@@ -903,6 +1073,16 @@ body {
   padding: 0 0 22px 0;
   margin: 0 30px;
 }
+@media (max-width: 1200px) {
+  .filter {
+    width: 28%;
+  }
+}
+@media (max-width: 992px) {
+  .filter {
+    display: none;
+  }
+}
 .filter .title {
   padding: 14px 30px;
   text-align: center;
@@ -928,6 +1108,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 1200px) {
+  .filter .filter-box .filter-title {
+    font-size: 18px;
+  }
 }
 .filter .filter-box .filter-title i {
   font-size: 16px;
@@ -1003,6 +1188,11 @@ body {
   text-transform: capitalize;
   margin-left: 15px;
 }
+@media (max-width: 1200px) {
+  .filter .filter-box .depart-btn span {
+    font-size: 15px;
+  }
+}
 .filter .filter-box .stops-btn {
   font-size: 22px;
   font-weight: 500;
@@ -1013,6 +1203,13 @@ body {
   width: 55px;
   border-radius: 4px;
   transition: 0.5s color ease, 0.5s background-color ease;
+}
+@media (max-width: 1200px) {
+  .filter .filter-box .stops-btn {
+    font-size: 16px;
+    padding: 5px 0;
+    width: 50px;
+  }
 }
 .filter .filter-box .stops-btn:hover {
   background-color: #404057;
@@ -1031,6 +1228,11 @@ body {
   font-weight: 500;
   text-transform: capitalize;
   cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .filter .filter-box .airline-item label {
+    font-size: 14px;
+  }
 }
 .filter .filter-box .airline-item label i {
   font-size: 18px;
@@ -1070,6 +1272,27 @@ body {
   background-color: #32d093;
 }
 
+/*Mobile filter menu*/
+.filter-mobile {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+  display: none;
+}
+.filter-mobile button {
+  background-color: #32d093;
+  padding: 10px;
+  border-radius: 4px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+@media (max-width: 992px) {
+  .filter-mobile {
+    display: block;
+  }
+}
+
 /*Result Boxes*/
 .result-box {
   width: 76%;
@@ -1077,6 +1300,11 @@ body {
   /*Sort By*/
   /*Result Item*/
   /*Continue Btn*/
+}
+@media (max-width: 992px) {
+  .result-box {
+    width: 100%;
+  }
 }
 .result-box .sort-by {
   display: flex;
@@ -1087,6 +1315,14 @@ body {
   font-weight: 500;
   text-transform: capitalize;
   margin-bottom: 30px;
+}
+@media (max-width: 480px) {
+  .result-box .sort-by {
+    flex-direction: column;
+  }
+  .result-box .sort-by-title {
+    margin-bottom: 20px;
+  }
 }
 .result-box .sort-by select {
   background-color: #ffffff;
@@ -1126,6 +1362,25 @@ body {
   align-items: center;
   padding: 13px 0;
 }
+@media (max-width: 768px) {
+  .result-box .departure-item {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .result-box .departure-item .airline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .result-box .departure-item .airline {
+    display: block;
+    margin: 0 auto;
+  }
+}
 .result-box .departure-item:first-child {
   border-bottom: 1px solid #edf2f6;
 }
@@ -1136,9 +1391,20 @@ body {
   display: flex;
   margin-bottom: 20px;
 }
+@media (max-width: 1200px) {
+  .result-box .result-single-item {
+    display: block;
+  }
+}
 .result-box .airline-item {
   display: flex;
   margin-bottom: 10px;
+}
+@media (max-width: 480px) {
+  .result-box .airline-item {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
 .result-box .airline-item .airline-img {
   width: 30px;
@@ -1159,6 +1425,22 @@ body {
 .result-box .arrive {
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  .result-box .onbound,
+.result-box .arrive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .result-box .onbound,
+.result-box .arrive {
+    display: block;
+    text-align: center;
+  }
+}
 .result-box .onbound-time h6,
 .result-box .arrive-time h6 {
   color: #404057;
@@ -1168,6 +1450,12 @@ body {
 .result-box .onbound-date,
 .result-box .arrive-date {
   margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .result-box .onbound-date,
+.result-box .arrive-date {
+    margin-bottom: 0;
+  }
 }
 .result-box .onbound-date span,
 .result-box .arrive-date span {
@@ -1184,6 +1472,12 @@ body {
 .result-box .details {
   width: 100px;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .result-box .details {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 }
 .result-box .details-duration {
   margin-bottom: 10px;
@@ -1263,6 +1557,11 @@ body {
   border-radius: 4px;
   transition: 0.3s background-color ease, 0.3s color ease;
 }
+@media (max-width: 576px) {
+  .result-box .price-btn {
+    width: 100%;
+  }
+}
 .result-box .price-btn:hover {
   background-color: #404057;
   color: #ffffff;
@@ -1284,6 +1583,11 @@ body {
   cursor: pointer;
   transition: 0.3s background-color ease, 0.3s color ease;
 }
+@media (max-width: 992px) {
+  .result-box .details-tag span {
+    left: 0%;
+  }
+}
 .result-box .details-tag span:hover {
   background-color: #32d093;
 }
@@ -1294,6 +1598,12 @@ body {
   align-items: center;
   text-transform: capitalize;
 }
+@media (max-width: 576px) {
+  .result-box .continue {
+    display: block;
+    text-align: center;
+  }
+}
 .result-box .continue button {
   font-size: 18px;
   font-weight: 700;
@@ -1303,6 +1613,11 @@ body {
   border-radius: 4px;
   transition: 0.3s background-color ease, 0.3s color ease;
 }
+@media (max-width: 480px) {
+  .result-box .continue button {
+    width: 85%;
+  }
+}
 .result-box .continue button:hover {
   background-color: #404057;
   color: #ffffff;
@@ -1311,6 +1626,16 @@ body {
   font-size: 18px;
   font-weight: 600;
   color: #404057;
+}
+@media (max-width: 768px) {
+  .result-box .continue p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .result-box .continue p {
+    margin-top: 20px;
+  }
 }
 
 /*===Travelling CSS Start===*/
@@ -1334,6 +1659,11 @@ body {
   text-align: center;
   text-transform: capitalize;
 }
+@media (max-width: 768px) {
+  .travelling-header h3 {
+    font-size: 20px;
+  }
+}
 .travelling-box {
   padding: 41px 70px;
   background-color: #ffffff;
@@ -1341,6 +1671,11 @@ body {
   margin-bottom: 10px;
   /*Travelling Box Form Item*/
   /*Baggage*/
+}
+@media (max-width: 768px) {
+  .travelling-box {
+    padding: 15px 25px;
+  }
 }
 .travelling-box-top {
   display: flex;
@@ -1352,6 +1687,11 @@ body {
   font-weight: 600;
   color: #404057;
   text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .travelling-box-top h2 {
+    font-size: 20px;
+  }
 }
 .travelling-box-top span {
   font-size: 20px;
@@ -1365,6 +1705,14 @@ body {
   display: inline-block;
   text-align: center;
   border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .travelling-box-top span {
+    font-size: 20px;
+    width: 20px;
+    height: 25px;
+    line-height: 25px;
+  }
 }
 .travelling-box-top i {
   font-size: 24px;
@@ -1398,6 +1746,16 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   text-transform: capitalize;
+}
+@media (max-width: 992px) {
+  .travelling-box .personal-info .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .travelling-box .personal-info .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .travelling-box .personal-info .content label {
   font-size: 16px;
@@ -1503,6 +1861,17 @@ body {
   position: relative;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .travelling-box .baggage .cabin-baggage {
+    display: block;
+  }
+  .travelling-box .baggage .cabin-baggage span {
+    display: block;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
 .travelling-box .baggage .cabin-baggage:not(:last-child) {
   margin-bottom: 35px;
 }
@@ -1551,6 +1920,11 @@ body {
   gap: 10px;
   margin-bottom: 10px;
 }
+@media (max-width: 480px) {
+  .travelling-box .baggage .add-baggage-container {
+    flex-direction: column;
+  }
+}
 .travelling-box .baggage .add-baggage p {
   padding: 13px 25px;
   display: flex;
@@ -1560,6 +1934,17 @@ body {
 }
 .travelling-box .baggage .add-baggage p > * {
   flex-basis: 50%;
+}
+@media (max-width: 768px) {
+  .travelling-box .baggage .add-baggage p {
+    padding: 12px 15px;
+  }
+  .travelling-box .baggage .add-baggage p .add-baggage-item {
+    flex-basis: 100%;
+  }
+  .travelling-box .baggage .add-baggage p .add-baggage-details {
+    display: none;
+  }
 }
 .travelling-box .baggage .add-baggage-item {
   font-size: 16px;
@@ -1606,9 +1991,20 @@ body {
   font-weight: 500;
   color: #b4b4c8;
 }
+@media (max-width: 768px) {
+  .travelling-box .baggage .add-baggage-details {
+    text-align: right;
+  }
+}
 .travelling-box .baggage .add-baggage-input {
   background-color: #edf2f6;
   width: 100px;
+}
+@media (max-width: 480px) {
+  .travelling-box .baggage .add-baggage-input {
+    align-self: center;
+    width: 100%;
+  }
 }
 .travelling-box .baggage .add-baggage-input input {
   padding: 10px 0 10px 20px;
@@ -1623,6 +2019,11 @@ body {
   border-radius: 4px;
   flex-basis: 10%;
 }
+@media (max-width: 480px) {
+  .travelling-box .baggage .add-baggage .price-btn {
+    padding: 10px;
+  }
+}
 .travelling-box .baggage .add-baggage .price-btn button {
   width: 130px;
   text-align: center;
@@ -1633,6 +2034,12 @@ body {
   display: flex;
   gap: 10px;
 }
+@media (max-width: 992px) {
+  .travelling-box .pricing-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .travelling-box .pricing-table {
   border: 3px solid transparent;
   border-radius: 4px;
@@ -1642,6 +2049,26 @@ body {
   margin-top: 10px;
   margin-bottom: 8px;
   transition: 0.5s border ease;
+}
+@media (max-width: 992px) {
+  .travelling-box .pricing-table {
+    flex-basis: 40%;
+  }
+}
+@media (max-width: 768px) {
+  .travelling-box .pricing-table {
+    flex-basis: 70%;
+  }
+}
+@media (max-width: 576px) {
+  .travelling-box .pricing-table {
+    flex-basis: 80%;
+  }
+}
+@media (max-width: 480px) {
+  .travelling-box .pricing-table {
+    flex-basis: 100%;
+  }
 }
 .travelling-box .pricing-table:hover {
   border: 3px solid #32d093;
@@ -1713,6 +2140,11 @@ body {
   border-radius: 4px;
   margin-top: 20px;
 }
+@media (max-width: 768px) {
+  .travelling-box .pricing-table .price-amount button {
+    width: 100%;
+  }
+}
 .travelling-passenger {
   margin-top: 30px;
   /*Add Passenger Btn*/
@@ -1724,6 +2156,15 @@ body {
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
+}
+@media (max-width: 480px) {
+  .travelling-passenger button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+  }
 }
 .travelling-passenger i {
   margin-right: 10px;
@@ -1740,6 +2181,11 @@ body {
   margin-left: 10px;
   text-transform: capitalize;
   transition: 0.3s background-color ease, 0.3s color ease;
+}
+@media (max-width: 480px) {
+  .travelling-passenger .continue {
+    margin: 0 auto;
+  }
 }
 .travelling-passenger .continue:hover {
   background-color: #404057;
@@ -1767,11 +2213,21 @@ body {
   text-align: center;
   text-transform: capitalize;
 }
+@media (max-width: 768px) {
+  .pay-header h3 {
+    font-size: 20px;
+  }
+}
 .pay-box {
   padding: 32px 70px;
   background-color: #ffffff;
   border-radius: 4px;
   margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .pay-box {
+    padding: 15px 25px;
+  }
 }
 .pay-box .content {
   text-transform: capitalize;
@@ -1786,6 +2242,7 @@ body {
   color: #404057;
   display: block;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 .pay-box .content input,
 .pay-box .content select {
@@ -1821,16 +2278,47 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   margin-bottom: 3px;
 }
+@media (max-width: 992px) {
+  .pay-box .content .credit-card-container {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .pay-box .content .credit-card-container {
+    justify-content: center;
+  }
+}
 .pay-box .content .credit-card-item {
-  width: 147px;
+  flex-basis: 16%;
   height: 85px;
   background-color: #edf2f6;
   border-radius: 4px;
   cursor: pointer;
   border: 2px solid transparent;
   transition: 0.5s border ease, 0.5s background-color ease;
+}
+@media (max-width: 992px) {
+  .pay-box .content .credit-card-item {
+    flex-basis: 32%;
+  }
+}
+@media (max-width: 768px) {
+  .pay-box .content .credit-card-item {
+    flex-basis: 45%;
+  }
+}
+@media (max-width: 576px) {
+  .pay-box .content .credit-card-item {
+    flex-basis: 40%;
+  }
+}
+@media (max-width: 480px) {
+  .pay-box .content .credit-card-item {
+    flex-basis: 80%;
+  }
 }
 .pay-box .content .credit-card-item:hover {
   background-color: #ffffff;
@@ -1842,6 +2330,18 @@ body {
   gap: 54px;
   margin-top: 22px;
   margin-bottom: 10px;
+}
+@media (max-width: 992px) {
+  .pay-box .content .credit-card-details {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .pay-box .content .credit-card-details {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
 }
 .pay-box .content .card-number {
   text-transform: lowercase;
@@ -1880,6 +2380,13 @@ body {
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
+  text-transform: capitalize;
+}
+@media (max-width: 480px) {
+  .pay-btn button {
+    width: 100%;
+    text-align: center;
+  }
 }
 .pay-btn i {
   margin-right: 10px;
@@ -1917,11 +2424,21 @@ body {
   text-align: center;
   text-transform: capitalize;
 }
+@media (max-width: 768px) {
+  .confirmation-header h3 {
+    font-size: 20px;
+  }
+}
 .confirmation-box {
   padding: 38px 70px;
   background-color: #ffffff;
   border-radius: 4px;
   margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .confirmation-box {
+    padding: 15px 25px;
+  }
 }
 .confirmation-box .content {
   display: grid;
@@ -1930,6 +2447,16 @@ body {
   text-transform: capitalize;
   /*Email & Phone*/
   /*Terms And Conditions*/
+}
+@media (max-width: 1200px) {
+  .confirmation-box .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .confirmation-box .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .confirmation-box .content label {
   font-size: 16px;
@@ -1964,6 +2491,16 @@ body {
 }
 .confirmation-box .content input[type=date] {
   text-transform: uppercase;
+}
+@media (max-width: 1200px) {
+  .confirmation-box .content .terms {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 768px) {
+  .confirmation-box .content .terms {
+    grid-column: span 1;
+  }
 }
 .confirmation-box .content .checkbox {
   height: 100%;
@@ -2014,6 +2551,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 480px) {
+  .confirmation-btn {
+    display: block;
+    text-align: center;
+  }
+}
 .confirmation-btn button {
   padding: 12px 30px;
   border-radius: 4px;
@@ -2021,6 +2564,12 @@ body {
   font-weight: 700;
   color: #ffffff;
   text-transform: capitalize;
+}
+@media (max-width: 480px) {
+  .confirmation-btn button {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
 .confirmation-btn .buy {
   background-color: #32d093;
@@ -2053,8 +2602,24 @@ body {
   align-items: stretch;
   padding: 30px 0;
 }
+@media (max-width: 992px) {
+  .footer-top .container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .footer-top .container {
+    display: block;
+  }
+}
 .footer-top .container > *:not(:last-child) {
   position: relative;
+}
+@media (max-width: 992px) {
+  .footer-top .container > *:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 .footer-top .container > *:not(:last-child)::after {
   content: "";
@@ -2064,6 +2629,11 @@ body {
   width: 2px;
   height: 90%;
   background-color: #535370;
+}
+@media (max-width: 1200px) {
+  .footer-top .container > *:not(:last-child)::after {
+    display: none;
+  }
 }
 
 /*Footer Logo*/
@@ -2106,6 +2676,11 @@ body {
 .footer-follow .social-btn a:not(:last-child) {
   margin-right: 35px;
 }
+@media (max-width: 992px) {
+  .footer-follow .social-btn a:not(:last-child) {
+    margin-right: 20px;
+  }
+}
 .footer-follow .social-btn a {
   transition: 0.5s color ease;
 }
@@ -2127,6 +2702,17 @@ body {
   align-items: center;
   padding: 15px 0 15px 0;
 }
+@media (max-width: 768px) {
+  .footer-bottom .container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .footer-bottom .container {
+    display: block;
+  }
+}
 .footer-bottom .policy {
   text-transform: capitalize;
 }
@@ -2135,6 +2721,12 @@ body {
 }
 .footer-bottom .policy a {
   transition: 0.5s color ease;
+}
+@media (max-width: 480px) {
+  .footer-bottom .policy a {
+    display: block;
+    margin-top: 15px;
+  }
 }
 .footer-bottom .policy a:hover {
   color: #ffffff;
@@ -2262,4 +2854,4 @@ body {
 /*Summary Last*/
 .summary-last {
   margin-bottom: 35px;
-}/*# sourceMappingURL=style.css.map */
+}

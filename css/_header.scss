@@ -12,12 +12,35 @@
     @include space-between;
     padding: 9px 0;
   }
+
+  span {
+    @include sm {
+      display: none;
+    }
+  }
+  .active-currency span {
+    display: inline-block;
+  }
+
+  .currency-list span {
+    display: block;
+  }
+
   &-item {
     display: inline-block;
   }
   /*Top Menu Left*/
   &-left-item {
     margin-right: 53px;
+    @include sm {
+      margin-right: 0px;
+    }
+    @include md {
+      margin-right: 10px;
+    }
+    @include lg {
+      margin-right: 10px;
+    }
     &:last-child {
       margin-right: 0;
     }
@@ -40,6 +63,16 @@
     &:last-child {
       margin-right: 0;
     }
+    @include sm {
+      margin-right: 0px;
+    }
+
+    @include md {
+      margin-right: 0px;
+    }
+    @include lg {
+      margin-right: 0px;
+    }
   }
 
   .fa-phone,
@@ -53,9 +86,34 @@
   .login i {
     margin-right: 5px;
   }
+
+  .top-menu-mobile {
+    display: none;
+    @include xl {
+      display: inline-block;
+    }
+  }
+
+  i {
+    margin-right: 10px;
+  }
+
   /*Top Menu Right*/
   &-right-item {
     padding: 0 26px;
+
+    @include sm {
+      padding: 0 5px;
+    }
+
+    @include md {
+      padding: 0 5px;
+    }
+
+    @include lg {
+      padding: 0 10px;
+    }
+
     transition: 0.5s color ease;
     &:first-child {
       padding-left: 0;
@@ -80,7 +138,10 @@
       box-shadow: 0px 0px 10px rgba($color: $primaryColor, $alpha: 0.2);
       margin-top: 20px;
       position: absolute;
+      right: 0;
       z-index: 999;
+      width: 80px;
+      text-align: center;
       a {
         transition: 0.3s background-color ease, 0.3s color ease;
         display: block;
@@ -112,9 +173,24 @@
 
   .currency {
     text-transform: uppercase;
+    position: relative;
   }
   i {
     margin-left: 10px;
+    @include sm {
+      margin-left: 0px;
+    }
+    @include md {
+      margin-left: 0px;
+    }
+  }
+
+  .fa-phone {
+    margin-left: 0;
+  }
+
+  .fa-angle-down {
+    margin-right: 0;
   }
 }
 
@@ -124,6 +200,9 @@
   .container {
     padding: 15px 0;
     @include space-between;
+    @include lg {
+      padding: 12px 0;
+    }
   }
   /*Navbar*/
   .navbar {
@@ -135,6 +214,13 @@
       margin-right: 50px;
       &:last-child {
         margin-right: 0;
+        display: inline-block;
+      }
+      @include sm {
+        display: none;
+      }
+      @include lg {
+        margin-right: 30px;
       }
       a {
         text-transform: capitalize;
@@ -160,10 +246,16 @@
     }
     .brand-name {
       @include font($fz-28, $fontWeightExtraBold, $primaryColor);
+      @include lg {
+        margin: 0;
+      }
     }
   }
   /*Search*/
   .search {
+    @include lg {
+      display: none;
+    }
     form {
       background-color: $bgColor2;
       border-radius: 32px;

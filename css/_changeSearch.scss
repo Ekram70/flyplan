@@ -6,10 +6,20 @@
     border-radius: 4px;
     padding: 28px;
   }
+
+  input {
+    @include lg {
+      font-size: $fz-14;
+    }
+  }
 }
 /*Flight*/
 .flight {
   @include space-between;
+
+  @include lg {
+    display: block;
+  }
   /*Flight Depart & Return*/
   &-icon {
     font-size: $fz-26;
@@ -22,19 +32,32 @@
   &-box {
     display: flex;
     align-items: center;
-    margin-left: 12px;
+    @include lg {
+      justify-content: center;
+      margin-bottom: 15px;
+    }
   }
   &-location {
     h4 {
       font-weight: $fontWeightSemiBold;
       font-size: $fz-24;
       text-transform: capitalize;
+      @include lg {
+        font-size: $fz-20;
+        display: inline-block;
+      }
+      @include sm {
+        display: block;
+      }
     }
     span {
       font-weight: $fontWeightMedium;
       font-size: $fz-20;
       color: $smTextColor2;
       text-transform: uppercase;
+      @include lg {
+        font-size: $fz-16;
+      }
     }
   }
   /*Flight Btn*/
@@ -121,6 +144,14 @@
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     text-transform: capitalize;
+    @include lg {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
     input {
       width: 100%;
       text-transform: capitalize;
@@ -207,10 +238,19 @@
       width: 95%;
       margin-left: auto;
       position: relative;
+      @include sm {
+        width: 100%;
+        margin-top: 30px;
+      }
       i {
         transition: 0.3s background-color ease, 0.3s color ease;
         &:hover {
           color: $whiteColor;
+        }
+        @include sm {
+          left: 50%;
+          top: -130%;
+          transform: translateX(-50%);
         }
       }
     }

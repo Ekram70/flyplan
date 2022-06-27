@@ -60,7 +60,7 @@
 /*Summary Item*/
 .summary-item {
   margin-top: 30px;
-  &-title{
+  &-title {
     margin-top: 40px;
     h4 {
       font-size: $fz-18;
@@ -76,7 +76,7 @@
       }
     }
   }
-/*Flight Item*/
+  /*Flight Item*/
   .flight-item {
     margin-bottom: 12px;
     span {
@@ -97,7 +97,7 @@
     color: $smTextColor2;
     text-transform: uppercase;
   }
-/*Travellers Item*/
+  /*Travellers Item*/
   .travellers-item {
     @include space-between;
     margin-bottom: 10px;

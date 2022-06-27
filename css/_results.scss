@@ -15,6 +15,12 @@
     padding: 0 0 22px 0;
     margin: 0 30px;
   }
+  @include xl {
+    width: 28%;
+  }
+  @include lg {
+    display: none;
+  }
   .title {
     padding: 14px 30px;
     text-align: center;
@@ -36,6 +42,9 @@
       font-weight: $fontWeightSemiBold;
       text-transform: capitalize;
       @include space-between;
+      @include xl {
+        font-size: $fz-18;
+      }
       i {
         font-size: $fz-16;
         color: $smTextColor2;
@@ -108,6 +117,9 @@
         font-size: $fz-18;
         text-transform: capitalize;
         margin-left: 15px;
+        @include xl {
+          font-size: $fz-15;
+        }
       }
     }
     /*Stops Btn*/
@@ -121,6 +133,11 @@
       width: 55px;
       border-radius: 4px;
       transition: 0.5s color ease, 0.5s background-color ease;
+      @include xl {
+        font-size: 16px;
+        padding: 5px 0;
+        width: 50px;
+      }
       &:hover {
         background-color: $primaryColor;
         color: $whiteColor;
@@ -139,6 +156,9 @@
         font-weight: $fontWeightMedium;
         text-transform: capitalize;
         cursor: pointer;
+        @include xl {
+          font-size: $fz-14;
+        }
         i {
           font-size: $fz-18;
           width: 10px;
@@ -188,10 +208,32 @@
   }
 }
 
+/*Mobile filter menu*/
+.filter-mobile {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+  display: none;
+  button {
+    background-color: $secondaryColor;
+    padding: 10px;
+    border-radius: 4px;
+    color: $whiteColor;
+    text-transform: uppercase;
+  }
+  @include lg {
+    display: block;
+  }
+}
+
 /*Result Boxes*/
 .result-box {
   width: 76%;
   margin-left: -10px;
+  @include lg {
+    width: 100%;
+  }
   /*Sort By*/
   .sort-by {
     @include space-between;
@@ -200,6 +242,13 @@
     font-weight: $fontWeightMedium;
     text-transform: capitalize;
     margin-bottom: 30px;
+    @include xs {
+      flex-direction: column;
+      &-title {
+        margin-bottom: 20px;
+      }
+    }
+
     select {
       background-color: $whiteColor;
       padding: 12px 30px;
@@ -240,6 +289,19 @@
   .departure-item {
     @include space-between;
     padding: 13px 0;
+    @include md {
+      display: block;
+    }
+    .airline {
+      @include md {
+        @include space-between;
+        margin-bottom: 20px;
+      }
+      @include xs {
+        display: block;
+        margin: 0 auto;
+      }
+    }
   }
 
   .departure-item:first-child {
@@ -252,11 +314,18 @@
   .result-single-item {
     display: flex;
     margin-bottom: 20px;
+    @include xl {
+      display: block;
+    }
   }
 
   .airline-item {
     display: flex;
     margin-bottom: 10px;
+    @include xs {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
     .airline-img {
       width: 30px;
       height: 30px;
@@ -277,6 +346,14 @@
   .onbound,
   .arrive {
     text-transform: uppercase;
+    @include md {
+      @include space-between;
+      margin-bottom: 20px;
+    }
+    @include xs {
+      display: block;
+      text-align: center;
+    }
     &-time {
       h6 {
         color: $primaryColor;
@@ -286,6 +363,9 @@
     }
     &-date {
       margin-bottom: 20px;
+      @include md {
+        margin-bottom: 0;
+      }
       span {
         color: $smTextColor2;
         font-size: $fz-16;
@@ -302,6 +382,10 @@
   .details {
     width: 100px;
     text-align: center;
+    @include md {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
     &-duration {
       margin-bottom: 10px;
       span {
@@ -381,6 +465,9 @@
       padding: 10px 20px;
       border-radius: 4px;
       transition: 0.3s background-color ease, 0.3s color ease;
+      @include sm {
+        width: 100%;
+      }
       &:hover {
         background-color: $primaryColor;
         color: $whiteColor;
@@ -402,6 +489,9 @@
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
       cursor: pointer;
+      @include lg {
+        left: 0%;
+      }
       transition: 0.3s background-color ease, 0.3s color ease;
       &:hover {
         background-color: $secondaryColor;
@@ -413,6 +503,10 @@
     margin-top: 40px;
     @include space-between;
     text-transform: capitalize;
+    @include sm {
+      display: block;
+      text-align: center;
+    }
     button {
       font-size: $fz-18;
       font-weight: $fontWeightBold;
@@ -421,6 +515,9 @@
       padding: 10px 32px;
       border-radius: 4px;
       transition: 0.3s background-color ease, 0.3s color ease;
+      @include xs {
+        width: 85%;
+      }
       &:hover {
         background-color: $primaryColor;
         color: $whiteColor;
@@ -430,6 +527,12 @@
       font-size: $fz-18;
       font-weight: $fontWeightSemiBold;
       color: $primaryColor;
+      @include md {
+        font-size: $fz-15;
+      }
+      @include sm {
+        margin-top: 20px;
+      }
     }
   }
 }

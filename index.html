@@ -38,6 +38,9 @@
               <a href="#"><i class="fa fa-google-plus"></i></a>
               <a href="#"><i class="fa fa-instagram"></i></a>
             </div>
+            <!-- <div class="top-menu-mobile top-menu-item top-menu-left-item">
+              <i class="fa fa-bars"></i>
+            </div> -->
           </div>
           <!-- Top menu right -->
           <div class="top-menu-right">
@@ -50,7 +53,9 @@
               <a href="#"><span>login</span></a>
             </div>
             <div class="currency top-menu-item top-menu-right-item">
-              <a href="#" id="active-currency"><span>$ usd</span></a>
+              <a href="#" class="active-currency" id="active-currency">
+                <span>$ usd</span>
+              </a>
               <a href="#" id="currency"><i class="fa fa-angle-down"></i></a>
               <div class="currency-list d-none" id="currency-list">
                 <a href="#"><span>$ usd</span></a>
@@ -359,6 +364,10 @@
             <button class="reset-btn">reset all filters</button>
           </div>
         </aside>
+        <!-- mobile filter btn -->
+        <div class="filter-mobile">
+          <button class="reset-btn">filter</button>
+        </div>
         <!-- Result Boxes -->
         <div class="result-box">
           <!-- Sort By -->
@@ -1228,7 +1237,7 @@
                         </div>
                       </div>
                       <div class="cvv">
-                        <label for="cvv-num" class="cvv-num">cvv code</label>
+                        <label for="cvv-num" class="cvv-num">cvv</label>
                         <input
                           type="text"
                           name=""
@@ -1509,7 +1518,7 @@
       </div>
     </footer>
 
-    <!-- curtom js -->
+    <!-- custom js -->
     <script src="js/app.js"></script>
   </body>
 </html>
