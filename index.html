@@ -50,8 +50,12 @@
               <a href="#"><span>login</span></a>
             </div>
             <div class="currency top-menu-item top-menu-right-item">
-              <a href="#"><span>$ usd</span></a>
-              <a href="#"><i class="fa fa-angle-down"></i></a>
+              <a href="#" id="active-currency"><span>$ usd</span></a>
+              <a href="#" id="currency"><i class="fa fa-angle-down"></i></a>
+              <div class="currency-list d-none" id="currency-list">
+                <a href="#"><span>$ usd</span></a>
+                <a href="#"><span>৳ bdt</span></a>
+              </div>
             </div>
           </div>
         </div>
@@ -137,48 +141,84 @@
             </div>
             <!-- Form Search -->
             <div class="dropdown-form-search">
-              <div class="input-from">
+              <div class="dropdown-form-search-item input-from">
                 <input type="text" placeholder="From" />
               </div>
-              <div class="input-to">
+              <div class="dropdown-form-search-item input-to">
                 <i class="icon ion-android-sync"></i>
                 <input type="text" placeholder="To" />
               </div>
-              <div class="input-depart">
-                <input type="date" />
+              <div class="dropdown-form-search-item input-depart">
+                <input
+                  type="text"
+                  placeholder="depart"
+                  class="custom-date-picker"
+                />
+                <i class="fa fa-calendar-o"></i>
               </div>
-              <div class="input-return">
-                <input type="date" />
+              <div class="dropdown-form-search-item input-return">
+                <input
+                  type="text"
+                  placeholder="return"
+                  class="custom-date-picker"
+                />
+                <i class="fa fa-calendar-o"></i>
               </div>
-              <div class="input-adults">
+              <div
+                class="dropdown-form-search-item input-adults input-dropdown"
+              >
+                <div class="dropdown-text">
+                  <input type="text" />
+                  <i class="fa fa-angle-down"></i>
+                </div>
+                <ul class="dropdown-list d-none"></ul>
                 <select>
                   <option>1 adult</option>
                   <option>2 adults</option>
                   <option>3 adults</option>
                 </select>
               </div>
-              <div class="input-children">
+              <div
+                class="dropdown-form-search-item input-children input-dropdown"
+              >
+                <div class="dropdown-text">
+                  <input type="text" />
+                  <i class="fa fa-angle-down"></i>
+                </div>
+                <ul class="dropdown-list d-none"></ul>
                 <select>
                   <option>1 children</option>
                   <option>2 children</option>
                   <option>3 children</option>
                 </select>
               </div>
-              <div class="input-infants">
+              <div
+                class="dropdown-form-search-item input-infants input-dropdown"
+              >
+                <div class="dropdown-text">
+                  <input type="text" />
+                  <i class="fa fa-angle-down"></i>
+                </div>
+                <ul class="dropdown-list d-none"></ul>
                 <select>
                   <option>1 infants</option>
                   <option>2 infants</option>
                   <option>3 infants</option>
                 </select>
               </div>
-              <div class="input-class">
+              <div class="dropdown-form-search-item input-class input-dropdown">
+                <div class="dropdown-text">
+                  <input type="text" />
+                  <i class="fa fa-angle-down"></i>
+                </div>
+                <ul class="dropdown-list d-none"></ul>
                 <select>
                   <option>first class</option>
                   <option>business class</option>
                   <option>economy class</option>
                 </select>
               </div>
-              <div class="input-search">
+              <div class="dropdown-form-search-item input-search">
                 <button>search flight</button>
               </div>
             </div>
@@ -239,7 +279,7 @@
             </div>
             <div class="filter-box-content">
               <button class="stops-btn">0</button>
-              <button class="stops-btn active">1</button>
+              <button class="stops-btn">1</button>
               <button class="stops-btn">2+</button>
             </div>
           </div>
@@ -1468,5 +1508,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- curtom js -->
+    <script src="js/app.js"></script>
   </body>
 </html>

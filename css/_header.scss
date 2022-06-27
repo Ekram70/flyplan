@@ -15,20 +15,20 @@
   &-item {
     display: inline-block;
   }
-/*Top Menu Left*/
+  /*Top Menu Left*/
   &-left-item {
     margin-right: 53px;
     &:last-child {
       margin-right: 0;
     }
-    a{
+    a {
       transition: 0.5s color ease;
       &:hover {
         color: $whiteColor;
       }
     }
   }
-  .phone{
+  .phone {
     transition: 0.5s color ease;
     &:hover {
       color: $whiteColor;
@@ -53,7 +53,7 @@
   .login i {
     margin-right: 5px;
   }
-/*Top Menu Right*/
+  /*Top Menu Right*/
   &-right-item {
     padding: 0 26px;
     transition: 0.5s color ease;
@@ -70,6 +70,25 @@
     }
     &:hover {
       color: $whiteColor;
+    }
+
+    .currency-list {
+      background-color: $whiteColor;
+      color: $primaryColor;
+      padding: 5px;
+      border-radius: 4px;
+      box-shadow: 0px 0px 10px rgba($color: $primaryColor, $alpha: 0.2);
+      margin-top: 20px;
+      position: absolute;
+      z-index: 999;
+      a {
+        transition: 0.3s background-color ease, 0.3s color ease;
+        display: block;
+        padding: 5px 10px;
+        &:hover {
+          color: $secondaryColor;
+        }
+      }
     }
   }
 
@@ -93,11 +112,12 @@
 
   .currency {
     text-transform: uppercase;
-    i {
-      margin-left: 10px;
-    }
+  }
+  i {
+    margin-left: 10px;
   }
 }
+
 /*Main Menu*/
 .menu {
   background-color: $whiteColor;
