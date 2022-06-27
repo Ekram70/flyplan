@@ -1,5 +1,7 @@
 /* ===Google Fonts=== */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap");
+/*==Breakpoints==*/
+/*==Mixins==*/
 /* ===Reset CSS=== */
 * {
   all: unset;
@@ -366,15 +368,6 @@ a {
 }
 
 /* ===Default CSS=== */
-::-moz-selection {
-  background-color: #404057;
-  color: #ffffff;
-}
-::selection {
-  background-color: #404057;
-  color: #ffffff;
-}
-
 body {
   font-family: "Work Sans", sans-serif;
   background-color: #edf2f6;
@@ -396,15 +389,18 @@ body {
   margin-top: 0;
 }
 
+/*Top Menu*/
 .top-menu {
   background-color: #404057;
   color: #cccccc;
+  /*Top Menu Left*/
+  /*Top Menu Right*/
 }
 .top-menu .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 9px 0;
 }
 .top-menu-item {
   display: inline-block;
@@ -415,8 +411,14 @@ body {
 .top-menu-left-item:last-child {
   margin-right: 0;
 }
+.top-menu-left-item a {
+  transition: 0.5s color ease;
+}
 .top-menu-left-item a:hover {
   color: #ffffff;
+}
+.top-menu .phone {
+  transition: 0.5s color ease;
 }
 .top-menu .phone:hover {
   color: #ffffff;
@@ -438,7 +440,8 @@ body {
   margin-right: 5px;
 }
 .top-menu-right-item {
-  padding: 0 30px;
+  padding: 0 26px;
+  transition: 0.5s color ease;
 }
 .top-menu-right-item:first-child {
   padding-left: 0;
@@ -475,11 +478,15 @@ body {
   margin-left: 10px;
 }
 
+/*Main Menu*/
 .menu {
   background-color: #ffffff;
+  /*Navbar*/
+  /*Logo*/
+  /*Search*/
 }
 .menu .container {
-  padding: 28px 0;
+  padding: 15px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -495,7 +502,7 @@ body {
   align-items: center;
 }
 .menu .navbar li {
-  margin-right: 48px;
+  margin-right: 50px;
 }
 .menu .navbar li:last-child {
   margin-right: 0;
@@ -516,6 +523,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: -25px;
 }
 .menu .logo img {
   margin-right: 10px;
@@ -581,6 +589,7 @@ body {
   color: #ffffff;
 }
 
+/*===Change Search CSS Start===*/
 .change-search .container {
   background-color: #404057;
   color: #ffffff;
@@ -588,10 +597,13 @@ body {
   padding: 28px;
 }
 
+/*Flight*/
 .flight {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /*Flight Depart & Return*/
+  /*Flight Btn*/
 }
 .flight-icon {
   font-size: 26px;
@@ -608,6 +620,7 @@ body {
 .flight-box {
   display: flex;
   align-items: center;
+  margin-left: 12px;
 }
 .flight-location h4 {
   font-weight: 600;
@@ -628,15 +641,26 @@ body {
   font-weight: 700;
   text-align: center;
   border-radius: 4px;
+  transition: 0.3s background-color ease, 0.3s color ease;
+}
+.flight-btn:hover {
+  background-color: #32d093;
+  color: #ffffff;
 }
 .flight-btn button {
-  padding: 10px 18px;
+  padding: 10px 22px;
+  text-transform: capitalize;
 }
 
+/*Dropdown Change*/
 .dropdown-change {
   margin-top: 35px;
 }
 
+.dropdown-form {
+  /*Form Radio*/
+  /*Dropdown Form Search*/
+}
 .dropdown-form-radio {
   display: flex;
 }
@@ -757,23 +781,32 @@ body {
 .dropdown-form .input-search {
   background-color: #32d093;
   color: #ffffff;
+  transition: 0.3s background-color ease, 0.3s color ease;
+}
+.dropdown-form .input-search:hover {
+  background-color: #ffffff;
+  color: #404057;
 }
 
+/*===Results CSS Start===*/
 .results-container {
   display: flex;
   padding: 0;
   gap: 40px;
 }
 
+/*Filter*/
 .filter {
   background-color: #ffffff;
   border-radius: 4px;
   overflow: hidden;
-  width: 25%;
+  width: 24%;
   color: #404057;
+  /*Filter Boxes*/
+  /*Reset Btn*/
 }
 .filter > div:not(:first-child) {
-  padding: 30px 0;
+  padding: 0 0 22px 0;
   margin: 0 30px;
 }
 .filter .title {
@@ -784,6 +817,10 @@ body {
   color: #ffffff;
   font-size: 24px;
   font-weight: 600;
+}
+.filter .filter-box {
+  /*Depart Btn*/
+  /*Stops Btn*/
 }
 .filter .filter-box:not(:nth-last-child(1), :nth-last-child(2)) {
   border-bottom: 5px dashed #edf2f6;
@@ -853,7 +890,12 @@ body {
   background-color: #edf2f6;
   width: 100%;
   border-radius: 4px;
-  padding: 8px 20px;
+  padding: 3px 20px;
+  transition: 0.5s color ease, 0.5s background-color ease;
+}
+.filter .filter-box .depart-btn:hover {
+  background-color: #404057;
+  color: #ffffff;
 }
 .filter .filter-box .depart-btn:not(:last-child) {
   margin-bottom: 10px;
@@ -876,6 +918,11 @@ body {
   display: inline-block;
   width: 55px;
   border-radius: 4px;
+  transition: 0.5s color ease, 0.5s background-color ease;
+}
+.filter .filter-box .stops-btn:hover {
+  background-color: #404057;
+  color: #ffffff;
 }
 .filter .filter-box .stops-btn.active {
   background-color: #404057;
@@ -883,7 +930,7 @@ body {
 }
 .filter .filter-box .airline-item {
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .filter .filter-box .airline-item label {
   font-size: 16px;
@@ -914,6 +961,7 @@ body {
   display: none;
 }
 .filter .reset-btn {
+  margin-top: 25px;
   background-color: #b4b4c8;
   width: 100%;
   text-align: center;
@@ -922,14 +970,19 @@ body {
   border-radius: 4px;
   padding: 12px 0;
   cursor: pointer;
-  transition: 0.3s background-color ease;
+  transition: 0.5s background-color ease;
 }
 .filter .reset-btn:hover {
   background-color: #32d093;
 }
 
+/*Result Boxes*/
 .result-box {
-  width: 75%;
+  width: 76%;
+  margin-left: -10px;
+  /*Sort By*/
+  /*Result Item*/
+  /*Continue Btn*/
 }
 .result-box .sort-by {
   display: flex;
@@ -943,7 +996,7 @@ body {
 }
 .result-box .sort-by select {
   background-color: #ffffff;
-  padding: 12px 18px;
+  padding: 12px 30px;
   border-radius: 4px;
   font-size: 16px;
 }
@@ -958,7 +1011,6 @@ body {
 }
 .result-box .result-item .departure::after {
   content: "";
-  width: 100%;
   height: calc(100% - 4px);
   position: absolute;
   right: -1px;
@@ -978,10 +1030,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 13px 0;
 }
 .result-box .departure-item:first-child {
   border-bottom: 1px solid #edf2f6;
+}
+.result-box .departure-item:nth-child(2) {
+  padding-bottom: 0;
 }
 .result-box .result-single-item {
   display: flex;
@@ -1046,15 +1101,15 @@ body {
 }
 .result-box .details .chart {
   width: 100%;
-  height: 4px;
+  height: 2px;
   background-color: #b4b4c8;
   position: relative;
   margin-bottom: 8px;
 }
 .result-box .details .chart::before, .result-box .details .chart::after {
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #b4b4c8;
   position: absolute;
@@ -1070,20 +1125,20 @@ body {
   transform: translate(50%, -50%);
 }
 .result-box .details .chart-circle {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: #32d093;
   border: 2px solid #ffffff;
   position: absolute;
 }
 .result-box .details .chart-circle:nth-child(1) {
-  left: 30%;
+  left: 40%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 .result-box .details .chart-circle:nth-child(2) {
-  right: 20%;
+  right: 30%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
@@ -1097,6 +1152,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /*Price Btn*/
 }
 .result-box .price-amount {
   color: #404057;
@@ -1111,6 +1167,11 @@ body {
   color: #ffffff;
   padding: 10px 20px;
   border-radius: 4px;
+  transition: 0.3s background-color ease, 0.3s color ease;
+}
+.result-box .price-btn:hover {
+  background-color: #404057;
+  color: #ffffff;
 }
 .result-box .details-tag {
   text-align: center;
@@ -1121,7 +1182,7 @@ body {
   font-size: 11px;
   font-weight: 500;
   text-transform: capitalize;
-  padding: 5px 8px;
+  padding: 3px 8px;
   background-color: #404057;
   color: #ffffff;
   border-top-left-radius: 4px;
@@ -1140,8 +1201,13 @@ body {
   font-weight: 700;
   background-color: #32d093;
   color: #ffffff;
-  padding: 15px 30px;
+  padding: 10px 32px;
   border-radius: 4px;
+  transition: 0.3s background-color ease, 0.3s color ease;
+}
+.result-box .continue button:hover {
+  background-color: #404057;
+  color: #ffffff;
 }
 .result-box .continue p {
   font-size: 18px;
@@ -1149,6 +1215,11 @@ body {
   color: #404057;
 }
 
+/*===Travelling CSS Start===*/
+.travelling {
+  /*Travelling Boxes*/
+  /*Passenger*/
+}
 .travelling .container {
   padding: 0;
 }
@@ -1157,7 +1228,7 @@ body {
 }
 .travelling-header h3 {
   border-radius: 4px;
-  padding: 15px 28px;
+  padding: 14px 28px;
   color: #ffffff;
   background-color: #404057;
   font-size: 24px;
@@ -1166,10 +1237,12 @@ body {
   text-transform: capitalize;
 }
 .travelling-box {
-  padding: 40px 70px;
+  padding: 41px 70px;
   background-color: #ffffff;
   border-radius: 4px;
   margin-bottom: 10px;
+  /*Travelling Box Form Item*/
+  /*Baggage*/
 }
 .travelling-box-top {
   display: flex;
@@ -1198,6 +1271,7 @@ body {
 .travelling-box-top i {
   font-size: 24px;
   color: #32d093;
+  cursor: pointer;
 }
 .travelling-box-form-item {
   margin-top: 40px;
@@ -1213,7 +1287,7 @@ body {
 }
 .travelling-box-form-item .title::before {
   content: "";
-  width: 4px;
+  width: 5px;
   height: 100%;
   background-color: #32d093;
   position: absolute;
@@ -1238,7 +1312,7 @@ body {
 .travelling-box .personal-info .content select {
   border: 2px solid #edf2f6;
   border-radius: 4px;
-  padding: 15px;
+  padding: 11px;
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -1313,11 +1387,16 @@ body {
 .travelling-box .personal-info .content .expiry-item .checkbox input:checked + label .fa-square-o {
   display: none;
 }
+.travelling-box .baggage {
+  /*Cabin Baggage*/
+  /*Add Beggage*/
+}
 .travelling-box .baggage .content-box {
   border: 2px solid #edf2f6;
-  padding: 10px 20px;
+  padding: 12px 20px;
   text-transform: capitalize;
   margin-bottom: 10px;
+  margin-top: 40px;
 }
 .travelling-box .baggage .cabin-baggage {
   display: flex;
@@ -1364,6 +1443,7 @@ body {
 }
 .travelling-box .baggage .add-baggage {
   text-transform: capitalize;
+  /*Price Btn*/
 }
 .travelling-box .baggage .add-baggage-container {
   display: flex;
@@ -1374,7 +1454,7 @@ body {
   margin-bottom: 10px;
 }
 .travelling-box .baggage .add-baggage p {
-  padding: 18px 25px;
+  padding: 13px 25px;
   display: flex;
   background-color: #edf2f6;
   border-radius: 4px;
@@ -1456,14 +1536,17 @@ body {
   gap: 10px;
 }
 .travelling-box .pricing-table {
-  border: 2px solid transparent;
+  border: 3px solid transparent;
   border-radius: 4px;
-  padding: 35px 40px;
+  padding: 38px;
   width: 33%;
   position: relative;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  transition: 0.5s border ease;
 }
 .travelling-box .pricing-table:hover {
-  border: 2px solid #32d093;
+  border: 3px solid #32d093;
 }
 .travelling-box .pricing-table:hover .price-close i {
   display: inline-block;
@@ -1471,6 +1554,7 @@ body {
 .travelling-box .pricing-table:hover .price-amount button {
   color: #bfbfd0;
   background-color: #edf2f6;
+  transition: 0.5s color ease, 0.5s background-color ease;
 }
 .travelling-box .pricing-table .price-close i {
   font-size: 20px;
@@ -1492,21 +1576,21 @@ body {
   text-align: center;
   font-size: 30px;
   color: #404057;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .travelling-box .pricing-table .pricing-title {
   text-align: center;
   color: #404057;
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 .travelling-box .pricing-table .price-details-item {
   color: #bfbfd0;
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
 }
 .travelling-box .pricing-table .price-details-item i {
   width: 20px;
@@ -1527,15 +1611,17 @@ body {
   font-size: 18px;
   font-weight: 700;
   background-color: #32d093;
-  padding: 10px 0;
+  padding: 12px 0;
   border-radius: 4px;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .travelling-passenger {
   margin-top: 30px;
+  /*Add Passenger Btn*/
+  /*Continue Btn*/
 }
 .travelling-passenger button {
-  padding: 10px 30px;
+  padding: 11px 30px;
   border-radius: 4px;
   font-size: 18px;
   font-weight: 700;
@@ -1546,21 +1632,36 @@ body {
 }
 .travelling-passenger .add {
   background-color: #b4b4c8;
+  transition: 0.3s background-color ease, 0.3s color ease;
+}
+.travelling-passenger .add:hover {
+  background-color: #32d093;
 }
 .travelling-passenger .continue {
   background-color: #32d093;
   margin-left: 10px;
+  text-transform: capitalize;
+  transition: 0.3s background-color ease, 0.3s color ease;
+}
+.travelling-passenger .continue:hover {
+  background-color: #404057;
 }
 
+/*===Pay CSS Start===*/
+.pay {
+  /*Pay Boxes*/
+  /*Pay Btn*/
+}
 .pay .container {
   padding: 0;
 }
 .pay-header {
   margin-bottom: 10px;
+  margin-top: 51px;
 }
 .pay-header h3 {
   border-radius: 4px;
-  padding: 15px 28px;
+  padding: 14px 28px;
   color: #ffffff;
   background-color: #404057;
   font-size: 24px;
@@ -1569,20 +1670,21 @@ body {
   text-transform: capitalize;
 }
 .pay-box {
-  padding: 30px 70px;
+  padding: 32px 70px;
   background-color: #ffffff;
   border-radius: 4px;
   margin-bottom: 10px;
 }
 .pay-box .content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
   text-transform: capitalize;
+  /*Credit Card*/
+  /*Number Card*/
+  /*Expiry Card*/
+  /*Location Card*/
 }
 .pay-box .content label {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   color: #404057;
   display: block;
   margin-bottom: 10px;
@@ -1591,7 +1693,7 @@ body {
 .pay-box .content select {
   border: 2px solid #edf2f6;
   border-radius: 4px;
-  padding: 15px;
+  padding: 10px;
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -1621,17 +1723,27 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 3px;
 }
 .pay-box .content .credit-card-item {
-  width: 150px;
+  width: 147px;
   height: 85px;
   background-color: #edf2f6;
   border-radius: 4px;
   cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.5s border ease, 0.5s background-color ease;
 }
 .pay-box .content .credit-card-item:hover {
   background-color: #ffffff;
   border: 2px solid #32d093;
+}
+.pay-box .content .credit-card-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 54px;
+  margin-top: 22px;
+  margin-bottom: 10px;
 }
 .pay-box .content .card-number {
   text-transform: lowercase;
@@ -1665,7 +1777,7 @@ body {
   margin-top: 30px;
 }
 .pay-btn button {
-  padding: 10px 30px;
+  padding: 12px 30px;
   border-radius: 4px;
   font-size: 18px;
   font-weight: 700;
@@ -1679,13 +1791,23 @@ body {
 }
 .pay-btn .continue {
   background-color: #32d093;
+  transition: 0.3s background-color ease, 0.3s color ease;
+}
+.pay-btn .continue:hover {
+  background-color: #404057;
 }
 
+/*===Confirmation CSS Start===*/
+.confirmation {
+  /*Confirmation Boxes*/
+  /*Confirmation Btn*/
+}
 .confirmation .container {
   padding: 0;
 }
 .confirmation-header {
   margin-bottom: 10px;
+  margin-top: 50px;
 }
 .confirmation-header h3 {
   border-radius: 4px;
@@ -1698,7 +1820,7 @@ body {
   text-transform: capitalize;
 }
 .confirmation-box {
-  padding: 30px 70px;
+  padding: 38px 70px;
   background-color: #ffffff;
   border-radius: 4px;
   margin-bottom: 10px;
@@ -1708,19 +1830,21 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   text-transform: capitalize;
+  /*Email & Phone*/
+  /*Terms And Conditions*/
 }
 .confirmation-box .content label {
   font-size: 16px;
   font-weight: 500;
   color: #404057;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 .confirmation-box .content input,
 .confirmation-box .content select {
   border: 2px solid #edf2f6;
   border-radius: 4px;
-  padding: 15px;
+  padding: 10px;
   width: 100%;
   font-size: 16px;
   font-weight: 500;
@@ -1793,7 +1917,7 @@ body {
   align-items: center;
 }
 .confirmation-btn button {
-  padding: 10px 30px;
+  padding: 12px 30px;
   border-radius: 4px;
   font-size: 18px;
   font-weight: 700;
@@ -1802,6 +1926,10 @@ body {
 }
 .confirmation-btn .buy {
   background-color: #32d093;
+  transition: 0.3s background-color ease, 0.3s color ease;
+}
+.confirmation-btn .buy:hover {
+  background-color: #404057;
 }
 .confirmation-btn p {
   font-size: 18px;
@@ -1809,11 +1937,14 @@ body {
   color: #404057;
 }
 
+/*===Footer CSS Start*/
 .footer {
   color: #ffffff;
   margin-bottom: 0;
+  margin-top: 100px;
 }
 
+/*Footer Top*/
 .footer-top {
   background-color: #404057;
   color: #cccccc;
@@ -1822,7 +1953,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  padding: 15px 0;
+  padding: 30px 0;
 }
 .footer-top .container > *:not(:last-child) {
   position: relative;
@@ -1837,11 +1968,19 @@ body {
   background-color: #535370;
 }
 
+/*Footer Logo*/
+.footer-logo .brand-name {
+  transition: 0.5s color ease;
+}
+.footer-logo .brand-name:hover {
+  color: #32d093;
+}
 .footer-logo h1 {
   font-size: 28px;
   font-weight: 800;
 }
 
+/*Footer Address and Mail*/
 .footer-address address,
 .footer-mail address {
   font-size: 16px;
@@ -1856,26 +1995,33 @@ body {
   display: block;
 }
 
+/*Footer Follow*/
 .footer-follow {
   font-size: 20px;
-}
-.footer-follow a:not(:last-child) {
-  margin-right: 35px;
-}
-.footer-follow a:hover {
-  color: #32d093;
+  /*Footer Icons*/
 }
 .footer-follow .social-btn {
   display: flex;
   height: 100%;
   align-items: center;
 }
+.footer-follow .social-btn a:not(:last-child) {
+  margin-right: 35px;
+}
+.footer-follow .social-btn a {
+  transition: 0.5s color ease;
+}
+.footer-follow .social-btn a:hover {
+  color: #32d093;
+}
 
+/*Footer Bottom*/
 .footer-bottom {
   background-color: #2f2f40;
   color: #cccccc;
   font-size: 13px;
   font-weight: 300;
+  /*Links*/
 }
 .footer-bottom .container {
   display: flex;
@@ -1889,10 +2035,14 @@ body {
 .footer-bottom .policy a:not(:last-child) {
   margin-right: 40px;
 }
+.footer-bottom .policy a {
+  transition: 0.5s color ease;
+}
 .footer-bottom .policy a:hover {
   color: #ffffff;
 }
 
+/*===Sidebar CSS Start*/
 .sidebar {
   background-color: #ffffff;
   margin: 0;
@@ -1904,6 +2054,7 @@ body {
   height: 100%;
   box-shadow: -5px 0px 10px rgba(64, 64, 87, 0.2);
   overflow-y: auto;
+  display: none;
 }
 .sidebar::-webkit-scrollbar {
   display: none;
@@ -1917,6 +2068,7 @@ body {
   margin-top: 35px;
 }
 
+/*Summary Section Boxes*/
 .summary-section {
   padding: 0 30px;
   margin-top: 25px;
@@ -1950,8 +2102,14 @@ body {
   font-size: 24px;
 }
 
+/*Summary Item*/
 .summary-item {
   margin-top: 30px;
+  /*Flight Item*/
+  /*Travellers Item*/
+}
+.summary-item-title {
+  margin-top: 40px;
 }
 .summary-item-title h4 {
   font-size: 18px;
@@ -1967,7 +2125,7 @@ body {
   margin-right: 10px;
 }
 .summary-item .flight-item {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .summary-item .flight-item span {
   display: block;
@@ -2003,6 +2161,7 @@ body {
   color: #b4b4c8;
 }
 
+/*Summary Last*/
 .summary-last {
   margin-bottom: 35px;
-}
+}/*# sourceMappingURL=style.css.map */

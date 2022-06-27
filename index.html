@@ -9,18 +9,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!-- IonIcons -->
+    <!-- ===IonIcons=== -->
     <link
       href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
       rel="stylesheet"
     />
-    <!-- My Css -->
+    <!-- ===My Css=== -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon" />
+    <!-- ===Title=== -->
     <title>FlyPlan</title>
   </head>
   <body>
-    <!-- Header Section -->
+    <!-- ===Header Section=== -->
     <header class="section header">
       <!-- Top menu -->
       <div class="top-menu">
@@ -55,7 +56,7 @@
           </div>
         </div>
       </div>
-      <!-- Main men -->
+      <!-- Main menu -->
       <div class="menu">
         <div class="container">
           <!-- Navbar -->
@@ -89,9 +90,12 @@
       </div>
     </header>
 
+    <!-- ===Change Search Section=== -->
     <section class="section change-search">
       <div class="container">
+        <!-- Flight -->
         <div class="flight">
+          <!-- Flight Depart -->
           <div class="flight-depart flight-box">
             <div class="flight-icon">
               <i class="fa fa-plane"></i>
@@ -101,6 +105,7 @@
               <span>jun 04, sat &nbsp;|&nbsp; 3 travellers</span>
             </div>
           </div>
+          <!-- Flight Return -->
           <div class="flight-return flight-box">
             <div class="flight-icon">
               <i class="fa fa-plane"></i>
@@ -110,12 +115,16 @@
               <span>27 may, sat &nbsp;|&nbsp; 3 travellers</span>
             </div>
           </div>
+          <!-- Flight Btn -->
           <div class="flight-btn">
             <button>change</button>
           </div>
         </div>
+        <!-- Dropdown Change -->
         <div class="dropdown-change">
+          <!-- Dropdown Form -->
           <form class="dropdown-form">
+            <!-- Form Radio -->
             <div class="dropdown-form-radio">
               <div class="radio-item">
                 <input type="radio" name="radio-item" id="round-trip" />
@@ -126,6 +135,7 @@
                 <label for="one-way">one way</label>
               </div>
             </div>
+            <!-- Form Search -->
             <div class="dropdown-form-search">
               <div class="input-from">
                 <input type="text" placeholder="From" />
@@ -177,17 +187,18 @@
       </div>
     </section>
 
+    <!-- ===Results Section=== -->
     <section class="section results">
       <div class="container results-container">
+        <!-- Filter -->
         <aside class="filter">
           <div class="title">
             <h3>filters</h3>
           </div>
-
+          <!-- Filter Box-1 -->
           <div class="filter-box">
             <div class="filter-title">
               <h6>price range</h6>
-
               <i class="fa fa-chevron-up"></i>
             </div>
             <div class="filter-box-content">
@@ -195,7 +206,7 @@
               <input type="range" />
             </div>
           </div>
-
+          <!-- Filter Box-2 -->
           <div class="filter-box">
             <div class="filter-title">
               <h6>depart time</h6>
@@ -220,7 +231,7 @@
               </button>
             </div>
           </div>
-
+          <!-- Filter Box-3 -->
           <div class="filter-box">
             <div class="filter-title">
               <h6>stops</h6>
@@ -232,7 +243,7 @@
               <button class="stops-btn">2+</button>
             </div>
           </div>
-
+          <!-- Filter Box-4 -->
           <div class="filter-box">
             <div class="filter-title">
               <h6>airlines</h6>
@@ -303,12 +314,14 @@
               </div>
             </div>
           </div>
-
+          <!-- Reset Btn -->
           <div class="reset-all">
             <button class="reset-btn">reset all filters</button>
           </div>
         </aside>
+        <!-- Result Boxes -->
         <div class="result-box">
+          <!-- Sort By -->
           <div class="sort-by">
             <div class="sort-by-title">
               <h6>565 results</h6>
@@ -322,7 +335,9 @@
               </select>
             </div>
           </div>
+          <!-- Result Items -->
           <div class="result-item">
+            <!-- Result Item-1 -->
             <div class="result-single-item">
               <div class="departure">
                 <div class="departure-item">
@@ -444,6 +459,7 @@
                 <button class="price-btn">Book</button>
               </div>
             </div>
+            <!-- Result Item-2 -->
             <div class="result-single-item">
               <div class="departure">
                 <div class="departure-item">
@@ -565,6 +581,7 @@
                 <button class="price-btn">Book</button>
               </div>
             </div>
+            <!-- Result Item-3 -->
             <div class="result-single-item">
               <div class="departure">
                 <div class="departure-item">
@@ -686,6 +703,7 @@
                 <button class="price-btn">Book</button>
               </div>
             </div>
+            <!-- Result Item-4 -->
             <div class="result-single-item">
               <div class="departure">
                 <div class="departure-item">
@@ -808,6 +826,7 @@
               </div>
             </div>
           </div>
+          <!-- Continue Btn -->
           <div class="continue">
             <button>Continue</button>
             <p>Everything looks fine. Please Continue!</p>
@@ -816,17 +835,20 @@
       </div>
     </section>
 
+    <!-- ===Travelling Section=== -->
     <section class="section travelling">
       <div class="container">
         <div class="travelling-header">
           <h3>Who's traveling?</h3>
         </div>
+        <!-- Travelling Box-1 -->
         <div class="travelling-box">
           <div class="travelling-box-top">
             <h2><span>1</span>Adult</h2>
             <i class="fa fa-chevron-down"></i>
           </div>
         </div>
+        <!-- Travelling Box-2 -->
         <div class="travelling-box">
           <div class="travelling-box-top">
             <h2><span>2</span>Adult</h2>
@@ -912,11 +934,13 @@
                 </div>
               </div>
             </div>
+            <!-- Beggage -->
             <div class="baggage travelling-box-form-item">
               <div class="title">
                 <h6>Baggage</h6>
               </div>
               <div class="content">
+                <!-- Baggage Content-->
                 <div class="content-box">
                   <p class="cabin-baggage">
                     <span class="cabin-baggage-item">Cabin Baggage</span>
@@ -932,6 +956,7 @@
                     ></span>
                   </p>
                 </div>
+                <!-- Add Baggage -->
                 <div class="add-baggage">
                   <div class="add-baggage-container">
                     <p>
@@ -963,11 +988,13 @@
                 </div>
               </div>
             </div>
-            <div class="travle travelling-box-form-item">
+            <!-- Travel Insurance Boxes -->
+            <div class="travel travelling-box-form-item">
               <div class="title">
                 <h6>travel insurance</h6>
               </div>
               <div class="content pricing-content">
+                <!-- Pricing Box-1 -->
                 <div class="pricing-table">
                   <div class="img">
                     <i class="icon ion-heart-broken"></i>
@@ -1004,6 +1031,7 @@
                     <a href="#"><i class="icon ion-android-close"></i></a>
                   </div>
                 </div>
+                <!-- Pricing Box-2 -->
                 <div class="pricing-table">
                   <div class="img">
                     <i class="icon ion-heart-broken"></i>
@@ -1040,6 +1068,7 @@
                     <a href="#"><i class="icon ion-android-close"></i></a>
                   </div>
                 </div>
+                <!-- Pricing Box-3 -->
                 <div class="pricing-table">
                   <div class="img">
                     <i class="icon ion-heart-broken"></i>
@@ -1081,6 +1110,7 @@
           </form>
         </div>
         <div class="travelling-passenger">
+          <!-- Add Passenger Btn -->
           <button class="add">
             <i class="icon ion-android-person-add"></i>Add passenger
           </button>
@@ -1089,122 +1119,143 @@
       </div>
     </section>
 
+    <!-- ===Pay Section=== -->
     <section class="section pay">
       <div class="container">
         <div class="pay-header">
           <h3>How would you like to pay?</h3>
         </div>
+        <!-- Pay Boxes -->
         <div class="pay-box">
           <form class="pay-box-form">
             <div class="pay-box-form-item">
               <div class="content">
+                <!-- Credit Card -->
                 <div class="credit-card">
                   <label>credit card type</label>
                   <div class="credit-card-container">
+                    <!-- Credit Cars Item-1 -->
                     <div class="credit-card-item"></div>
+                    <!-- Credit Cars Item-2 -->
                     <div class="credit-card-item"></div>
+                    <!-- Credit Cars Item-3 -->
                     <div class="credit-card-item"></div>
+                    <!-- Credit Cars Item-4 -->
                     <div class="credit-card-item"></div>
+                    <!-- Credit Cars Item-5 -->
                     <div class="credit-card-item"></div>
+                    <!-- Credit Cars Item-6 -->
                     <div class="credit-card-item"></div>
                   </div>
                 </div>
-                <div class="card-number">
-                  <label for="cnum">card number</label>
-                  <input
-                    type="text"
-                    name=""
-                    id="cnum"
-                    placeholder="xxxx xxxx xxxx xxxx"
-                  />
-                </div>
-                <div class="card-name">
-                  <label for="card-name">Name on the card</label>
-                  <input
-                    type="text"
-                    name=""
-                    id="card-name"
-                    placeholder="enter name on the card"
-                  />
-                </div>
-                <div class="expiry">
-                  <div class="expiry-box">
-                    <div class="expiry-item">
-                      <label>Expiry date</label>
-                      <div class="expiry-parts">
-                        <select name="">
-                          <option value="01">January</option>
-                          <option value="02">february</option>
-                          <option value="03">march</option>
-                        </select>
-                        <select name="">
-                          <option value="2001">2001</option>
-                          <option value="2002">2002</option>
-                          <option value="2003">2003</option>
-                        </select>
+                <div class="credit-card-details">
+                  <!-- Number Card -->
+                  <div class="card-number">
+                    <label for="cnum">card number</label>
+                    <input
+                      type="text"
+                      name=""
+                      id="cnum"
+                      placeholder="xxxx xxxx xxxx xxxx"
+                    />
+                  </div>
+                  <!-- Name Card -->
+                  <div class="card-name">
+                    <label for="card-name">Name on the card</label>
+                    <input
+                      type="text"
+                      name=""
+                      id="card-name"
+                      placeholder="enter name on the card"
+                    />
+                  </div>
+                  <!-- Expiry-->
+                  <div class="expiry">
+                    <div class="expiry-box">
+                      <div class="expiry-item">
+                        <label>Expiry date</label>
+                        <div class="expiry-parts">
+                          <select name="">
+                            <option value="01">January</option>
+                            <option value="02">february</option>
+                            <option value="03">march</option>
+                          </select>
+                          <select name="">
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="cvv">
+                        <label for="cvv-num" class="cvv-num">cvv code</label>
+                        <input
+                          type="text"
+                          name=""
+                          id="cvv-num"
+                          placeholder="0000"
+                        />
                       </div>
                     </div>
-                    <div class="cvv">
-                      <label for="cvv-num" class="cvv-num">cvv code</label>
-                      <input
-                        type="text"
-                        name=""
-                        id="cvv-num"
-                        placeholder="0000"
-                      />
-                    </div>
                   </div>
-                </div>
-                <div class="country">
-                  <label for="country">country</label>
-                  <select name="" id="country">
-                    <option value="bd">Bangladesh</option>
-                    <option value="in">india</option>
-                    <option value="pk">pakistan</option>
-                  </select>
-                </div>
-                <div class="address">
-                  <label for="address">billing address</label>
-                  <input
-                    type="text"
-                    name=""
-                    id="address"
-                    placeholder="enter your billing address"
-                  />
-                </div>
-                <div class="location">
-                  <div class="city">
-                    <label for="city">city</label>
-                    <select name="" id="city">
-                      <option value="dh">Dhaka</option>
-                      <option value="ctg">chittagong</option>
-                      <option value="cu">cumilla</option>
+                  <!-- Country -->
+                  <div class="country">
+                    <label for="country">country</label>
+                    <select name="" id="country">
+                      <option value="bd">Bangladesh</option>
+                      <option value="in">india</option>
+                      <option value="pk">pakistan</option>
                     </select>
                   </div>
-                  <div class="zip">
-                    <label for="zip">zip code</label>
-                    <input type="text" name="" id="zip" placeholder="XXXX" />
+                  <!-- Address -->
+                  <div class="address">
+                    <label for="address">billing address</label>
+                    <input
+                      type="text"
+                      name=""
+                      id="address"
+                      placeholder="enter your billing address"
+                    />
+                  </div>
+                  <!-- Location -->
+                  <div class="location">
+                    <div class="city">
+                      <label for="city">city</label>
+                      <select name="" id="city">
+                        <option value="dh">Dhaka</option>
+                        <option value="ctg">chittagong</option>
+                        <option value="cu">cumilla</option>
+                      </select>
+                    </div>
+                    <div class="zip">
+                      <label for="zip">zip code</label>
+                      <input type="text" name="" id="zip" placeholder="XXXX" />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </form>
         </div>
+        <!-- Pay Btn -->
         <div class="pay-btn">
           <button class="continue">continue</button>
         </div>
       </div>
     </section>
 
+    <!-- ===Confirmation Section=== -->
     <section class="section confirmation">
       <div class="container">
         <div class="confirmation-header">
           <h3>Where should we send your confirmation?</h3>
         </div>
+        <!-- Confirmation Boxes -->
         <div class="confirmation-box">
           <form class="confirmation-box-form">
             <div class="confirmation-box-form-item">
               <div class="content">
+                <!-- Email -->
                 <div class="email">
                   <label for="email">email address</label>
                   <input
@@ -1214,6 +1265,7 @@
                     placeholder="enter your email address"
                   />
                 </div>
+                <!-- Phone -->
                 <div class="phone">
                   <label for="phone">phone number</label>
                   <input
@@ -1223,6 +1275,7 @@
                     placeholder="enter phone number"
                   />
                 </div>
+                <!-- Terms and Conditions -->
                 <div class="terms">
                   <div class="checkbox">
                     <div class="checkbox-item">
@@ -1249,6 +1302,7 @@
             </div>
           </form>
         </div>
+        <!-- Confirmation Btn -->
         <div class="confirmation-btn">
           <button class="buy">buy now</button>
           <p>Review and Book Your Trip</p>
@@ -1256,15 +1310,18 @@
       </div>
     </section>
 
+    <!-- ===Sidebar Section=== -->
     <section class="section sidebar">
       <div class="header">
         <h2>summary</h2>
       </div>
+      <!-- Summary Section-1 -->
       <div class="summary-section">
         <div class="title">
           <h6>Flights</h6>
           <h6 class="muted">$2799</h6>
         </div>
+        <!-- Summary Item-1 -->
         <div class="summary-item">
           <div class="summary-item-title">
             <h4><i class="fa fa-plane"></i>Departure</h4>
@@ -1283,6 +1340,7 @@
             </div>
           </div>
         </div>
+        <!-- Summary Item-2 -->
         <div class="summary-item">
           <div class="summary-item-title">
             <h4><i class="fa fa-plane"></i>return</h4>
@@ -1302,11 +1360,13 @@
           </div>
         </div>
       </div>
+      <!-- Summary Section-2 -->
       <div class="summary-section">
         <div class="title">
           <h6>travellers</h6>
           <h6 class="muted">$186</h6>
         </div>
+        <!-- Summary Item-1 -->
         <div class="summary-item">
           <div class="summary-item-title">
             <h4><i class="fa fa-user"></i>olivia davidson</h4>
@@ -1326,6 +1386,7 @@
             </div>
           </div>
         </div>
+        <!-- Summary Item-2 -->
         <div class="summary-item">
           <div class="summary-item-title">
             <h4><i class="fa fa-user"></i>olivia davidson</h4>
@@ -1346,6 +1407,7 @@
           </div>
         </div>
       </div>
+      <!-- Summary Section-3 -->
       <div class="summary-section summary-last">
         <div class="title">
           <h6>total</h6>
@@ -1354,25 +1416,32 @@
       </div>
     </section>
 
+    <!-- ===Footer Section=== -->
     <footer class="section footer">
+      <!-- Footer Top -->
       <div class="footer-top">
         <div class="container">
+          <!-- Logo -->
           <div class="footer-logo">
             <h1 class="brand-name"><a href="#">flyplan</a></h1>
           </div>
+          <!-- Address -->
           <div class="footer-address">
             <address>
               <span>1556 Broadway, New York</span>
               <span>NY, 10120, USA</span>
             </address>
           </div>
+          <!-- Mail -->
           <div class="footer-mail">
             <address>
               <span>flyplan@gmail.com</span>
               <span>555-555-5555</span>
             </address>
           </div>
+          <!-- Footer Follow -->
           <div class="footer-follow">
+            <!-- Icons -->
             <div class="social-btn">
               <a href="#"><i class="fa fa-youtube-play"></i></a>
               <a href="#"><i class="fa fa-facebook"></i></a>
@@ -1383,11 +1452,13 @@
           </div>
         </div>
       </div>
+      <!-- Footer Bottom -->
       <div class="footer-bottom">
         <div class="container">
           <div class="copyright">
             <span>Copyright@BestWebSoft 2017</span>
           </div>
+          <!-- Links -->
           <div class="policy">
             <a href="#"><span>security policy</span></a>
             <a href="#"><span>support policy</span></a>

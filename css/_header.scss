@@ -4,28 +4,35 @@
   margin-top: 0;
 }
 
+/*Top Menu*/
 .top-menu {
   background-color: $primaryColor;
   color: $smTextColor;
   .container {
     @include space-between;
-    padding: 10px 0;
+    padding: 9px 0;
   }
   &-item {
     display: inline-block;
   }
-
+/*Top Menu Left*/
   &-left-item {
     margin-right: 53px;
     &:last-child {
       margin-right: 0;
     }
-    & a:hover {
-      color: $whiteColor;
+    a{
+      transition: 0.5s color ease;
+      &:hover {
+        color: $whiteColor;
+      }
     }
   }
-  .phone:hover {
-    color: $whiteColor;
+  .phone{
+    transition: 0.5s color ease;
+    &:hover {
+      color: $whiteColor;
+    }
   }
 
   .social-btn a {
@@ -46,9 +53,10 @@
   .login i {
     margin-right: 5px;
   }
-
+/*Top Menu Right*/
   &-right-item {
-    padding: 0 30px;
+    padding: 0 26px;
+    transition: 0.5s color ease;
     &:first-child {
       padding-left: 0;
     }
@@ -90,20 +98,21 @@
     }
   }
 }
-
+/*Main Menu*/
 .menu {
   background-color: $whiteColor;
   .container {
-    padding: 28px 0;
+    padding: 15px 0;
     @include space-between;
   }
+  /*Navbar*/
   .navbar {
     @include font($fz-18, $fontWeightMedium, $smTextColor2);
     ul {
       @include center;
     }
     li {
-      margin-right: 48px;
+      margin-right: 50px;
       &:last-child {
         margin-right: 0;
       }
@@ -122,9 +131,10 @@
       color: $secondaryColor;
     }
   }
-
+  /*Logo*/
   .logo {
     @include center;
+    margin-left: -25px;
     img {
       margin-right: 10px;
     }
@@ -132,6 +142,7 @@
       @include font($fz-28, $fontWeightExtraBold, $primaryColor);
     }
   }
+  /*Search*/
   .search {
     form {
       background-color: $bgColor2;

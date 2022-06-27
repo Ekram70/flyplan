@@ -1,3 +1,4 @@
+/*===Sidebar CSS Start*/
 .sidebar {
   background-color: $whiteColor;
   margin: 0;
@@ -9,6 +10,7 @@
   height: 100%;
   box-shadow: -5px 0px 10px rgba($color: $primaryColor, $alpha: 0.2);
   overflow-y: auto;
+  display: none;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -22,7 +24,7 @@
     margin-top: 35px;
   }
 }
-
+/*Summary Section Boxes*/
 .summary-section {
   padding: 0 30px;
   margin-top: 25px;
@@ -55,25 +57,28 @@
     font-size: $fz-24;
   }
 }
-
+/*Summary Item*/
 .summary-item {
   margin-top: 30px;
-  &-title h4 {
-    font-size: $fz-18;
-    font-weight: $fontWeightSemiBold;
-    color: $primaryColor;
-    text-transform: capitalize;
-    margin-bottom: 10px;
-    i {
-      font-size: $fz-22;
-      color: $smTextColor2;
-      transform: translateY(2px);
-      margin-right: 10px;
+  &-title{
+    margin-top: 40px;
+    h4 {
+      font-size: $fz-18;
+      font-weight: $fontWeightSemiBold;
+      color: $primaryColor;
+      text-transform: capitalize;
+      margin-bottom: 10px;
+      i {
+        font-size: $fz-22;
+        color: $smTextColor2;
+        transform: translateY(2px);
+        margin-right: 10px;
+      }
     }
   }
-
+/*Flight Item*/
   .flight-item {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     span {
       display: block;
       font-size: $fz-16;
@@ -92,7 +97,7 @@
     color: $smTextColor2;
     text-transform: uppercase;
   }
-
+/*Travellers Item*/
   .travellers-item {
     @include space-between;
     margin-bottom: 10px;
@@ -108,7 +113,7 @@
     }
   }
 }
-
+/*Summary Last*/
 .summary-last {
   margin-bottom: 35px;
 }

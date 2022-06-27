@@ -1,9 +1,11 @@
+/*===Confirmation CSS Start===*/
 .confirmation {
   .container {
     padding: 0;
   }
   &-header {
     margin-bottom: 10px;
+    margin-top: 50px;
     h3 {
       border-radius: 4px;
       padding: 15px 28px;
@@ -15,9 +17,9 @@
       text-transform: capitalize;
     }
   }
-
+  /*Confirmation Boxes*/
   &-box {
-    padding: 30px 70px;
+    padding: 38px 70px;
     background-color: $whiteColor;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -26,22 +28,20 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      // & > div {
-      //   border: 1px solid;
-      // }
       text-transform: capitalize;
+      /*Email & Phone*/
       label {
         font-size: $fz-16;
         font-weight: $fontWeightMedium;
         color: $primaryColor;
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 7px;
       }
       input,
       select {
         border: 2px solid $bgColor;
         border-radius: 4px;
-        padding: 15px;
+        padding: 10px;
         width: 100%;
         font-size: $fz-16;
         font-weight: $fontWeightMedium;
@@ -56,7 +56,7 @@
       input[type="date"] {
         text-transform: uppercase;
       }
-
+      /*Terms And Conditions*/
       .checkbox {
         height: 100%;
         display: flex;
@@ -103,11 +103,12 @@
       }
     }
   }
+  /*Confirmation Btn*/
   &-btn {
     margin-top: 30px;
     @include space-between;
     button {
-      padding: 10px 30px;
+      padding: 12px 30px;
       border-radius: 4px;
       font-size: $fz-18;
       font-weight: $fontWeightBold;
@@ -116,6 +117,10 @@
     }
     .buy {
       background-color: $secondaryColor;
+      transition: 0.3s background-color ease, 0.3s color ease;
+      &:hover {
+        background-color: $primaryColor;
+      }
     }
     p {
       font-size: $fz-18;

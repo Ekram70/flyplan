@@ -1,3 +1,4 @@
+/*===Travelling CSS Start===*/
 .travelling {
   .container {
     padding: 0;
@@ -6,7 +7,7 @@
     margin-bottom: 10px;
     h3 {
       border-radius: 4px;
-      padding: 15px 28px;
+      padding: 14px 28px;
       color: $whiteColor;
       background-color: $primaryColor;
       font-size: $fz-24;
@@ -15,9 +16,9 @@
       text-transform: capitalize;
     }
   }
-
+  /*Travelling Boxes*/
   &-box {
-    padding: 40px 70px;
+    padding: 41px 70px;
     background-color: $whiteColor;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -45,9 +46,10 @@
       i {
         font-size: $fz-24;
         color: $secondaryColor;
+        cursor: pointer;
       }
     }
-
+    /*Travelling Box Form Item*/
     &-form-item {
       margin-top: 40px;
 
@@ -61,7 +63,7 @@
         margin-bottom: 25px;
         &::before {
           content: "";
-          width: 4px;
+          width: 5px;
           height: 100%;
           background-color: $secondaryColor;
           position: absolute;
@@ -77,9 +79,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        // & > div {
-        //   border: 1px solid;
-        // }
         text-transform: capitalize;
         label {
           font-size: $fz-16;
@@ -92,7 +91,7 @@
         select {
           border: 2px solid $bgColor;
           border-radius: 4px;
-          padding: 15px;
+          padding: 11px;
           width: 100%;
           font-size: $fz-16;
           font-weight: $fontWeightMedium;
@@ -163,13 +162,16 @@
         }
       }
     }
+    /*Baggage*/
     .baggage {
       .content-box {
         border: 2px solid $bgColor;
-        padding: 10px 20px;
+        padding: 12px 20px;
         text-transform: capitalize;
         margin-bottom: 10px;
+        margin-top: 40px;
       }
+      /*Cabin Baggage*/
       .cabin-baggage {
         @include space-between;
         &:not(:last-child) {
@@ -209,7 +211,7 @@
           @include center;
         }
       }
-
+      /*Add Beggage*/
       .add-baggage {
         text-transform: capitalize;
         &-container {
@@ -219,7 +221,7 @@
           margin-bottom: 10px;
         }
         p {
-          padding: 18px 25px;
+          padding: 13px 25px;
           display: flex;
           background-color: $bgColor;
           border-radius: 4px;
@@ -284,6 +286,7 @@
             height: 100%;
           }
         }
+        /*Price Btn*/
         .price-btn {
           font-size: $fz-18;
           font-weight: $fontWeightBold;
@@ -306,13 +309,16 @@
       gap: 10px;
     }
     .pricing-table {
-      border: 2px solid transparent;
+      border: 3px solid transparent;
       border-radius: 4px;
-      padding: 35px 40px;
+      padding: 38px;
       width: 33%;
       position: relative;
+      margin-top: 10px;
+      margin-bottom: 8px;
+      transition: 0.5s border ease;
       &:hover {
-        border: 2px solid $secondaryColor;
+        border: 3px solid $secondaryColor;
         .price-close i {
           display: inline-block;
         }
@@ -320,6 +326,7 @@
           button {
             color: $bgColor5;
             background-color: $bgColor;
+            transition: 0.5s color ease, 0.5s background-color ease;
           }
         }
       }
@@ -343,21 +350,21 @@
         text-align: center;
         font-size: $fz-30;
         color: $primaryColor;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
       }
       .pricing-title {
         text-align: center;
         color: $primaryColor;
         font-size: $fz-20;
         font-weight: $fontWeightSemiBold;
-        margin-bottom: 30px;
+        margin-bottom: 24px;
       }
       .price-details-item {
         color: $bgColor5;
         font-size: $fz-16;
         font-weight: $fontWeightMedium;
         text-transform: capitalize;
-        margin-bottom: 15px;
+        margin-bottom: 11px;
         i {
           width: 20px;
           text-align: center;
@@ -378,18 +385,19 @@
           font-size: $fz-18;
           font-weight: $fontWeightBold;
           background-color: $secondaryColor;
-          padding: 10px 0;
+          padding: 12px 0;
           border-radius: 4px;
-          margin-top: 25px;
+          margin-top: 20px;
         }
       }
     }
   }
-
+  /*Passenger*/
   &-passenger {
     margin-top: 30px;
+    /*Add Passenger Btn*/
     button {
-      padding: 10px 30px;
+      padding: 11px 30px;
       border-radius: 4px;
       font-size: $fz-18;
       font-weight: $fontWeightBold;
@@ -400,10 +408,20 @@
     }
     .add {
       background-color: $smTextColor2;
+      transition: 0.3s background-color ease, 0.3s color ease;
+      &:hover {
+        background-color: $secondaryColor;
+      }
     }
+    /*Continue Btn*/
     .continue {
       background-color: $secondaryColor;
       margin-left: 10px;
+      text-transform: capitalize;
+      transition: 0.3s background-color ease, 0.3s color ease;
+      &:hover {
+        background-color: $primaryColor;
+      }
     }
   }
 }

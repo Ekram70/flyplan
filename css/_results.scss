@@ -1,16 +1,18 @@
+/*===Results CSS Start===*/
 .results-container {
   display: flex;
   padding: 0;
   gap: 40px;
 }
+/*Filter*/
 .filter {
   background-color: $whiteColor;
   border-radius: 4px;
   overflow: hidden;
-  width: 25%;
+  width: 24%;
   color: $primaryColor;
   & > div:not(:first-child) {
-    padding: 30px 0;
+    padding: 0 0 22px 0;
     margin: 0 30px;
   }
   .title {
@@ -22,6 +24,7 @@
     font-size: $fz-24;
     font-weight: $fontWeightSemiBold;
   }
+  /*Filter Boxes*/
   .filter-box {
     &:not(:nth-last-child(1), :nth-last-child(2)) {
       border-bottom: 5px dashed $bgColor;
@@ -82,13 +85,18 @@
       margin-bottom: 5px;
       display: inline-block;
     }
-
+    /*Depart Btn*/
     .depart-btn {
       display: block;
       background-color: $bgColor;
       width: 100%;
       border-radius: 4px;
-      padding: 8px 20px;
+      padding: 3px 20px;
+      transition: 0.5s color ease, 0.5s background-color ease;
+      &:hover {
+        background-color: $primaryColor;
+        color: $whiteColor;
+      }
       &:not(:last-child) {
         margin-bottom: 10px;
       }
@@ -102,7 +110,7 @@
         margin-left: 15px;
       }
     }
-
+    /*Stops Btn*/
     .stops-btn {
       font-size: $fz-22;
       font-weight: $fontWeightMedium;
@@ -112,6 +120,11 @@
       display: inline-block;
       width: 55px;
       border-radius: 4px;
+      transition: 0.5s color ease, 0.5s background-color ease;
+      &:hover {
+        background-color: $primaryColor;
+        color: $whiteColor;
+      }
       &.active {
         background-color: $primaryColor;
         color: $whiteColor;
@@ -120,7 +133,7 @@
 
     .airline-item {
       display: flex;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       label {
         font-size: $fz-16;
         font-weight: $fontWeightMedium;
@@ -157,7 +170,9 @@
       }
     }
   }
+  /*Reset Btn*/
   .reset-btn {
+    margin-top: 25px;
     background-color: $smTextColor2;
     width: 100%;
     text-align: center;
@@ -166,15 +181,18 @@
     border-radius: 4px;
     padding: 12px 0;
     cursor: pointer;
-    transition: 0.3s background-color ease;
+    transition: 0.5s background-color ease;
     &:hover {
       background-color: $secondaryColor;
     }
   }
 }
 
+/*Result Boxes*/
 .result-box {
-  width: 75%;
+  width: 76%;
+  margin-left: -10px;
+  /*Sort By*/
   .sort-by {
     @include space-between;
     color: $primaryColor;
@@ -184,11 +202,12 @@
     margin-bottom: 30px;
     select {
       background-color: $whiteColor;
-      padding: 12px 18px;
+      padding: 12px 30px;
       border-radius: 4px;
       font-size: $fz-16;
     }
   }
+  /*Result Item*/
   .result-item {
     .departure {
       flex-basis: 80%;
@@ -200,7 +219,6 @@
       position: relative;
       &::after {
         content: "";
-        width: 100%;
         height: calc(100% - 4px);
         position: absolute;
         right: -1px;
@@ -221,11 +239,14 @@
 
   .departure-item {
     @include space-between;
-    padding: 20px 0;
+    padding: 13px 0;
   }
 
   .departure-item:first-child {
     border-bottom: 1px solid $bgColor;
+  }
+  .departure-item:nth-child(2) {
+    padding-bottom: 0;
   }
 
   .result-single-item {
@@ -292,15 +313,15 @@
 
     .chart {
       width: 100%;
-      height: 4px;
+      height: 2px;
       background-color: $smTextColor2;
       position: relative;
       margin-bottom: 8px;
       &::before,
       &::after {
         content: "";
-        width: 10px;
-        height: 10px;
+        width: 8px;
+        height: 8px;
         border-radius: 50%;
         background-color: $smTextColor2;
         position: absolute;
@@ -317,19 +338,19 @@
         transform: translate(50%, -50%);
       }
       &-circle {
-        width: 15px;
-        height: 15px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background-color: $secondaryColor;
         border: 2px solid $whiteColor;
         position: absolute;
         &:nth-child(1) {
-          left: 30%;
+          left: 40%;
           top: 50%;
           transform: translate(-50%, -50%);
         }
         &:nth-child(2) {
-          right: 20%;
+          right: 30%;
           top: 50%;
           transform: translate(-50%, -50%);
         }
@@ -351,6 +372,7 @@
       font-weight: $fontWeightSemiBold;
       margin-bottom: 5px;
     }
+    /*Price Btn*/
     &-btn {
       font-size: $fz-16;
       font-weight: $fontWeightBold;
@@ -358,6 +380,11 @@
       color: $whiteColor;
       padding: 10px 20px;
       border-radius: 4px;
+      transition: 0.3s background-color ease, 0.3s color ease;
+      &:hover {
+        background-color: $primaryColor;
+        color: $whiteColor;
+      }
     }
   }
 
@@ -369,7 +396,7 @@
       font-size: $fz-11;
       font-weight: $fontWeightMedium;
       text-transform: capitalize;
-      padding: 5px 8px;
+      padding: 3px 8px;
       background-color: $primaryColor;
       color: $whiteColor;
       border-top-left-radius: 4px;
@@ -377,6 +404,7 @@
       cursor: pointer;
     }
   }
+  /*Continue Btn*/
   .continue {
     margin-top: 40px;
     @include space-between;
@@ -386,8 +414,13 @@
       font-weight: $fontWeightBold;
       background-color: $secondaryColor;
       color: $whiteColor;
-      padding: 15px 30px;
+      padding: 10px 32px;
       border-radius: 4px;
+      transition: 0.3s background-color ease, 0.3s color ease;
+      &:hover {
+        background-color: $primaryColor;
+        color: $whiteColor;
+      }
     }
     p {
       font-size: $fz-18;
