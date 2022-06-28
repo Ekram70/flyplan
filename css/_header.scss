@@ -209,15 +209,18 @@
     @include font($fz-18, $fontWeightMedium, $smTextColor2);
     ul {
       @include center;
+      @include sm {
+        display: none;
+      }
     }
     li {
       margin-right: 50px;
       &:last-child {
         margin-right: 0;
         display: inline-block;
-      }
-      @include sm {
-        display: none;
+        @include sm {
+          display: none;
+        }
       }
       @include lg {
         margin-right: 30px;
@@ -235,6 +238,32 @@
 
     .active-item {
       color: $secondaryColor;
+    }
+
+    .desktop-menu {
+      @include sm {
+        position: absolute;
+        background: $whiteColor;
+        margin-top: 50px;
+        border-radius: 4px;
+        padding: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        li {
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      @include sm {
+        display: block;
+      }
+      li {
+        @include sm {
+          display: block;
+        }
+      }
     }
   }
   /*Logo*/

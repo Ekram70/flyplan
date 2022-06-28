@@ -6,6 +6,20 @@ let currencyListItem = currencyList.querySelectorAll("a");
 let activeCurrency = document.getElementById("active-currency");
 let datePicker = document.querySelectorAll(".custom-date-picker");
 let inputDropdown = document.querySelectorAll(".input-dropdown");
+let flightChangeBtn = document.querySelector(".flight-btn button");
+let flightLocationLeft = document.querySelector(".flight-location-left");
+let flightLocationRight = document.querySelector(".flight-location-right");
+let inputChange = document.querySelector(".input-to .icon");
+let inputFrom = document.querySelector(".input-from input");
+let inputTo = document.querySelector(".input-to input");
+let filterToggleBtns = document.querySelectorAll(".filter-box .fa-chevron-up");
+let travellingToggleBtns = document.querySelectorAll(".travelling-box .fa");
+let mobileMenuIcon = document.querySelector(".mobile-menu .icon");
+let desktopMenu = document.querySelector(".desktop-menu");
+let filterBtn = document.getElementById("filter-btn");
+let sidebarClose = document.querySelector(".summary-icon i");
+let sidebar = document.querySelector(".sidebar");
+let priceBtns = document.querySelectorAll(".price-btn");
 
 currency.addEventListener("click", () => {
   currencyList.classList.toggle("d-none");
@@ -61,3 +75,96 @@ function setOption(parent) {
   const target = options[0].innerText;
   textInput.placeholder = `${target}`;
 }
+
+// flight change btn
+flightChangeBtn.addEventListener("click", () => {
+  let text = flightLocationLeft.innerHTML;
+  flightLocationLeft.innerHTML = flightLocationRight.innerHTML;
+  flightLocationRight.innerHTML = text;
+});
+
+// inputChange
+inputChange.addEventListener("click", () => {
+  let value = inputFrom.value;
+  inputFrom.value = inputTo.value;
+  inputTo.value = value;
+});
+
+// toggleBtns
+filterToggleBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    let parent = e.target.parentElement.parentElement;
+    let element = parent.querySelector(".filter-box-content");
+    toggle(element);
+    e.target.classList.toggle("rotate-180");
+  });
+});
+
+travellingToggleBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    let parent = e.target.parentElement.parentElement;
+    let element = parent.querySelector(".travelling-box-form");
+    toggle(element);
+    e.target.classList.toggle("rotate-180");
+  });
+});
+
+// toggle function
+function toggle(element) {
+  element.classList.toggle("d-none");
+}
+
+// menu toggling
+mobileMenuIcon.addEventListener("click", () => {
+  desktopMenu.classList.toggle("d-block");
+});
+
+// mobile filter
+filterBtn.addEventListener("click", (e) => {
+  let parent = e.target.parentElement.parentElement;
+  let target = parent.querySelector(".filter");
+  target.classList.toggle("d-block");
+});
+
+// summary section toggle
+sidebarClose.addEventListener("click", () => {
+  sidebar.style.right = "-270px";
+});
+
+priceBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    sidebar.style.right = "0";
+  });
+});
+
+// multi-range slider
+var lowerSlider = document.querySelector("#lower"),
+  upperSlider = document.querySelector("#upper"),
+  lowerVal = parseInt(lowerSlider.value);
+upperVal = parseInt(upperSlider.value);
+
+upperSlider.oninput = function () {
+  lowerVal = parseInt(lowerSlider.value);
+  upperVal = parseInt(upperSlider.value);
+
+  if (upperVal < lowerVal + 5) {
+    lowerSlider.value = upperVal - 5;
+
+    if (lowerVal == lowerSlider.min) {
+      upperSlider.value = 5;
+    }
+  }
+};
+
+lowerSlider.oninput = function () {
+  lowerVal = parseInt(lowerSlider.value);
+  upperVal = parseInt(upperSlider.value);
+
+  if (lowerVal > upperVal - 5) {
+    upperSlider.value = lowerVal + 5;
+
+    if (upperVal == upperSlider.max) {
+      lowerSlider.value = parseInt(upperSlider.max) - 5;
+    }
+  }
+};

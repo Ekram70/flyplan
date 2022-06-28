@@ -4,13 +4,12 @@
   margin: 0;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -270px;
   bottom: 0;
   width: 270px;
   height: 100%;
   box-shadow: -5px 0px 10px rgba($color: $primaryColor, $alpha: 0.2);
   overflow-y: auto;
-  display: none;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -21,14 +20,36 @@
     color: $primaryColor;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 35px;
+    margin-top: 50px;
+  }
+
+  .summary-icon {
+    width: 100%;
+    i {
+      color: $primaryColor;
+      font-size: $fz-20;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 50%;
+      background-color: $secondaryColor;
+      display: inline-block;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 999;
+      cursor: pointer;
+    }
   }
 }
+
 /*Summary Section Boxes*/
 .summary-section {
   padding: 0 30px;
   margin-top: 25px;
   position: relative;
+
   .title {
     font-size: $fz-20;
     font-weight: $fontWeightSemiBold;
@@ -71,7 +92,6 @@
       i {
         font-size: $fz-22;
         color: $smTextColor2;
-        transform: translateY(2px);
         margin-right: 10px;
       }
     }

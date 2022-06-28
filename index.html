@@ -70,10 +70,17 @@
         <div class="container">
           <!-- Navbar -->
           <nav class="navbar">
-            <ul>
+            <ul class="desktop-menu">
               <li><a href="#" class="active-item">home</a></li>
               <li><a href="#">pages</a></li>
               <li><a href="#">about</a></li>
+              <li>
+                <a href="#">
+                  <i class="icon ion-android-more-horizontal"></i>
+                </a>
+              </li>
+            </ul>
+            <ul class="mobile-menu">
               <li>
                 <a href="#">
                   <i class="icon ion-android-more-horizontal"></i>
@@ -109,7 +116,7 @@
             <div class="flight-icon">
               <i class="fa fa-plane"></i>
             </div>
-            <div class="flight-location">
+            <div class="flight-location flight-location-left">
               <h4>los angeles - istanbul</h4>
               <span>jun 04, sat &nbsp;|&nbsp; 3 travellers</span>
             </div>
@@ -117,9 +124,9 @@
           <!-- Flight Return -->
           <div class="flight-return flight-box">
             <div class="flight-icon">
-              <i class="fa fa-plane"></i>
+              <i class="fa fa-plane rotate-270"></i>
             </div>
-            <div class="flight-location">
+            <div class="flight-location flight-location-right">
               <h4>istanbul - los angeles</h4>
               <span>27 may, sat &nbsp;|&nbsp; 3 travellers</span>
             </div>
@@ -244,11 +251,15 @@
           <div class="filter-box">
             <div class="filter-title">
               <h6>price range</h6>
-              <i class="fa fa-chevron-up"></i>
+              <i class="fa fa-chevron-up rotate-180"></i>
             </div>
             <div class="filter-box-content">
-              <span class="price-amount">$600</span>
-              <input type="range" />
+              <span class="price-amount price-amount-left">$600</span>
+              <span class="price-amount price-amount-right">$600</span>
+              <span class="multi-range">
+                <input type="range" min="0" max="50" value="5" id="lower" />
+                <input type="range" min="0" max="50" value="25" id="upper" />
+              </span>
             </div>
           </div>
           <!-- Filter Box-2 -->
@@ -366,7 +377,7 @@
         </aside>
         <!-- mobile filter btn -->
         <div class="filter-mobile">
-          <button class="reset-btn">filter</button>
+          <button class="filter-btn" id="filter-btn">filter</button>
         </div>
         <!-- Result Boxes -->
         <div class="result-box">
@@ -377,11 +388,18 @@
             </div>
             <div class="sort-by-input">
               <label for="">sort by:</label>
-              <select name="" id="">
-                <option value="">Price per Adult</option>
-                <option value="">Price per Children</option>
-                <option value="">Price per Infant</option>
-              </select>
+              <div class="input-adults input-dropdown">
+                <div class="dropdown-text">
+                  <input type="text" />
+                  <i class="fa fa-angle-down"></i>
+                </div>
+                <ul class="dropdown-list d-none"></ul>
+                <select>
+                  <option value="">Price per Adult</option>
+                  <option value="">Price per Children</option>
+                  <option value="">Price per Infant</option>
+                </select>
+              </div>
             </div>
           </div>
           <!-- Result Items -->
@@ -896,6 +914,293 @@
             <h2><span>1</span>Adult</h2>
             <i class="fa fa-chevron-down"></i>
           </div>
+          <form class="travelling-box-form d-none">
+            <div class="personal-info travelling-box-form-item">
+              <div class="title">
+                <h6>personal information</h6>
+              </div>
+              <div class="content">
+                <div class="first-name">
+                  <label for="fname">first name</label>
+                  <input
+                    type="text"
+                    name=""
+                    id="fname"
+                    placeholder="enter first name"
+                  />
+                </div>
+                <div class="last-name">
+                  <label for="lname">last name</label>
+                  <input
+                    type="text"
+                    name=""
+                    id="lname"
+                    placeholder="enter last name"
+                  />
+                </div>
+                <div class="birth-gender">
+                  <div class="birth">
+                    <label for="dob">date of birth</label>
+                    <input type="date" id="dob" class="custom-date-picker" />
+                  </div>
+                  <div class="gender">
+                    <label for="gender">gender</label>
+                    <div class="input-dropdown">
+                      <div class="dropdown-text">
+                        <input type="text" />
+                        <i class="fa fa-angle-down"></i>
+                      </div>
+                      <ul class="dropdown-list d-none"></ul>
+                      <select class="d-none">
+                        <option value="">Male</option>
+                        <option value="">Female</option>
+                        <option value="">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="nationality">
+                  <label for="nationality">nationality</label>
+                  <div class="input-dropdown">
+                    <div class="dropdown-text">
+                      <input type="text" />
+                      <i class="fa fa-angle-down"></i>
+                    </div>
+                    <ul class="dropdown-list d-none"></ul>
+                    <select name="" id="nationality" class="d-none">
+                      <option value="bd">Bangladeshi</option>
+                      <option value="in">indian</option>
+                      <option value="pk">pakistani</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="passport">
+                  <label for="passport">passport of id number</label>
+                  <input
+                    type="text"
+                    name=""
+                    id="passport"
+                    placeholder="0000 0000 0000 0000"
+                  />
+                </div>
+                <div class="expiry">
+                  <label>Expiry date</label>
+                  <div class="expiry-item">
+                    <div class="input-dropdown">
+                      <div class="dropdown-text">
+                        <input type="text" />
+                        <i class="fa fa-angle-down"></i>
+                      </div>
+                      <ul class="dropdown-list d-none"></ul>
+                      <select name="" class="d-none">
+                        <option value="01">January</option>
+                        <option value="02">february</option>
+                        <option value="03">march</option>
+                      </select>
+                    </div>
+                    <div class="input-dropdown">
+                      <div class="dropdown-text">
+                        <input type="text" />
+                        <i class="fa fa-angle-down"></i>
+                      </div>
+                      <ul class="dropdown-list d-none"></ul>
+                      <select name="" class="d-none">
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                      </select>
+                    </div>
+                    <div class="checkbox">
+                      <input
+                        type="checkbox"
+                        name=""
+                        id="echeck"
+                        class="d-none"
+                      />
+                      <label for="echeck">
+                        <i class="fa fa-square-o"></i>
+                        <i class="fa fa-check-square-o"></i>
+                        <span>No expiry</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Beggage -->
+            <div class="baggage travelling-box-form-item">
+              <div class="title">
+                <h6>Baggage</h6>
+              </div>
+              <div class="content">
+                <!-- Baggage Content-->
+                <div class="content-box">
+                  <p class="cabin-baggage">
+                    <span class="cabin-baggage-item">Cabin Baggage</span>
+                    <span class="cabin-baggage-details">42x32x20cm</span>
+                    <span class="cabin-baggage-price">free</span>
+                  </p>
+                  <p class="cabin-baggage checked-baggege">
+                    <span class="cabin-baggage-item">Checked Baggage</span>
+                    <span class="cabin-baggage-details">23 kg</span>
+                    <span class="cabin-baggage-price">$80</span>
+                    <span class="cabin-baggage-icon"
+                      ><a href="#"><i class="icon ion-android-close"></i></a
+                    ></span>
+                  </p>
+                </div>
+                <!-- Add Baggage -->
+                <div class="add-baggage">
+                  <div class="add-baggage-container">
+                    <p>
+                      <span class="add-baggage-item">checked baggage</span>
+                      <span class="add-baggage-details">23 kg</span>
+                    </p>
+                    <div class="add-baggage-input">
+                      <input type="number" />
+                    </div>
+                    <div class="price-btn">
+                      <button>$80</button>
+                    </div>
+                  </div>
+                  <div class="add-baggage-container">
+                    <p>
+                      <span class="add-baggage-item">
+                        sport equipment
+                        <i class="fa fa-question-circle-o"></i>
+                        <span
+                          >You Can Bring Ski, Snowboard, Surf equipment,
+                          Bicycle, etc.</span
+                        >
+                      </span>
+                    </p>
+                    <div class="price-btn">
+                      <button>$80</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Travel Insurance Boxes -->
+            <div class="travel travelling-box-form-item">
+              <div class="title">
+                <h6>travel insurance</h6>
+              </div>
+              <div class="content pricing-content">
+                <!-- Pricing Box-1 -->
+                <div class="pricing-table">
+                  <div class="img">
+                    <i class="icon ion-heart-broken"></i>
+                  </div>
+                  <div class="pricing-title">
+                    <h4>No insurance</h4>
+                  </div>
+                  <div class="price-details">
+                    <p class="price-details-item">
+                      <i class="fa fa-check"></i>
+                      <span>Medical expenses</span>
+                    </p>
+                    <p class="price-details-item">
+                      <i class="fa fa-check"></i>
+                      <span>trip cancellation</span>
+                    </p>
+                    <p class="price-details-item">
+                      <i class="fa fa-times"></i>
+                      <span>lost baggage</span>
+                    </p>
+                    <p class="price-details-item">
+                      <i class="fa fa-times"></i>
+                      <span>air travel insurance</span>
+                    </p>
+                    <p class="price-details-item">
+                      <i class="fa fa-times"></i>
+                      <span>liability</span>
+                    </p>
+                  </div>
+                  <div class="price-amount">
+                    <button>$0</button>
+                  </div>
+                  <div class="price-close">
+                    <a href="#"><i class="icon ion-android-close"></i></a>
+                  </div>
+                </div>
+                <!-- Pricing Box-2 -->
+                <div class="pricing-table">
+                  <div class="img">
+                    <i class="icon ion-heart-broken"></i>
+                  </div>
+                  <div class="pricing-title">
+                    <h4>No insurance</h4>
+                  </div>
+                  <div class="price-details">
+                    <p class="price-details-item">
+                      <i class="fa fa-check"></i>
+                      <span>Medical expenses</span>
+                    </p>
+                    <p class="price-details-item">
+                      <i class="fa fa-check"></i>
+                      <span>trip cancellation</span>
+                    </p>
+                    <p class="price-details-item">
+                      <i class="fa fa-times"></i>
+                      <span>lost baggage</span>
+                    </p>
+                    <p class="price-details-item">
+                      <i class="fa fa-times"></i>
+                      <span>air travel insurance</span>
+                    </p>
+                    <p class="price-details-item">
+                      <i class="fa fa-times"></i>
+                      <span>liability</span>
+                    </p>
+                  </div>
+                  <div class="price-amount">
+                    <button>$0</button>
+                  </div>
+                  <div class="price-close">
+                    <a href="#"><i class="icon ion-android-close"></i></a>
+                  </div>
+                </div>
+                <!-- Pricing Box-3 -->
+                <div class="pricing-table">
+                  <div class="img">
+                    <i class="icon ion-heart-broken"></i>
+                  </div>
+                  <div class="pricing-title">
+                    <h4>No insurance</h4>
+                  </div>
+                  <div class="price-details">
+                    <p class="price-details-item">
+                      <i class="fa fa-check"></i>
+                      <span>Medical expenses</span>
+                    </p>
+                    <p class="price-details-item">
+                      <i class="fa fa-check"></i>
+                      <span>trip cancellation</span>
+                    </p>
+                    <p class="price-details-item">
+                      <i class="fa fa-times"></i>
+                      <span>lost baggage</span>
+                    </p>
+                    <p class="price-details-item">
+                      <i class="fa fa-times"></i>
+                      <span>air travel insurance</span>
+                    </p>
+                    <p class="price-details-item">
+                      <i class="fa fa-times"></i>
+                      <span>liability</span>
+                    </p>
+                  </div>
+                  <div class="price-amount">
+                    <button>$0</button>
+                  </div>
+                  <div class="price-close">
+                    <a href="#"><i class="icon ion-android-close"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
         <!-- Travelling Box-2 -->
         <div class="travelling-box">
@@ -930,24 +1235,38 @@
                 <div class="birth-gender">
                   <div class="birth">
                     <label for="dob">date of birth</label>
-                    <input type="date" id="dob" />
+                    <input type="date" id="dob" class="custom-date-picker" />
                   </div>
                   <div class="gender">
                     <label for="gender">gender</label>
-                    <select name="" id="gender">
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="other">Other</option>
-                    </select>
+                    <div class="input-dropdown">
+                      <div class="dropdown-text">
+                        <input type="text" />
+                        <i class="fa fa-angle-down"></i>
+                      </div>
+                      <ul class="dropdown-list d-none"></ul>
+                      <select class="d-none">
+                        <option value="">Male</option>
+                        <option value="">Female</option>
+                        <option value="">Other</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
                 <div class="nationality">
                   <label for="nationality">nationality</label>
-                  <select name="" id="nationality">
-                    <option value="bd">Bangladeshi</option>
-                    <option value="in">indian</option>
-                    <option value="pk">pakistani</option>
-                  </select>
+                  <div class="input-dropdown">
+                    <div class="dropdown-text">
+                      <input type="text" />
+                      <i class="fa fa-angle-down"></i>
+                    </div>
+                    <ul class="dropdown-list d-none"></ul>
+                    <select name="" id="nationality" class="d-none">
+                      <option value="bd">Bangladeshi</option>
+                      <option value="in">indian</option>
+                      <option value="pk">pakistani</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="passport">
                   <label for="passport">passport of id number</label>
@@ -961,18 +1280,37 @@
                 <div class="expiry">
                   <label>Expiry date</label>
                   <div class="expiry-item">
-                    <select name="">
-                      <option value="01">January</option>
-                      <option value="02">february</option>
-                      <option value="03">march</option>
-                    </select>
-                    <select name="">
-                      <option value="2001">2001</option>
-                      <option value="2002">2002</option>
-                      <option value="2003">2003</option>
-                    </select>
+                    <div class="input-dropdown">
+                      <div class="dropdown-text">
+                        <input type="text" />
+                        <i class="fa fa-angle-down"></i>
+                      </div>
+                      <ul class="dropdown-list d-none"></ul>
+                      <select name="" class="d-none">
+                        <option value="01">January</option>
+                        <option value="02">february</option>
+                        <option value="03">march</option>
+                      </select>
+                    </div>
+                    <div class="input-dropdown">
+                      <div class="dropdown-text">
+                        <input type="text" />
+                        <i class="fa fa-angle-down"></i>
+                      </div>
+                      <ul class="dropdown-list d-none"></ul>
+                      <select name="" class="d-none">
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                      </select>
+                    </div>
                     <div class="checkbox">
-                      <input type="checkbox" name="" id="echeck" />
+                      <input
+                        type="checkbox"
+                        name=""
+                        id="echeck"
+                        class="d-none"
+                      />
                       <label for="echeck">
                         <i class="fa fa-square-o"></i>
                         <i class="fa fa-check-square-o"></i>
@@ -1224,16 +1562,31 @@
                       <div class="expiry-item">
                         <label>Expiry date</label>
                         <div class="expiry-parts">
-                          <select name="">
-                            <option value="01">January</option>
-                            <option value="02">february</option>
-                            <option value="03">march</option>
-                          </select>
-                          <select name="">
-                            <option value="2001">2001</option>
-                            <option value="2002">2002</option>
-                            <option value="2003">2003</option>
-                          </select>
+                          <div class="input-dropdown">
+                            <div class="dropdown-text">
+                              <input type="text" />
+                              <i class="fa fa-angle-down"></i>
+                            </div>
+                            <ul class="dropdown-list d-none"></ul>
+                            <select name="" class="d-none">
+                              <option value="01">January</option>
+                              <option value="02">february</option>
+                              <option value="03">march</option>
+                            </select>
+                          </div>
+
+                          <div class="input-dropdown">
+                            <div class="dropdown-text">
+                              <input type="text" />
+                              <i class="fa fa-angle-down"></i>
+                            </div>
+                            <ul class="dropdown-list d-none"></ul>
+                            <select name="" class="d-none">
+                              <option value="2001">2001</option>
+                              <option value="2002">2002</option>
+                              <option value="2003">2003</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                       <div class="cvv">
@@ -1250,11 +1603,18 @@
                   <!-- Country -->
                   <div class="country">
                     <label for="country">country</label>
-                    <select name="" id="country">
-                      <option value="bd">Bangladesh</option>
-                      <option value="in">india</option>
-                      <option value="pk">pakistan</option>
-                    </select>
+                    <div class="input-dropdown">
+                      <div class="dropdown-text">
+                        <input type="text" />
+                        <i class="fa fa-angle-down"></i>
+                      </div>
+                      <ul class="dropdown-list d-none"></ul>
+                      <select name="" id="country" class="d-none">
+                        <option value="bd">Bangladesh</option>
+                        <option value="in">india</option>
+                        <option value="pk">pakistan</option>
+                      </select>
+                    </div>
                   </div>
                   <!-- Address -->
                   <div class="address">
@@ -1270,11 +1630,18 @@
                   <div class="location">
                     <div class="city">
                       <label for="city">city</label>
-                      <select name="" id="city">
-                        <option value="dh">Dhaka</option>
-                        <option value="ctg">chittagong</option>
-                        <option value="cu">cumilla</option>
-                      </select>
+                      <div class="input-dropdown">
+                        <div class="dropdown-text">
+                          <input type="text" />
+                          <i class="fa fa-angle-down"></i>
+                        </div>
+                        <ul class="dropdown-list d-none"></ul>
+                        <select name="" id="city" class="d-none">
+                          <option value="dh">Dhaka</option>
+                          <option value="ctg">chittagong</option>
+                          <option value="cu">cumilla</option>
+                        </select>
+                      </div>
                     </div>
                     <div class="zip">
                       <label for="zip">zip code</label>
@@ -1361,6 +1728,9 @@
 
     <!-- ===Sidebar Section=== -->
     <section class="section sidebar">
+      <div class="summary-icon">
+        <i class="fa fa-times"></i>
+      </div>
       <div class="header">
         <h2>summary</h2>
       </div>
@@ -1392,7 +1762,7 @@
         <!-- Summary Item-2 -->
         <div class="summary-item">
           <div class="summary-item-title">
-            <h4><i class="fa fa-plane"></i>return</h4>
+            <h4><i class="fa fa-plane rotate-270"></i>return</h4>
           </div>
           <div class="summary-flight">
             <div class="flight-item">
