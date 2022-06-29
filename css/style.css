@@ -1780,6 +1780,238 @@ body {
   }
 }
 
+/*Modal Box*/
+.modal-box {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(64, 64, 87, 0.8);
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  overflow-y: auto;
+}
+.modal-box-content {
+  max-width: 875px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 35px 40px;
+  position: relative;
+}
+@media (max-width: 992px) {
+  .modal-box-content {
+    width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  .modal-box-content {
+    width: 90%;
+  }
+}
+.modal-box-close {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  z-index: 5000;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #404057;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  cursor: pointer;
+}
+.modal-box-close i {
+  line-height: 35px;
+  font-size: 18px;
+}
+.modal-box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  .modal-box-top {
+    flex-direction: column;
+  }
+}
+.modal-box-top h4,
+.modal-box-top h6 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #404057;
+  text-transform: capitalize;
+}
+@media (max-width: 576px) {
+  .modal-box-top h4 {
+    margin-bottom: 20px;
+  }
+}
+.modal-box-top span {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #b4b4c8;
+}
+.modal-box-top button {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #32d093;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+.modal-box-top .modal-price {
+  display: flex;
+}
+.modal-box-top .modal-price h6 {
+  margin-right: 10px;
+}
+.modal-box .modal-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #404057;
+  text-transform: capitalize;
+  margin: 30px 0;
+}
+.modal-box .modal-section-title span {
+  font-weight: 500;
+}
+.modal-box .modal-section-content .airline-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+}
+@media (max-width: 992px) {
+  .modal-box .modal-section-content .airline-box {
+    display: block;
+  }
+}
+.modal-box .modal-section-content .airline {
+  display: flex;
+}
+@media (max-width: 992px) {
+  .modal-box .modal-section-content .airline {
+    display: inline-block;
+  }
+}
+.modal-box .modal-section-content .airline-logo {
+  height: 30px;
+  width: 30px;
+  background: #b4b4c8;
+  border-radius: 4px;
+}
+@media (max-width: 992px) {
+  .modal-box .modal-section-content .airline-logo {
+    display: inline-block;
+  }
+}
+.modal-box .modal-section-content .airline-name {
+  margin-left: 10px;
+}
+@media (max-width: 992px) {
+  .modal-box .modal-section-content .airline-name {
+    display: inline-block;
+  }
+}
+.modal-box .modal-section-content .airline-name span {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #b4b4c8;
+}
+@media (max-width: 992px) {
+  .modal-box .modal-section-content .outbound {
+    text-align: center;
+  }
+}
+.modal-box .modal-section-content .outbound span {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #404057;
+  text-transform: capitalize;
+  line-height: 20px;
+}
+.modal-box .modal-section-content .outbound .outbound-span {
+  font-weight: 700;
+}
+.modal-box .modal-section-content .journey {
+  text-align: center;
+}
+.modal-box .modal-section-content .journey span {
+  font-size: 11px;
+  font-weight: 500;
+  color: #b4b4c8;
+  margin: 10px 0;
+  display: block;
+}
+.modal-box .modal-section-content .journey-stops {
+  background-color: #b4b4c8;
+  width: 150%;
+  height: 2px;
+  position: relative;
+  left: -25%;
+}
+@media (max-width: 992px) {
+  .modal-box .modal-section-content .journey-stops {
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.modal-box .modal-section-content .journey .single-stops {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background-color: #b4b4c8;
+  border-radius: 50%;
+}
+.modal-box .modal-section-content .journey .single-stops-left {
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+.modal-box .modal-section-content .journey .single-stops-right {
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
+}
+.modal-box .modal-section-content .arrive span {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #404057;
+  text-transform: capitalize;
+  line-height: 20px;
+  text-align: right;
+}
+@media (max-width: 992px) {
+  .modal-box .modal-section-content .arrive span {
+    text-align: center;
+  }
+}
+.modal-box .modal-section-content .arrive .arrive-span {
+  font-weight: 700;
+}
+.modal-box .layover {
+  background-color: #edf2f6;
+  text-align: center;
+  border-radius: 4px;
+  margin: 35px 0;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #404057;
+}
+.modal-box .layover span {
+  font-weight: 600;
+}
+
 /*===Travelling CSS Start===*/
 .travelling {
   /*Travelling Boxes*/
@@ -3103,4 +3335,4 @@ body {
 /*Summary Last*/
 .summary-last {
   margin-bottom: 35px;
-}
+}/*# sourceMappingURL=style.css.map */

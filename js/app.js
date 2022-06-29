@@ -20,6 +20,9 @@ let filterBtn = document.getElementById("filter-btn");
 let sidebarClose = document.querySelector(".summary-icon i");
 let sidebar = document.querySelector(".sidebar");
 let priceBtns = document.querySelectorAll(".price-btn");
+let modalBox = document.querySelector(".modal-box");
+let modalBoxClose = document.querySelector(".modal-box-close");
+let detailsBtns = document.querySelectorAll(".details-tag span");
 
 currency.addEventListener("click", () => {
   currencyList.classList.toggle("d-none");
@@ -135,6 +138,17 @@ priceBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     sidebar.style.right = "0";
   });
+});
+
+// modal box
+detailsBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    modalBox.classList.remove("d-none");
+  });
+});
+
+modalBoxClose.addEventListener("click", () => {
+  modalBox.classList.add("d-none");
 });
 
 // multi-range slider

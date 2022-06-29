@@ -640,3 +640,207 @@
     }
   }
 }
+
+/*Modal Box*/
+.modal-box {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  background-color: rgba($color: $primaryColor, $alpha: 0.8);
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  overflow-y: auto;
+
+  &-content {
+    max-width: 875px;
+    margin: 30px auto;
+    background-color: $whiteColor;
+    border-radius: 4px;
+    padding: 35px 40px;
+    position: relative;
+    @include lg {
+      width: 80%;
+    }
+    @include sm {
+      width: 90%;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    z-index: 5000;
+    display: inline-block;
+    background-color: $whiteColor;
+    color: $primaryColor;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+    i {
+      line-height: 35px;
+      font-size: $fz-18;
+    }
+  }
+
+  &-top {
+    @include space-between;
+    @include sm {
+      flex-direction: column;
+    }
+    h4,
+    h6 {
+      @include font($fz-24, $fontWeightSemiBold, $primaryColor);
+      text-transform: capitalize;
+    }
+    h4 {
+      @include sm {
+        margin-bottom: 20px;
+      }
+    }
+    span {
+      display: block;
+      @include font($fz-13, $fontWeightMedium, $smTextColor2);
+    }
+    button {
+      @include font($fz-16, $fontWeightBold, $whiteColor);
+      background-color: $secondaryColor;
+      padding: 10px 20px;
+      border-radius: 4px;
+    }
+    .modal-price {
+      display: flex;
+      h6 {
+        margin-right: 10px;
+      }
+    }
+  }
+  .modal-section-title {
+    @include font($fz-16, $fontWeightSemiBold, $primaryColor);
+    text-transform: capitalize;
+    margin: 30px 0;
+    span {
+      font-weight: $fontWeightMedium;
+    }
+  }
+
+  .modal-section-content {
+    .airline-box {
+      @include space-between;
+      align-items: flex-start;
+      @include lg {
+        display: block;
+      }
+    }
+
+    .airline {
+      display: flex;
+      @include lg {
+        display: inline-block;
+      }
+    }
+
+    .airline-logo {
+      height: 30px;
+      width: 30px;
+      background: $smTextColor2;
+      border-radius: 4px;
+      @include lg {
+        display: inline-block;
+      }
+    }
+
+    .airline-name {
+      margin-left: 10px;
+      @include lg {
+        display: inline-block;
+      }
+      span {
+        display: block;
+        @include font($fz-13, $fontWeightMedium, $smTextColor2);
+      }
+    }
+    .outbound {
+      @include lg {
+        text-align: center;
+      }
+      span {
+        display: block;
+        @include font($fz-13, $fontWeightMedium, $primaryColor);
+        text-transform: capitalize;
+        line-height: 20px;
+      }
+      .outbound-span {
+        font-weight: $fontWeightBold;
+      }
+    }
+    .journey {
+      text-align: center;
+      span {
+        @include font($fz-11, $fontWeightMedium, $smTextColor2);
+        margin: 10px 0;
+        display: block;
+      }
+      &-stops {
+        background-color: $smTextColor2;
+        width: 150%;
+        height: 2px;
+        position: relative;
+        left: -25%;
+        @include lg {
+          width: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      .single-stops {
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        background-color: $smTextColor2;
+        border-radius: 50%;
+        &-left {
+          left: 0;
+          top: 0;
+          transform: translate(-50%, -50%);
+        }
+        &-right {
+          right: 0;
+          top: 0;
+          transform: translate(50%, -50%);
+        }
+      }
+    }
+
+    .arrive {
+      span {
+        display: block;
+        @include font($fz-13, $fontWeightMedium, $primaryColor);
+        text-transform: capitalize;
+        line-height: 20px;
+        text-align: right;
+        @include lg {
+          text-align: center;
+        }
+      }
+      .arrive-span {
+        font-weight: $fontWeightBold;
+      }
+    }
+  }
+  .layover {
+    background-color: $bgColor;
+    text-align: center;
+    border-radius: 4px;
+    margin: 35px 0;
+    padding: 10px 0;
+    @include font($fz-14, $fontWeightMedium, $primaryColor);
+    span {
+      font-weight: $fontWeightSemiBold;
+    }
+  }
+}
