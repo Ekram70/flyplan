@@ -846,14 +846,13 @@ body {
     display: block;
   }
 }
-.flight-location span {
+.flight-location p span {
   font-weight: 500;
   font-size: 20px;
-  color: #b4b4c8;
   text-transform: uppercase;
 }
 @media (max-width: 992px) {
-  .flight-location span {
+  .flight-location p span {
     font-size: 16px;
   }
 }
@@ -887,6 +886,15 @@ body {
 }
 .dropdown-form-radio {
   display: flex;
+}
+.dropdown-form input:not(:-moz-placeholder-shown) {
+  color: #ffffff;
+}
+.dropdown-form input:not(:-ms-input-placeholder) {
+  color: #ffffff;
+}
+.dropdown-form input:not(:placeholder-shown) {
+  color: #ffffff;
 }
 .dropdown-form .radio-item {
   display: flex;
@@ -975,6 +983,30 @@ body {
   text-transform: uppercase;
   padding: 8px;
 }
+.dropdown-form-search .input-from,
+.dropdown-form-search .input-to {
+  position: relative;
+}
+.dropdown-form-search .input-from ul,
+.dropdown-form-search .input-to ul {
+  position: absolute;
+  z-index: 999;
+  margin-top: 10px;
+  padding: 10px 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.dropdown-form-search .input-from ul li,
+.dropdown-form-search .input-to ul li {
+  color: #404057;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.dropdown-form-search .input-from ul li:hover,
+.dropdown-form-search .input-to ul li:hover {
+  color: #32d093;
+}
 .dropdown-form-search .custom-date-picker {
   cursor: pointer;
 }
@@ -1033,6 +1065,38 @@ body {
   transition: 0.3s color ease, 0.3s background-color ease;
 }
 .dropdown-form-search .input-dropdown .dropdown-list li:hover {
+  background-color: #32d093;
+  color: #ffffff;
+}
+.dropdown-form-search .dropdown-children-list {
+  position: absolute;
+  z-index: 999;
+  left: 110%;
+  background-color: #ffffff;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 0;
+  width: 100%;
+  border-radius: 4px;
+  filter: drop-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.15));
+}
+.dropdown-form-search .dropdown-children-list::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  z-index: -1;
+  top: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+}
+.dropdown-form-search .dropdown-children-list li {
+  padding: 10px 15px;
+  color: #404057;
+  transition: 0.3s color ease, 0.3s background-color ease;
+}
+.dropdown-form-search .dropdown-children-list li:hover {
   background-color: #32d093;
   color: #ffffff;
 }

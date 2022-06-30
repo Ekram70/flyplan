@@ -117,8 +117,15 @@
               <i class="fa fa-plane"></i>
             </div>
             <div class="flight-location flight-location-left">
-              <h4>los angeles - istanbul</h4>
-              <span>jun 04, sat &nbsp;|&nbsp; 3 travellers</span>
+              <h4>
+                <span class="flight-from-span">los angeles</span> -
+                <span class="flight-to-span">istanbul</span>
+              </h4>
+              <p>
+                <span id="flight-depart-date-span">jun 04, sat</span>
+                &nbsp;|&nbsp;
+                <span class="input-person-count-span">0 traveller</span>
+              </p>
             </div>
           </div>
           <!-- Flight Return -->
@@ -127,8 +134,15 @@
               <i class="fa fa-plane rotate-270"></i>
             </div>
             <div class="flight-location flight-location-right">
-              <h4>istanbul - los angeles</h4>
-              <span>27 may, sat &nbsp;|&nbsp; 3 travellers</span>
+              <h4>
+                <span class="flight-to-span">istanbul</span> -
+                <span class="flight-from-span">los angeles</span>
+              </h4>
+              <p>
+                <span id="flight-return-date-span">27 may, sat</span>
+                &nbsp;|&nbsp;
+                <span class="input-person-count-span">0 traveller</span>
+              </p>
             </div>
           </div>
           <!-- Flight Btn -->
@@ -139,11 +153,11 @@
         <!-- Dropdown Change -->
         <div class="dropdown-change">
           <!-- Dropdown Form -->
-          <form class="dropdown-form">
+          <form class="dropdown-form" autocomplete="off">
             <!-- Form Radio -->
             <div class="dropdown-form-radio">
               <div class="radio-item">
-                <input type="radio" name="radio-item" id="round-trip" />
+                <input type="radio" name="radio-item" id="round-trip" checked />
                 <label for="round-trip">round trip</label>
               </div>
               <div class="radio-item">
@@ -154,17 +168,24 @@
             <!-- Form Search -->
             <div class="dropdown-form-search">
               <div class="dropdown-form-search-item input-from">
-                <input type="text" placeholder="From" />
+                <input
+                  type="text"
+                  placeholder="From"
+                  id="flight-location-from"
+                />
+                <ul class="d-none"></ul>
               </div>
               <div class="dropdown-form-search-item input-to">
                 <i class="icon ion-android-sync"></i>
-                <input type="text" placeholder="To" />
+                <input type="text" placeholder="To" id="flight-location-to" />
+                <ul class="d-none"></ul>
               </div>
               <div class="dropdown-form-search-item input-depart">
                 <input
                   type="text"
                   placeholder="depart"
                   class="custom-date-picker"
+                  id="flight-depart-date"
                 />
                 <i class="fa fa-calendar-o"></i>
               </div>
@@ -173,6 +194,7 @@
                   type="text"
                   placeholder="return"
                   class="custom-date-picker"
+                  id="flight-return-date"
                 />
                 <i class="fa fa-calendar-o"></i>
               </div>
@@ -180,7 +202,7 @@
                 class="dropdown-form-search-item input-adults input-dropdown"
               >
                 <div class="dropdown-text">
-                  <input type="text" />
+                  <input type="text" class="input-person-count" />
                   <i class="fa fa-angle-down"></i>
                 </div>
                 <ul class="dropdown-list d-none"></ul>
@@ -194,10 +216,23 @@
                 class="dropdown-form-search-item input-children input-dropdown"
               >
                 <div class="dropdown-text">
-                  <input type="text" />
+                  <input type="text" class="input-person-count" />
                   <i class="fa fa-angle-down"></i>
                 </div>
                 <ul class="dropdown-list d-none"></ul>
+                <ul class="dropdown-children-list d-none">
+                  <li>
+                    <span>Child 1 age:</span>
+                    <select>
+                      <option>1 children</option>
+                      <option>2 children</option>
+                      <option>3 children</option>
+                    </select>
+                  </li>
+                  <li>
+                    <span>Child 1 age:</span>
+                  </li>
+                </ul>
                 <select>
                   <option>1 children</option>
                   <option>2 children</option>
@@ -208,7 +243,7 @@
                 class="dropdown-form-search-item input-infants input-dropdown"
               >
                 <div class="dropdown-text">
-                  <input type="text" />
+                  <input type="text" class="input-person-count" />
                   <i class="fa fa-angle-down"></i>
                 </div>
                 <ul class="dropdown-list d-none"></ul>

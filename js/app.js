@@ -23,6 +23,43 @@ let priceBtns = document.querySelectorAll(".price-btn");
 let modalBox = document.querySelector(".modal-box");
 let modalBoxClose = document.querySelector(".modal-box-close");
 let detailsBtns = document.querySelectorAll(".details-tag span");
+let flightLocationTo = document.getElementById("flight-location-to");
+let flightLocationFrom = document.getElementById("flight-location-from");
+let flightLocationToList = document.querySelector("#flight-location-to + ul");
+let flightLocationFromList = document.querySelector(
+  "#flight-location-from + ul"
+);
+let flightToSpan = document.querySelectorAll(".flight-to-span");
+let flightFromSpan = document.querySelectorAll(".flight-from-span");
+let flightDepartDate = document.getElementById("flight-depart-date");
+let flightReturnDate = document.getElementById("flight-return-date");
+let flightDepartDateSpan = document.getElementById("flight-depart-date-span");
+let flightReturnDateSpan = document.getElementById("flight-return-date-span");
+let inputPersonCount = document.querySelectorAll(".input-person-count");
+let inputPersonCountSpan = document.querySelectorAll(
+  ".input-person-count-span"
+);
+let dropdownChildrenList = document.querySelector(".dropdown-children-list");
+
+// some useful data
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+const daysInWeek = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
+
+// sotring some data
+let storeDate = new Date();
 
 currency.addEventListener("click", () => {
   currencyList.classList.toggle("d-none");
@@ -41,6 +78,7 @@ datePicker.forEach((picker) => {
     e.target.showPicker();
   });
   picker.addEventListener("blur", (e) => {
+    storeDate = new Date(e.target.value);
     const dateArr = e.target.value.split("-");
     const [year, month, date] = dateArr;
     e.target.type = "text";
@@ -64,6 +102,10 @@ inputDropdown.forEach((dropdown) => {
       li.innerText = options[i].innerText;
       li.addEventListener("click", () => {
         textInput.value = `${li.innerText}`;
+        let count = personCount();
+        inputPersonCountSpan.forEach((span) => {
+          span.innerText = `${count} travellers`;
+        });
       });
       dropdownList.appendChild(li);
     }
@@ -81,16 +123,24 @@ function setOption(parent) {
 
 // flight change btn
 flightChangeBtn.addEventListener("click", () => {
-  let text = flightLocationLeft.innerHTML;
-  flightLocationLeft.innerHTML = flightLocationRight.innerHTML;
-  flightLocationRight.innerHTML = text;
+  // do something
 });
 
 // inputChange
 inputChange.addEventListener("click", () => {
-  let value = inputFrom.value;
-  inputFrom.value = inputTo.value;
-  inputTo.value = value;
+  if (inputFrom.value && inputTo.value) {
+    let value = inputFrom.value;
+    inputFrom.value = inputTo.value;
+    inputTo.value = value;
+
+    flightFromSpan.forEach((span) => {
+      span.innerText = inputFrom.value.split(",")[0];
+    });
+
+    flightToSpan.forEach((span) => {
+      span.innerText = inputTo.value.split(",")[0];
+    });
+  }
 });
 
 // toggleBtns
@@ -150,6 +200,92 @@ detailsBtns.forEach((btn) => {
 modalBoxClose.addEventListener("click", () => {
   modalBox.classList.add("d-none");
 });
+
+// flight location change
+flightLocationTo.addEventListener("input", (e) => {
+  flightLocationToList.innerHTML = "";
+  fetch("../js/db/airportlist.json")
+    .then((res) => res.json())
+    .then((data) => {
+      let result = data.filter((port) =>
+        port.name.toLowerCase().includes(`${e.target.value.toLowerCase()}`)
+      );
+      if (result.length > 5) result.length = 5;
+      if (result.length > 0) {
+        for (let i = 0; i < result.length; i++) {
+          let li = document.createElement("li");
+          li.innerText = result[i].name;
+          li.addEventListener("click", (e) => {
+            flightLocationTo.value = e.target.innerText;
+            flightLocationToList.classList.add("d-none");
+            flightToSpan.forEach((btn) => {
+              btn.innerHTML = flightLocationTo.value.split(",")[0];
+            });
+          });
+          flightLocationToList.appendChild(li);
+          flightLocationToList.classList.remove("d-none");
+        }
+      } else {
+        flightLocationToList.classList.add("d-none");
+      }
+    });
+});
+
+flightLocationFrom.addEventListener("input", (e) => {
+  flightLocationFromList.innerHTML = "";
+  fetch("../js/db/airportlist.json")
+    .then((res) => res.json())
+    .then((data) => {
+      let result = data.filter((port) =>
+        port.name.toLowerCase().includes(`${e.target.value.toLowerCase()}`)
+      );
+      if (result.length > 5) result.length = 5;
+      if (result.length > 0) {
+        for (let i = 0; i < result.length; i++) {
+          let li = document.createElement("li");
+          li.innerText = result[i].name;
+          li.addEventListener("click", (e) => {
+            flightLocationFrom.value = e.target.innerText;
+            flightLocationFromList.classList.add("d-none");
+            flightFromSpan.forEach((btn) => {
+              btn.innerHTML = flightLocationFrom.value.split(",")[0];
+            });
+          });
+          flightLocationFromList.appendChild(li);
+          flightLocationFromList.classList.remove("d-none");
+        }
+      } else {
+        flightLocationFromList.classList.add("d-none");
+      }
+    });
+});
+
+// flight date change
+
+flightDepartDate.addEventListener("blur", () => {
+  const day = daysInWeek[storeDate.getDay()];
+  const month = months[storeDate.getMonth()];
+  const date = storeDate.getDate();
+  flightDepartDateSpan.innerText = `${date} ${month}, ${day}`;
+});
+
+flightReturnDate.addEventListener("blur", () => {
+  const day = daysInWeek[storeDate.getDay()];
+  const month = months[storeDate.getMonth()];
+  const date = storeDate.getDate();
+  flightReturnDateSpan.innerText = `${date} ${month}, ${day}`;
+});
+
+// person count
+function personCount() {
+  let count = 0;
+  inputPersonCount.forEach((person) => {
+    if (+person.value.split("")[0]) {
+      count += +person.value.split("")[0];
+    }
+  });
+  return count;
+}
 
 // multi-range slider
 var lowerSlider = document.querySelector("#lower"),
