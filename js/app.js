@@ -39,7 +39,8 @@ let inputPersonCount = document.querySelectorAll(".input-person-count");
 let inputPersonCountSpan = document.querySelectorAll(
   ".input-person-count-span"
 );
-let dropdownChildrenList = document.querySelector(".dropdown-children-list");
+let roundTrip = document.getElementById("round-trip");
+let oneWay = document.getElementById("one-way");
 
 // some useful data
 const months = [
@@ -58,7 +59,7 @@ const months = [
 ];
 const daysInWeek = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
 
-// sotring some data
+// storing some data
 let storeDate = new Date();
 
 currency.addEventListener("click", () => {
@@ -92,10 +93,11 @@ inputDropdown.forEach((dropdown) => {
     // getting references
     let parent = e.target.parentElement.parentElement;
     let dropdownList = parent.querySelector(".dropdown-list");
-    let options = parent.querySelector("select").children;
+    let options = parent.children[parent.children.length - 1].children;
     let textInput = parent.querySelector("input");
     // clearing the list
     dropdownList.innerHTML = "";
+    console.log(parent);
     // creating the list
     for (let i = 0; i < options.length; i++) {
       let li = document.createElement("li");
@@ -262,11 +264,18 @@ flightLocationFrom.addEventListener("input", (e) => {
 
 // flight date change
 
+flightDepartDate.setAttribute("min", `${currentDate()}`);
+
 flightDepartDate.addEventListener("blur", () => {
   const day = daysInWeek[storeDate.getDay()];
   const month = months[storeDate.getMonth()];
   const date = storeDate.getDate();
   flightDepartDateSpan.innerText = `${date} ${month}, ${day}`;
+  const setDate = flightDepartDate.value.split("-");
+  flightReturnDate.setAttribute(
+    "min",
+    `${setDate[2]}-${setDate[1]}-${setDate[0]}`
+  );
 });
 
 flightReturnDate.addEventListener("blur", () => {
@@ -275,6 +284,35 @@ flightReturnDate.addEventListener("blur", () => {
   const date = storeDate.getDate();
   flightReturnDateSpan.innerText = `${date} ${month}, ${day}`;
 });
+
+function currentDate() {
+  let date = new Date();
+  let currentYear = date.getFullYear();
+  let currentMonth = date.getMonth() + 1;
+  let currentDate = date.getDate();
+
+  currentMonth =
+    `${currentMonth}`.length == 1 ? `0${currentMonth}` : `${currentMonth}`;
+  currentDate =
+    `${currentDate}`.length == 1 ? `0${currentDate}` : `${currentDate}`;
+
+  return `${currentYear}-${currentMonth}-${currentDate}`;
+}
+
+function nextDate() {
+  let date = new Date(flightDepartDate.getAttribute("min"));
+  date.setDate(date.getDate() + 1);
+  let currentYear = date.getFullYear();
+  let currentMonth = date.getMonth() + 1;
+  let currentDate = date.getDate();
+
+  currentMonth =
+    `${currentMonth}`.length == 1 ? `0${currentMonth}` : `${currentMonth}`;
+  currentDate =
+    `${currentDate}`.length == 1 ? `0${currentDate}` : `${currentDate}`;
+
+  return `${currentYear}-${currentMonth}-${currentDate}`;
+}
 
 // person count
 function personCount() {
@@ -286,6 +324,17 @@ function personCount() {
   });
   return count;
 }
+
+// one way , round trip
+flightReturnDate.disabled = "true";
+oneWay.addEventListener("click", () => {
+  flightReturnDate.disabled = true;
+  flightReturnDate.value = "";
+});
+
+roundTrip.addEventListener("click", () => {
+  flightReturnDate.disabled = false;
+});
 
 // multi-range slider
 var lowerSlider = document.querySelector("#lower"),

@@ -258,39 +258,6 @@
       }
     }
 
-    .dropdown-children-list {
-      position: absolute;
-      z-index: 999;
-      left: 110%;
-      background-color: $whiteColor;
-      cursor: pointer;
-      margin-top: 20px;
-      padding: 0;
-      width: 100%;
-      border-radius: 4px;
-      filter: drop-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.15));
-      &::after {
-        content: "";
-        position: absolute;
-        left: -10px;
-        z-index: -1;
-        top: 10px;
-        height: 20px;
-        width: 20px;
-        background-color: $whiteColor;
-        transform: rotate(45deg);
-      }
-      li {
-        padding: 10px 15px;
-        color: $primaryColor;
-        transition: 0.3s color ease, 0.3s background-color ease;
-        &:hover {
-          background-color: $secondaryColor;
-          color: $whiteColor;
-        }
-      }
-    }
-
     .input-from,
     .input-to,
     .input-search {
