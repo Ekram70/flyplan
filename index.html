@@ -145,10 +145,6 @@
               </p>
             </div>
           </div>
-          <!-- Flight Btn -->
-          <div class="flight-btn">
-            <button>change</button>
-          </div>
         </div>
         <!-- Dropdown Change -->
         <div class="dropdown-change">
@@ -157,12 +153,12 @@
             <!-- Form Radio -->
             <div class="dropdown-form-radio">
               <div class="radio-item">
-                <input type="radio" name="radio-item" id="round-trip" />
-                <label for="round-trip">round trip</label>
-              </div>
-              <div class="radio-item">
                 <input type="radio" name="radio-item" id="one-way" checked />
                 <label for="one-way">one way</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" name="radio-item" id="round-trip" />
+                <label for="round-trip">round trip</label>
               </div>
             </div>
             <!-- Form Search -->
@@ -219,7 +215,7 @@
                   <input type="text" class="input-person-count" />
                   <i class="fa fa-angle-down"></i>
                 </div>
-                <ul class="dropdown-list d-none"></ul>
+                <ul class="dropdown-list"></ul>
                 <select class="dropdown">
                   <option>1 children</option>
                   <option>2 children</option>
@@ -273,14 +269,20 @@
           <div class="filter-box">
             <div class="filter-title">
               <h6>price range</h6>
-              <i class="fa fa-chevron-up rotate-180"></i>
+              <i class="fa fa-chevron-up"></i>
             </div>
             <div class="filter-box-content">
-              <span class="price-amount price-amount-left">$600</span>
-              <span class="price-amount price-amount-right">$600</span>
+              <span class="price-amount price-amount-left">$0</span>
+              <span class="price-amount price-amount-right">$6000</span>
               <span class="multi-range">
-                <input type="range" min="0" max="50" value="5" id="lower" />
-                <input type="range" min="0" max="50" value="25" id="upper" />
+                <input type="range" min="0" max="6000" value="0" id="lower" />
+                <input
+                  type="range"
+                  min="0"
+                  max="6000"
+                  value="6000"
+                  id="upper"
+                />
               </span>
             </div>
           </div>
@@ -1067,6 +1069,11 @@
                 <h6>personal information</h6>
               </div>
               <div class="content">
+                <div class="honorific">
+                  <button class="honorific-btn">Mr</button>
+                  <button class="honorific-btn">Mrs</button>
+                  <button class="honorific-btn">Ms</button>
+                </div>
                 <div class="first-name">
                   <label for="fname">first name</label>
                   <input
@@ -1349,300 +1356,7 @@
             </div>
           </form>
         </div>
-        <!-- Travelling Box-2 -->
-        <div class="travelling-box">
-          <div class="travelling-box-top">
-            <h2><span>2</span>Adult</h2>
-            <i class="fa fa-chevron-up"></i>
-          </div>
-          <form class="travelling-box-form">
-            <div class="personal-info travelling-box-form-item">
-              <div class="title">
-                <h6>personal information</h6>
-              </div>
-              <div class="content">
-                <div class="first-name">
-                  <label for="fname">first name</label>
-                  <input
-                    type="text"
-                    name=""
-                    id="fname"
-                    placeholder="enter first name"
-                  />
-                </div>
-                <div class="last-name">
-                  <label for="lname">last name</label>
-                  <input
-                    type="text"
-                    name=""
-                    id="lname"
-                    placeholder="enter last name"
-                  />
-                </div>
-                <div class="birth-gender">
-                  <div class="birth">
-                    <label for="dob">date of birth</label>
-                    <input type="date" id="dob" class="custom-date-picker" />
-                  </div>
-                  <div class="gender">
-                    <label for="gender">gender</label>
-                    <div class="input-dropdown">
-                      <div class="dropdown-text">
-                        <input type="text" />
-                        <i class="fa fa-angle-down"></i>
-                      </div>
-                      <ul class="dropdown-list d-none"></ul>
-                      <select class="d-none">
-                        <option value="">Male</option>
-                        <option value="">Female</option>
-                        <option value="">Other</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="nationality">
-                  <label for="nationality">nationality</label>
-                  <div class="input-dropdown">
-                    <div class="dropdown-text">
-                      <input type="text" />
-                      <i class="fa fa-angle-down"></i>
-                    </div>
-                    <ul class="dropdown-list d-none"></ul>
-                    <select name="" id="nationality" class="d-none">
-                      <option value="bd">Bangladeshi</option>
-                      <option value="in">indian</option>
-                      <option value="pk">pakistani</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="passport">
-                  <label for="passport">passport of id number</label>
-                  <input
-                    type="text"
-                    name=""
-                    id="passport"
-                    placeholder="0000 0000 0000 0000"
-                  />
-                </div>
-                <div class="expiry">
-                  <label>Expiry date</label>
-                  <div class="expiry-item">
-                    <div class="input-dropdown">
-                      <div class="dropdown-text">
-                        <input type="text" />
-                        <i class="fa fa-angle-down"></i>
-                      </div>
-                      <ul class="dropdown-list d-none"></ul>
-                      <select name="" class="d-none">
-                        <option value="01">January</option>
-                        <option value="02">february</option>
-                        <option value="03">march</option>
-                      </select>
-                    </div>
-                    <div class="input-dropdown">
-                      <div class="dropdown-text">
-                        <input type="text" />
-                        <i class="fa fa-angle-down"></i>
-                      </div>
-                      <ul class="dropdown-list d-none"></ul>
-                      <select name="" class="d-none">
-                        <option value="2001">2001</option>
-                        <option value="2002">2002</option>
-                        <option value="2003">2003</option>
-                      </select>
-                    </div>
-                    <div class="checkbox">
-                      <input
-                        type="checkbox"
-                        name=""
-                        id="echeck"
-                        class="d-none"
-                      />
-                      <label for="echeck">
-                        <i class="fa fa-square-o"></i>
-                        <i class="fa fa-check-square-o"></i>
-                        <span>No expiry</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Beggage -->
-            <div class="baggage travelling-box-form-item">
-              <div class="title">
-                <h6>Baggage</h6>
-              </div>
-              <div class="content">
-                <!-- Baggage Content-->
-                <div class="content-box">
-                  <p class="cabin-baggage">
-                    <span class="cabin-baggage-item">Cabin Baggage</span>
-                    <span class="cabin-baggage-details">42x32x20cm</span>
-                    <span class="cabin-baggage-price">free</span>
-                  </p>
-                  <p class="cabin-baggage checked-baggege">
-                    <span class="cabin-baggage-item">Checked Baggage</span>
-                    <span class="cabin-baggage-details">23 kg</span>
-                    <span class="cabin-baggage-price">$80</span>
-                    <span class="cabin-baggage-icon"
-                      ><a href="#"><i class="icon ion-android-close"></i></a
-                    ></span>
-                  </p>
-                </div>
-                <!-- Add Baggage -->
-                <div class="add-baggage">
-                  <div class="add-baggage-container">
-                    <p>
-                      <span class="add-baggage-item">checked baggage</span>
-                      <span class="add-baggage-details">23 kg</span>
-                    </p>
-                    <div class="add-baggage-input">
-                      <input type="number" />
-                    </div>
-                    <div class="price-btn">
-                      <button>$80</button>
-                    </div>
-                  </div>
-                  <div class="add-baggage-container">
-                    <p>
-                      <span class="add-baggage-item">
-                        sport equipment
-                        <i class="fa fa-question-circle-o"></i>
-                        <span
-                          >You Can Bring Ski, Snowboard, Surf equipment,
-                          Bicycle, etc.</span
-                        >
-                      </span>
-                    </p>
-                    <div class="price-btn">
-                      <button>$80</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Travel Insurance Boxes -->
-            <div class="travel travelling-box-form-item">
-              <div class="title">
-                <h6>travel insurance</h6>
-              </div>
-              <div class="content pricing-content">
-                <!-- Pricing Box-1 -->
-                <div class="pricing-table">
-                  <div class="img">
-                    <i class="icon ion-heart-broken"></i>
-                  </div>
-                  <div class="pricing-title">
-                    <h4>No insurance</h4>
-                  </div>
-                  <div class="price-details">
-                    <p class="price-details-item">
-                      <i class="fa fa-check"></i>
-                      <span>Medical expenses</span>
-                    </p>
-                    <p class="price-details-item">
-                      <i class="fa fa-check"></i>
-                      <span>trip cancellation</span>
-                    </p>
-                    <p class="price-details-item">
-                      <i class="fa fa-times"></i>
-                      <span>lost baggage</span>
-                    </p>
-                    <p class="price-details-item">
-                      <i class="fa fa-times"></i>
-                      <span>air travel insurance</span>
-                    </p>
-                    <p class="price-details-item">
-                      <i class="fa fa-times"></i>
-                      <span>liability</span>
-                    </p>
-                  </div>
-                  <div class="price-amount">
-                    <button>$0</button>
-                  </div>
-                  <div class="price-close">
-                    <a href="#"><i class="icon ion-android-close"></i></a>
-                  </div>
-                </div>
-                <!-- Pricing Box-2 -->
-                <div class="pricing-table">
-                  <div class="img">
-                    <i class="icon ion-heart-broken"></i>
-                  </div>
-                  <div class="pricing-title">
-                    <h4>No insurance</h4>
-                  </div>
-                  <div class="price-details">
-                    <p class="price-details-item">
-                      <i class="fa fa-check"></i>
-                      <span>Medical expenses</span>
-                    </p>
-                    <p class="price-details-item">
-                      <i class="fa fa-check"></i>
-                      <span>trip cancellation</span>
-                    </p>
-                    <p class="price-details-item">
-                      <i class="fa fa-times"></i>
-                      <span>lost baggage</span>
-                    </p>
-                    <p class="price-details-item">
-                      <i class="fa fa-times"></i>
-                      <span>air travel insurance</span>
-                    </p>
-                    <p class="price-details-item">
-                      <i class="fa fa-times"></i>
-                      <span>liability</span>
-                    </p>
-                  </div>
-                  <div class="price-amount">
-                    <button>$0</button>
-                  </div>
-                  <div class="price-close">
-                    <a href="#"><i class="icon ion-android-close"></i></a>
-                  </div>
-                </div>
-                <!-- Pricing Box-3 -->
-                <div class="pricing-table">
-                  <div class="img">
-                    <i class="icon ion-heart-broken"></i>
-                  </div>
-                  <div class="pricing-title">
-                    <h4>No insurance</h4>
-                  </div>
-                  <div class="price-details">
-                    <p class="price-details-item">
-                      <i class="fa fa-check"></i>
-                      <span>Medical expenses</span>
-                    </p>
-                    <p class="price-details-item">
-                      <i class="fa fa-check"></i>
-                      <span>trip cancellation</span>
-                    </p>
-                    <p class="price-details-item">
-                      <i class="fa fa-times"></i>
-                      <span>lost baggage</span>
-                    </p>
-                    <p class="price-details-item">
-                      <i class="fa fa-times"></i>
-                      <span>air travel insurance</span>
-                    </p>
-                    <p class="price-details-item">
-                      <i class="fa fa-times"></i>
-                      <span>liability</span>
-                    </p>
-                  </div>
-                  <div class="price-amount">
-                    <button>$0</button>
-                  </div>
-                  <div class="price-close">
-                    <a href="#"><i class="icon ion-android-close"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
+
         <div class="travelling-passenger">
           <!-- Add Passenger Btn -->
           <button class="add">

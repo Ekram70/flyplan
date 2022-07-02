@@ -102,6 +102,25 @@
           grid-template-columns: repeat(1, 1fr);
         }
 
+        .honorific {
+          grid-column: 1/-1;
+          &-btn {
+            padding: 5px 10px;
+            background-color: $bgColor;
+            border-radius: 4px;
+            font-weight: $fontWeightMedium;
+            color: $smTextColor2;
+            &:hover {
+              background-color: $secondaryColor;
+              color: $whiteColor;
+            }
+          }
+          .active {
+            background-color: $secondaryColor;
+            color: $whiteColor;
+          }
+        }
+
         .dropdown-change {
           margin-top: 35px;
         }

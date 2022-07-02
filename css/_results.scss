@@ -135,12 +135,14 @@
       font-size: $fz-16;
       position: relative;
       margin-bottom: 5px;
+      width: 48%;
       display: inline-block;
       &-left {
-        left: 10px;
+        left: 0;
       }
       &-right {
-        left: 20px;
+        right: 0;
+        text-align: right;
       }
     }
     /*Depart Btn*/
@@ -151,6 +153,10 @@
       border-radius: 4px;
       padding: 3px 20px;
       transition: 0.5s color ease, 0.5s background-color ease;
+      &.active {
+        background-color: $primaryColor;
+        color: $whiteColor;
+      }
       &:hover {
         background-color: $primaryColor;
         color: $whiteColor;

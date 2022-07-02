@@ -41,6 +41,15 @@ let inputPersonCountSpan = document.querySelectorAll(
 );
 let roundTrip = document.getElementById("round-trip");
 let oneWay = document.getElementById("one-way");
+let flightDepart = document.querySelector(".flight-depart");
+let flightReturn = document.querySelector(".flight-return");
+let priceAmountLeft = document.querySelector(".price-amount-left");
+let priceAmountRight = document.querySelector(".price-amount-right");
+let upper = document.getElementById("upper");
+let lower = document.getElementById("lower");
+let departBtns = document.querySelectorAll(".depart-btn");
+let stopsBtns = document.querySelectorAll(".stops-btn");
+let honorificBtns = document.querySelectorAll(".honorific-btn");
 
 // some useful data
 const months = [
@@ -122,11 +131,6 @@ function setOption(parent) {
   const target = options[0].innerText;
   textInput.placeholder = `${target}`;
 }
-
-// flight change btn
-flightChangeBtn.addEventListener("click", () => {
-  // do something
-});
 
 // inputChange
 inputChange.addEventListener("click", () => {
@@ -285,6 +289,10 @@ flightReturnDate.addEventListener("blur", () => {
   flightReturnDateSpan.innerText = `${date} ${month}, ${day}`;
 });
 
+flightReturnDate.addEventListener("click", () => {
+  roundTrip.click();
+});
+
 function currentDate() {
   let date = new Date();
   let currentYear = date.getFullYear();
@@ -326,14 +334,55 @@ function personCount() {
 }
 
 // one way , round trip
-flightReturnDate.disabled = "true";
+flightReturn.classList.add("d-none");
 oneWay.addEventListener("click", () => {
-  flightReturnDate.disabled = true;
   flightReturnDate.value = "";
+  flightReturn.classList.add("d-none");
 });
 
 roundTrip.addEventListener("click", () => {
   flightReturnDate.disabled = false;
+  flightReturn.classList.remove("d-none");
+});
+
+// price range
+lower.addEventListener("input", (e) => {
+  priceAmountLeft.innerText = `$${e.target.value}`;
+});
+
+upper.addEventListener("input", (e) => {
+  priceAmountRight.innerText = `$${e.target.value}`;
+});
+
+// departBtns
+departBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    for (let i = 0; i < departBtns.length; i++) {
+      departBtns[i].classList.remove("active");
+    }
+    btn.classList.add("active");
+  });
+});
+
+// stops Btns
+stopsBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    for (let i = 0; i < stopsBtns.length; i++) {
+      stopsBtns[i].classList.remove("active");
+    }
+    btn.classList.add("active");
+  });
+});
+
+// honorificBtns
+honorificBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    for (let i = 0; i < honorificBtns.length; i++) {
+      honorificBtns[i].classList.remove("active");
+    }
+    btn.classList.add("active");
+  });
 });
 
 // multi-range slider
@@ -346,11 +395,13 @@ upperSlider.oninput = function () {
   lowerVal = parseInt(lowerSlider.value);
   upperVal = parseInt(upperSlider.value);
 
-  if (upperVal < lowerVal + 5) {
-    lowerSlider.value = upperVal - 5;
+  if (upperVal < lowerVal + 500) {
+    lowerSlider.value = upperVal - 500;
+    priceAmountLeft.innerText = `$${lowerSlider.value}`;
 
     if (lowerVal == lowerSlider.min) {
-      upperSlider.value = 5;
+      upperSlider.value = 500;
+      priceAmountRight.innerText = `$${upperSlider.value}`;
     }
   }
 };
@@ -359,11 +410,13 @@ lowerSlider.oninput = function () {
   lowerVal = parseInt(lowerSlider.value);
   upperVal = parseInt(upperSlider.value);
 
-  if (lowerVal > upperVal - 5) {
-    upperSlider.value = lowerVal + 5;
+  if (lowerVal > upperVal - 500) {
+    upperSlider.value = lowerVal + 500;
+    priceAmountRight.innerText = `$${upperSlider.value}`;
 
     if (upperVal == upperSlider.max) {
-      lowerSlider.value = parseInt(upperSlider.max) - 5;
+      lowerSlider.value = parseInt(upperSlider.max) - 500;
+      priceAmountLeft.innerText = `$${lowerSlider.value}`;
     }
   }
 };

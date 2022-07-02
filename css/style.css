@@ -399,7 +399,7 @@ body {
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 .d-block {
@@ -798,7 +798,6 @@ body {
 /*Flight*/
 .flight {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   /*Flight Depart & Return*/
   /*Flight Btn*/
@@ -823,6 +822,7 @@ body {
 .flight-box {
   display: flex;
   align-items: center;
+  flex-basis: 50%;
 }
 @media (max-width: 992px) {
   .flight-box {
@@ -1277,13 +1277,15 @@ body {
   font-size: 16px;
   position: relative;
   margin-bottom: 5px;
+  width: 48%;
   display: inline-block;
 }
 .filter .filter-box .price-amount-left {
-  left: 10px;
+  left: 0;
 }
 .filter .filter-box .price-amount-right {
-  left: 20px;
+  right: 0;
+  text-align: right;
 }
 .filter .filter-box .depart-btn {
   display: block;
@@ -1292,6 +1294,10 @@ body {
   border-radius: 4px;
   padding: 3px 20px;
   transition: 0.5s color ease, 0.5s background-color ease;
+}
+.filter .filter-box .depart-btn.active {
+  background-color: #404057;
+  color: #ffffff;
 }
 .filter .filter-box .depart-btn:hover {
   background-color: #404057;
@@ -2162,6 +2168,24 @@ body {
   .travelling-box .personal-info .content {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+.travelling-box .personal-info .content .honorific {
+  grid-column: 1/-1;
+}
+.travelling-box .personal-info .content .honorific-btn {
+  padding: 5px 10px;
+  background-color: #edf2f6;
+  border-radius: 4px;
+  font-weight: 500;
+  color: #b4b4c8;
+}
+.travelling-box .personal-info .content .honorific-btn:hover {
+  background-color: #32d093;
+  color: #ffffff;
+}
+.travelling-box .personal-info .content .honorific .active {
+  background-color: #32d093;
+  color: #ffffff;
 }
 .travelling-box .personal-info .content .dropdown-change {
   margin-top: 35px;

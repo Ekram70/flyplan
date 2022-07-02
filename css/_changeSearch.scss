@@ -15,7 +15,8 @@
 }
 /*Flight*/
 .flight {
-  @include space-between;
+  display: flex;
+  align-items: center;
 
   @include lg {
     display: block;
@@ -32,6 +33,7 @@
   &-box {
     display: flex;
     align-items: center;
+    flex-basis: 50%;
     @include lg {
       justify-content: center;
       margin-bottom: 15px;
